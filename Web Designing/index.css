@@ -1,0 +1,14 @@
+button {
+    background: green;
+    padding: 15px 25px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1.3rem;
+    
+}
+button a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}   
