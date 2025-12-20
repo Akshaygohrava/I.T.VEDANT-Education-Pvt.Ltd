@@ -334,9 +334,10 @@ tree -L 3
 
 Upon completion of all modules, I will earn:
 - **I.T. VEDANT Full Stack Java Development Certificate**
+- **NSDC Professional Certification** (Planned)
+- **IBM Professional Certification** (Planned)
 - **AWS Cloud Practitioner Certification** (Planned)
 - **Spring Professional Certification** (Planned)
-- **MongoDB Certification** (Planned)
 
 ---
 
