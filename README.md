@@ -1,6 +1,6 @@
-# 🌟 Full Stack Java Developer Learning Journey
+# 🌟 My Full Stack Java Developer Learning Journey
 
-![Course Banner](https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80)
+![Course Banner](https://i.ytimg.com/vi/L4sOI8ffsqs/maxresdefault.jpg)
 
 Welcome to my comprehensive learning repository documenting my Full Stack Java Development journey at **I.T. VEDANT Education Pvt. Ltd.** This repository serves as a living portfolio of my growth, projects, and skills development throughout the course.
 
@@ -190,7 +190,7 @@ I.T.VEDANT-Education-Pvt.Ltd/
 ### **🎯 Module Completion Status**
 ```
 Profile Building    ██████████ 100%
-Web Development     ████░░░░░░ 40%
+Web Development     ██████░░░░ 50%
 JavaScript          ░░░░░░░░░░ 0%
 React               ░░░░░░░░░░ 0%
 SQL                 ░░░░░░░░░░ 0%
@@ -271,7 +271,7 @@ AWS                 ░░░░░░░░░░ 0%
 
 ## 🏫 About I.T. VEDANT Education Pvt. Ltd.
 
-**I.T. VEDANT Education Pvt. Ltd.** is a premier IT training institute committed to transforming careers through quality education and hands-on training. The institute offers:
+**I.T. VEDANT Education Pvt. Ltd.** is a premier, Mumbai's #1 IT training institute committed to transforming careers through quality education and hands-on training. The institute offers:
 
 ### **🎓 Comprehensive Training Programs:**
 - Full Stack Java Development with Modern Frameworks
@@ -334,9 +334,10 @@ tree -L 3
 
 Upon completion of all modules, I will earn:
 - **I.T. VEDANT Full Stack Java Development Certificate**
+- **NSDC Professional Certification** (Planned)
+- **IBM Professional Certification** (Planned)
 - **AWS Cloud Practitioner Certification** (Planned)
 - **Spring Professional Certification** (Planned)
-- **MongoDB Certification** (Planned)
 
 ---
 
