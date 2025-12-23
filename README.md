@@ -232,7 +232,10 @@ AWS                 ░░░░░░░░░░ 0%
 - [ ] Angular Framework & TypeScript
 - [ ] AWS Cloud Deployment
 
----
+--- 
+Learning Experience : 
+Pre-study topics < Classes < Digital Learning : Video tutorial, Pdf Study, Quizs , Assignment = Mastering Module Topics
+
 
 ## 🏆 Projects Gallery
 
