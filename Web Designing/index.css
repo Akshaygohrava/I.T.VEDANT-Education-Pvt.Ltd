@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 button {
     background: green;
     padding: 15px 25px;
@@ -12,3 +19,159 @@ button a {
     font-size: 20px;
     font-weight: bold;
 }   
+/* Day-3 CSS */
+
+h1 heading {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: red;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.cedarville-cursive-regular {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.box {
+    background-color: goldenrod;
+    height: 300px;
+    padding: 90px;
+    margin: 20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.para {
+    background-color: red;
+    padding: 10px 20px;
+    height: 100px;
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    background-color: gold;
+    padding: 15px 20px;
+    font-size: 1.3rem;
+    border: 2px solid red;
+    border-radius: 30px;
+    transition: 1s;
+}
+a:hover {
+    background-color: red;
+    color: white;
+    border: navajowhite;
+}
+
+@media screen and (min-width: 500px) {
+    body {
+       background-color: green;
+    }
+ .box{
+        display: none;
+    }
+     p {
+        display: inline;
+     }
+}
+
+
+
+/* Day-4 CSS*/
+
+.box2 {
+    height: 150px;
+    width: 150px;
+    margin-bottom: 3px;
+}
+#box1 {
+    background-color: green;
+    position: relative;
+    top: 5px;
+    left: 10px;
+}
+#box2 {
+    background-color: red;
+    position: relative;
+    top: -100px;
+    left: 40px;
+}
+#box3 {
+    background-color: blue;
+    position: relative;
+    top: -200px;
+    left: 80px;
+}
+/* Position Absolute */
+.box1 {
+    height: 350px;
+    background-color: yellow;
+    width: 350px;
+    position: relative;
+    /* bottom: 100px; */
+}
+.box-2 {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    position: absolute;
+    top: 120px;
+    left: 120px;
+}
+
+/*  position Fixed */
+
+.box4 {
+    background-color: green;
+    height: 200px;
+    width: 300px;
+    padding: 5px;
+    overflow: scroll;
+    position: relative;
+    box-shadow: 4px 5px 5px gold;
+}
+.fixed {
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+    position: sticky;
+    top: 0;
+    left: 0;
+ 
+}
+
+/*  */
+
+#container1 {
+    height: 200px;
+    width: 200px;
+    background-color: orange;
+    background-image: url('./images/photorealistic-view-tree-nature-with-branches-trunk.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#container2 {
+    height: 200px;
+    width: 200px;
+    background-color: green;
+    background-image: url('./images/wet-vietnam-mountain-flow-stream-rural.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#container3 {
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+    background-image: url('./images/facebook-6338508_640.png');
+    background-size: cover;
+    background-position: 30px 30px;
+    background-repeat: no-repeat;
+}
+
+
+/* Day-5 CSS */
