@@ -234,7 +234,7 @@ AWS                 ░░░░░░░░░░ 0%
 
 --- 
 Learning Experience : 
-Pre-study topics < Classes < Digital Learning : Video tutorial, Pdf Study, Quizs , Assignment = Mastering Module Topics
+Pre-study topics < Classes < Digital Learning : Video tutorial, Pdf Study, Quizs , Assignment = Mastering Module Topics & Modules !
 
 
 ## 🏆 Projects Gallery
