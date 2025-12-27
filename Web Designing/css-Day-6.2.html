@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 GRID 3.0</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: red;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .grid-container-3 {
+            background-color: blue;
+            padding: 10px;
+            height: 500px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 10px;
+        }
+        .grid-3 {
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: red;
+            font-size: 1.4rem; 
+        }
+        #grid-item1 {
+            grid-row: 1/5;
+        }
+        #grid-item2 {
+            grid-column: 2/4;
+        }
+        #grid-item3 {
+            grid-column: 3/5;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS3 GRID 3.0</h1>
+    <div class="grid-container-3">
+        <div class="grid-3" id="grid-item1">1</div>
+        <div class="grid-3" id="grid-item2">2</div>
+        <div class="grid-3" id="grid-item3">3</div>
+        <div class="grid-3" id="grid-item4">4</div>
+        <div class="grid-3" id="grid-item5">5</div>
+        <div class="grid-3" id="grid-item6">6</div>
+        <div class="grid-3" id="grid-item7">7</div>
+        <div class="grid-3" id="grid-item8">8</div>
+    </div>
+</body>
+</html>

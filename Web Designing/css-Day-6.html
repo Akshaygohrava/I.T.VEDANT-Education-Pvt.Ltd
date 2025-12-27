@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 GRID</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        h1 {
+            text-align: center;
+            color: goldenrod;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .container-grid {
+            background-color: red;
+            padding: 10px;
+            height: 800px;
+            width: auto;
+            display: grid;
+            /* First we have to use columns,otherwise will not work ! */
+            grid-template-columns: 1fr 1fr 1fr; 
+            grid-template-rows: 1fr 2fr 1fr 2fr;
+            grid-gap: 10px;
+        }
+        .grid {
+            background-color: white;
+            /* height: 50px;
+            width: 50px; */
+            color: black;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS3 GRID</h1>
+    <div class="container-grid">
+        <div class="grid" id="grid-items1">1</div>
+        <div class="grid" id="grid-items2">2</div>
+        <div class="grid" id="grid-items3">3</div>
+        <div class="grid" id="grid-items4">4</div>
+        <div class="grid" id="grid-items5">5</div>
+        <div class="grid" id="grid-items6">6</div>
+        <div class="grid" id="grid-items7">7</div>
+        <div class="grid" id="grid-items8">8</div>
+        <div class="grid" id="grid-items9">9</div>
+        <div class="grid" id="grid-items10">10</div>
+        <div class="grid" id="grid-items11">11</div>
+        <div class="grid" id="grid-items12">12</div>
+    </div>
+</body>
+</html>

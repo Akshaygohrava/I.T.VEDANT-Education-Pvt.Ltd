@@ -68,7 +68,7 @@ button a {
     border: navajowhite;
 }
 
-@media screen and (min-width: 500px) {
+/* @media screen and (min-width: 500px) {
     body {
        background-color: green;
     }
@@ -78,7 +78,7 @@ button a {
      p {
         display: inline;
      }
-}
+} */
 
 
 
@@ -175,3 +175,36 @@ button a {
 
 
 /* Day-5 CSS */
+
+img {
+    float: right;
+    width: 150px;
+    height: 150px;
+}
+.test3 {
+    float: left;
+    width: 150px;
+    height: 150px;
+}
+
+/*  CSS-Flexbox */
+
+.container {
+    height: 700px;
+    width: 100%;
+    background: #000;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.flex {
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    text-align: center;
+}

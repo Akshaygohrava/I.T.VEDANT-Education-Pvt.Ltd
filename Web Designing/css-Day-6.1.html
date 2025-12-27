@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 GRID 2.0</title>
+    <style>
+        body {
+            padding: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: red;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .grid-container {
+            background-color: yellow;
+            height: 450px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 2fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+        }
+        .grid {
+            background-color: green;
+            color: white;
+            font-size: 1.4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #grid-items1 {
+            grid-column: 1/4;
+            grid-row: 1/4;
+        }
+        #grid-item2 {
+            grid-row: 1/4;
+        }
+       
+    </style>
+</head>
+<body>
+    <h1>CSS3 GRID 2.0</h1>
+    <div class="grid-container">
+        <div class="grid" id="grid-items1">1</div>
+        <div class="grid" id="grid-items2">2</div>
+        <div class="grid" id="grid-items3">3</div>
+    </div>
+
+    
+
+
+</body>
+</html>
