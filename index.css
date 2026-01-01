@@ -2,12 +2,10 @@ body {
     padding: 0;
 
 }
-
 h1 {
     color: black;
     text-shadow: 2px 4px 4px goldenrod;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
 }
 button {
     font-size: 1.2rem;
