@@ -1,0 +1,28 @@
+button {
+    background-color: aqua;
+    border: none;
+    padding: 10px 13px;
+    border-radius: 10px;
+    border: 1px solid red;
+    transition: .5s;
+}
+button:hover {
+    background-color: red;
+    color: black;
+}
+button a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    text-align: center;
+    color: chartreuse;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
