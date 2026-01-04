@@ -12,3 +12,17 @@
 //     alert("Incorrect password. Redirecting...");
 //     window.location.href = "https://youtu.be/EQ94zflNqn4?si=a6BbBwFLBlLrrETQ";
 // }
+
+
+const video = document.getElementById('bg-video');
+const btn = document.getElementById('unmute-btn');
+
+btn.addEventListener('click', () => {
+  if (video.muted) {
+    video.muted = false; 
+    btn.innerText = "🔇 Mute";
+  } else {
+    video.muted = true;
+    btn.innerText = "🔊 Unmute";
+  }
+});

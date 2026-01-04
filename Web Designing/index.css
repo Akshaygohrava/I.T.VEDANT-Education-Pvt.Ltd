@@ -13,6 +13,13 @@ button {
     font-size: 1.3rem;
     
 }
+@media screen and (max-width:600px) {
+    body {
+        background-image: url('./images/bg-images/suzume-mobile.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
 .container-box {
     display: flex;
     /* justify-content: space-evenly; */

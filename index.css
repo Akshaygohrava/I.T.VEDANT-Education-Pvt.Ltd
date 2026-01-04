@@ -62,7 +62,7 @@ button a {
 
 @media screen and (min-width:600px) {
     body {
-    background-image: url('https://wallpapercave.com/wp/wp3511821.jpg');
+    background-image: url('https://images8.alphacoders.com/552/552632.jpg');
     background-size: cover;
    }
 
@@ -71,4 +71,7 @@ button a {
     text-shadow: 2px 4px 4px goldenrod;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+   .bg-video-sm {
+    display: none;
+   }
 }
