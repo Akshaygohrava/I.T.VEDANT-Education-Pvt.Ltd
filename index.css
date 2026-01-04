@@ -1,18 +1,15 @@
-body {
-    background-image: url('./Web Designing/images/bg-images/suzume-mobile.jpg');
-    background-size: cover;
 
-}
+
 h1 {
     color: black;
-    text-shadow: 2px 4px 4px goldenrod;
+    /* text-shadow: 2px 4px 4px goldenrod; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 button {
     font-size: 1.2rem;
     padding: 13px 20px;
     border-radius: 9px;
-    background: blue;
+    background: none;
     opacity: 0.8;
 }
 button a {
@@ -24,4 +21,54 @@ button a {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+@media screen and (max-width:600px) {
+    body {
+        margin: 0;
+    }
+
+.video-background-container {
+  position: relative; 
+  height: 100vh;    
+  width: 100vw;
+  overflow: hidden;   
+}
+
+
+.video-background-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover; 
+  z-index: -1;      
+}
+
+
+.content-overlay {
+  position: relative;
+  z-index: 1; 
+  color: white;
+  text-align: center;
+  padding: 20px;
+
+}
+
+  
+
+}
+
+@media screen and (min-width:600px) {
+    body {
+    background-image: url('https://wallpapercave.com/wp/wp3511821.jpg');
+    background-size: cover;
+   }
+
+   h1 {
+    color: black;
+    text-shadow: 2px 4px 4px goldenrod;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 }
