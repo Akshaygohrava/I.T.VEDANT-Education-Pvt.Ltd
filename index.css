@@ -23,6 +23,7 @@ button a {
     flex-direction: column;
 }
 
+
 @media screen and (max-width:600px) {
     body {
         margin: 0;
@@ -55,7 +56,13 @@ button a {
   padding: 20px;
 
 }
-
+.audio-btn {
+    border-radius: 30px;
+    padding: 5px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
   
 
 }
@@ -64,6 +71,7 @@ button a {
     body {
     background-image: url('https://images8.alphacoders.com/552/552632.jpg');
     background-size: cover;
+    background-repeat: no-repeat;
    }
 
    h1 {
@@ -72,6 +80,9 @@ button a {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
    .bg-video-sm {
+    display: none;
+   }
+   .audio-btn {
     display: none;
    }
 }

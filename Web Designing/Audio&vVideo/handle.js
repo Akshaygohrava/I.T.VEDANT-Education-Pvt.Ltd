@@ -14,15 +14,27 @@
 // }
 
 
-const video = document.getElementById('bg-video');
-const btn = document.getElementById('unmute-btn');
+document.addEventListener('DOMContentLoaded', () => {
+  const video = document.getElementById('bg-video');
+  const btn = document.getElementById('unmute-btn');
 
-btn.addEventListener('click', () => {
-  if (video.muted) {
-    video.muted = false; 
-    btn.innerText = "🔇 Mute";
-  } else {
-    video.muted = true;
-    btn.innerText = "🔊 Unmute";
+  if (!video || !btn) {
+    console.error("Video or Button element not found. Check your IDs.");
+    return;
   }
-});
+
+  btn.addEventListener('click', () => {
+    if (video.readyState >= 2) { 
+      if (video.muted) {
+        video.muted = false;
+        video.volume = 1.0; 
+        btn.innerText = "🔇";
+      } else {
+        video.muted = true;
+        btn.innerText = "🔊";
+      }
+    } else {
+      console.warn("Video is still loading or could not be found.");
+    }
+  });
+}); 
