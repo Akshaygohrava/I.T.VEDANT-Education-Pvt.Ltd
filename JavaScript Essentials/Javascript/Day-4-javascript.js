@@ -1,0 +1,80 @@
+
+// Loops in Javascripts !
+
+// while loop 
+
+// Print number 1 to 100
+let a = 1;
+while (a<=100) {
+    document.writeln(a);
+        a++;
+}
+
+document.writeln("<br><br>");
+
+// Print number 1 to 100 in Reverse
+let b = 100;
+while (b>=1) {
+    document.writeln(b);
+        b--;
+}
+
+document.writeln("<br><br>");
+
+
+// program to reduce one number 
+let n = 563;
+
+while (n>0) {
+    n = Math.floor(n/10);
+    document.writeln(n);
+}
+document.writeln("<br><br>");
+
+// Write a program to reverse a number
+
+let c = 123;
+// storing final value in rev variable
+let rev = 0;
+
+while (c>0) {
+    // rem = storing reminder value !
+    let rem = c % 10;
+    // creating formula , 
+    rev = rev * 10 + rem;
+    c = Math.floor(c / 10);
+   
+}
+ document.writeln(rev);
+
+ document.writeln("<br><br>");
+
+//  Create To find Factorial of a Number ! home work
+
+
+// For Loop
+
+// to print number 1 to 20
+
+for (let g = 1; g <= 20; g++) {
+    document.writeln(g);
+    
+}
+ document.writeln("<br><br>");
+
+// to print hello-text 10 times
+
+for (let h = 1; h <= 20; h++) {
+    document.writeln("Hello");
+    
+}
+
+
+
+
+
+
+
+
+// All those Solution to find is to check your problem solving in math and coding / LANGUAGE
+
