@@ -1,5 +1,5 @@
 const password = prompt("Enter Password to access portfolio:");
-const correctPassword = "admin@1230"; 
+const correctPassword = "admin@1230";
 
 if (password === null) {
     
