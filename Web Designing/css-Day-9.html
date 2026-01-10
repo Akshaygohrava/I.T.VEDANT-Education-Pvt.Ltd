@@ -100,6 +100,28 @@
         transform: rotate(190deg);
         border-radius: 50%;
       }
+      .transist {
+        height: 120px;
+        width: 120px;
+        background-color: purple;
+        transition-duration: 1s;
+        animation-name: test;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        margin: 0 auto;
+      }
+      @keyframes test {
+        from {
+            transform: rotate(0deg);        }
+        to {
+            transform: rotate(360deg);
+        }
+      }
+      .transist:hover {
+        transform: translateX(500px);
+        background-color: blue;
+      }
     </style>
 </head>
 <body>
@@ -118,7 +140,33 @@
         
        </div>
     </div>
-    
+
+
+    <h3>CSS3 ALL ANIMATION PROPERTIES ! </h3>
+    <pre>
+        div {
+  animation-name: myAnimation;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: forward;
+}
+    </pre>
+    <h3>CSS3 ALL TRANSISTATION PROPERTY</h3>
+    <pre>
+    The CSS transition property is a shorthand property for:
+
+    transition-property (Required)
+    transition-duration (Required)
+    transition-timing-function
+    transition-delay
+
+    </pre>
+    <div class="transist">
+
+    </div>
 
 </body>
 </html>

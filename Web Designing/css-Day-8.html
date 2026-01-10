@@ -4,9 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS TRANFORM</title>
+    <style>
+        div {
+           margin-bottom: 50px;
+        }
+        .container {
+            height: 120px;
+            width: 120px;
+            background-color: goldenrod;
+            transition: all 1s;
+        }
+        .container:hover {
+            transform: translate(130px,170px);
+
+        }
+        .container1 {
+            height: 120px;
+            width: 120px;
+            background-color: green;
+            transition: all 1s;
+        }
+        .container1:hover {
+            transform: rotate(360deg);
+
+        }
+        .container2 {
+            height: 120px;
+            width: 120px;
+            background-color: blue;
+            transition: all 1s;
+        }
+        .container2:hover {
+            transform: scale(0.5);
+
+        }
+        .container3 {
+            height: 120px;
+            width: 120px;
+            background-color: red;
+            transition: all 1s;
+        }
+        .container3:hover {
+            transform: skew(180deg);
+
+        }
+    </style>
 </head>
 <body>
     <H1>CSS TRANSFORM</H1>
+    <div class="container">
+       translate
+    </div>
+    <div class="container1">
+       Rotate
+    </div>
+    <div class="container2">
+      Scale
+    </div>
+    <div class="container3">
+      Skew
+    </div>
     
 </body>
 </html>
