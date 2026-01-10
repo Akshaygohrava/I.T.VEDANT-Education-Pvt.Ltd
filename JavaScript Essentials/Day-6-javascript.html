@@ -19,6 +19,151 @@
    <h3>Javascript File : </h3>
  <pre>
     
+
+// Functions In Javascript
+
+// creating functions
+function printhello() {
+    alert("Hello, Javascript Functions !");
+    document.writeln("Hello, Javascript Functions");
+}
+// calling the functions
+printhello();
+
+document.writeln("<br><br>");
+
+// Parameter & Arguments 
+// Parameterized functions / name as variable
+function para(name) {
+    document.writeln("Welcome Home ", name);
+}
+
+// calling function with arguments, storing into variable
+// passing different values ... 
+para("Akshay Gohrava");
+document.writeln("<br>");
+para("Full-Stack Developer");
+
+document.writeln("<br><br>");
+
+
+// To Find Addition functions
+function add(a, b, c) {
+    document.writeln("Addtion of A,B,C is : ",a+b+c);
+}
+add(23,5,9);
+
+document.writeln("<br><br>");
+
+
+
+// Return Functions, without return , its all void functions
+
+function square(n) {
+    return n*n;
+}
+document.writeln("The Square of 5 is : ", square(5));
+
+document.writeln("<br><br>");
+
+
+// Return sum of 4 Numbers
+
+function adding(a,b,c,d) {
+    return a+b+c+d;
+    // document.writeln("Adding of A B C D: ", a+b+c+d);
+}
+document.writeln("Addition with return  : ",adding(4,2,1,7));
+
+document.writeln("<br><br>");
+
+
+// Function to find Even Number is or Not !
+
+function even(n) {
+    return n%2==0;
+}
+document.writeln("The Number 10 is Even or Not :", even(10));
+
+document.writeln("<br><br>");
+
+
+// Program to check wheather prime or not
+
+function isPrime(n) {
+    let count = 0;
+    for (let i = 1; i <= n; i++) {
+       if (n % i == 0) {
+         count++;
+       }
+        
+    }
+    return count == 2;
+}
+document.writeln("The Number 75 is prime or Not :" ,isPrime(75));
+
+document.writeln("<br><br>");
+
+// Anonimous Functions In Javascript
+
+const Anonimousfuns = function () {
+    document.writeln("This is Anonimous Function , stored in Variable !")
+}
+Anonimousfuns();
+
+document.writeln("<br><br>");
+
+
+// Anonimous Functions with parameter & Arguments
+
+const parafun = function (a,b) {
+    document.writeln("This is Parameterized and Anonimous Functions: ", a+b);
+}
+parafun(55,65);
+
+document.writeln("<br><br>");
+
+
+// Arrow Functions In JavaScripts
+
+const arrowfun = () => {
+    document.writeln("Hello Arrow Functions !");
+}
+arrowfun();
+
+document.writeln("<br><br>");
+
+// Single Statement Arrow Functions
+const arrowfun2 = (a ,b) => document.writeln("This is Addtion : ",a+b);
+arrowfun2(54,33);
+
+document.writeln("<br><br>");
+
+
+
+// Program to check even number with arrow functions !
+
+const iseven = (n) => {
+    const even = n%2==0;
+    return even;
+}
+document.writeln("The number is even or not in arrow functions: ",iseven(6));
+
+
+document.writeln("<br><br>");
+
+
+// SetTimeout Function : is used to function can after some times
+
+const hellosettimeout = () => {
+    document.writeln("Hello, setTimeout funtion !, This display after 5 seconds")
+}
+setTimeout(()=> document.writeln("This display after 50 seconds") , 50000);
+
+// Learning Topics
+// Asynchronous, JavaScript is Asynchronous Language ,synchronous
+// Call Back Functions is used most !to perform Asynchronous function,or csll an api !
+//
  </pre>
 
    <h3>Javascript Output :</h3>

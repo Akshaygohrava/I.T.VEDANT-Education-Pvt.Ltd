@@ -22,7 +22,7 @@ function para(name) {
 // passing different values ... 
 para("Akshay Gohrava");
 document.writeln("<br>");
-para("Full-Stack");
+para("Full-Stack Developer");
 
 document.writeln("<br><br>");
 
@@ -84,7 +84,7 @@ document.writeln("The Number 75 is prime or Not :" ,isPrime(75));
 
 document.writeln("<br><br>");
 
-// Anonimous Functions In Javascriptd 
+// Anonimous Functions In Javascript
 
 const Anonimousfuns = function () {
     document.writeln("This is Anonimous Function , stored in Variable !")
@@ -143,4 +143,4 @@ setTimeout(()=> document.writeln("This display after 50 seconds") , 50000);
 // Learning Topics
 // Asynchronous, JavaScript is Asynchronous Language ,synchronous
 // Call Back Functions is used most !to perform Asynchronous function,or csll an api !
-// 
+//
