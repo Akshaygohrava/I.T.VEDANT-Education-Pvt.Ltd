@@ -1,7 +1,7 @@
 button {
-    background-color: aqua;
+    background-color: brown;
     border: none;
-    padding: 10px 13px;
+    padding: 13px 15px;
     border-radius: 10px;
     border: 1px solid red;
     transition: .5s;

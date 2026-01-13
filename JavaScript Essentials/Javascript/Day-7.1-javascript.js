@@ -1,0 +1,70 @@
+// Arrays & Objects
+// Array is collection of elements stored in variable 
+
+let arr = [22, 33, 54, true, 21, 'Helloarray', 37];
+document.writeln("Accessing Array with indexes [0],[1],[2] ....<br>");
+document.writeln(arr[0],arr[3],arr[5]);
+
+document.writeln("<br><br>");
+
+
+document.writeln("Checking array length : ", arr.length);
+
+document.writeln("<br><br>");
+
+let arr2 = [32, 40, 32, 55, 89, 54, 772];
+// for (let i = 0; i < arr2.length; i++) {
+//     document.writeln(arr2 ,"<br>");
+    
+// }
+// How to iterate in array
+for (const i of arr2) {
+    document.writeln(i);
+}
+document.writeln("<br><br>");
+
+// Array methods
+document.writeln("<h3>Array Methods </h3><br>");
+
+let arr3 = [233, 431, 433, 654, 213, 689, 900];
+for (const i of arr3) {
+    document.writeln(i)
+}
+document.writeln("<br><br>");
+document.writeln("Indexof method :", arr3.indexOf(43), "<br><br>");
+
+document.writeln("Push method :",arr3.push(31),arr3.push(300), arr3, "<br><br>")
+
+document.writeln("Pop method :",arr3.pop(), arr3, "<br>Remove one item from last<br><br>")
+
+document.writeln("Slice method :",arr3.slice(2,5), arr3, "<br><br>")
+
+// Spread Operator 
+// To merge two arrays 
+document.writeln("Spread Operator: ");
+let a = [33, 14, 67, 87, 42];
+let b = [93, 42, 57, 97, 65, ...a];
+document.writeln(b);
+
+
+// Rest Operator
+// to store all arguments in parameter , basic examole of rest 
+
+
+
+// Destructing Array & Objects 
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Note : Keep learning all concept from youtube everyday !
+// Typescript
