@@ -1,14 +1,21 @@
 button {
-    background-color: brown;
+    background-color: goldenrod;
     border: none;
     padding: 13px 15px;
     border-radius: 10px;
-    border: 1px solid red;
+    border: 2px solid red;
     transition: .5s;
 }
+body {
+    background-image: url('../Web Designing/images/photorealistic-view-tree-nature-with-branches-trunk.jpg');
+    background-size: cover;
+}
 button:hover {
-    background-color: red;
+    background-color: silver;
     color: black;
+    border: 2px solid goldenrod;
+    box-shadow: 3px 3px 6px black;
+    transform: scale(1.1);
 }
 button a {
     text-decoration: none;
@@ -24,7 +31,7 @@ button a {
 }
 h1 {
     text-align: center;
-    color: rgb(26, 219, 68);
+    color: chocolate;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 h2, h3, h4 {
