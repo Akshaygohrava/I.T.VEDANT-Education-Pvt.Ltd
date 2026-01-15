@@ -1,0 +1,53 @@
+
+// For Each Method
+// 3 parameter , first aaray, second gives index , third give whole array
+let a = [12, 50, 56, 100, 200];
+document.writeln("For Each Method : ");
+a.forEach((n) => {
+    document.writeln(n);
+});
+
+
+// Map Mthods
+// Map method has 3 parameter , can access, Element , index, and Array !
+document.writeln("<br><br> Map Method - Array Squares:");
+
+let arr = a.map((n) => n*n);
+document.writeln(arr);
+
+document.writeln("<br><br>");
+
+// Filter Method, returns new array based on Conditions 
+let arr2 = a.filter((n) => true);
+
+document.writeln("Fliter Methods, All Array : ",arr2, "<br><br>");
+
+// Filter based on condtions 
+let arr3 = a.filter((n) => n > 50);
+document.writeln("Fliter Methods, Based on Conditions , n > 50: ",arr3);
+// Create array , 10 items , filter array =< 40
+
+document.writeln("<br><br>");
+
+
+// First ans.map returns the square of an array, 
+//  seconds ans2 filter out square which is < 100, which is 4, 81
+let arr4 = [43, 65, 322, 2, 9, 200];
+let ans = arr4.map((n) => n * n);
+let ans2 = ans.filter((n) => n < 100);
+document.writeln("First find Square using map, then filter which is < 100 : ",ans2);
+
+document.writeln("<br><br>");
+
+
+// Reverse An Array
+let rev = arr4.reverse((n) => n);
+document.writeln("Reverse Method :",rev);
+
+
+
+
+
+
+
+

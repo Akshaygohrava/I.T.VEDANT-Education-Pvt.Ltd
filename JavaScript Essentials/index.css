@@ -6,7 +6,7 @@ button {
     border: 2px solid red;
     transition: .5s;
 }
-body {
+.body-bg-img {
     background-image: url('../Web Designing/images/photorealistic-view-tree-nature-with-branches-trunk.jpg');
     background-size: cover;
 }
