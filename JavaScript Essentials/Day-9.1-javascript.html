@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manuplation</title>
+</head>
+<body>
+    <h1>DOM Manuplation</h1>
+
+    
+    <h3>JavaScript File</h3>
+     <pre>
+          // DOM MANUPLATION
+
+// Window > Documents > Html > head > title > body ...
+
+// document.body.style    in console 
+
+document.body.style.backgroundColor = "green";
+
+document.getElementsByTagName("h2")[0].style.color = "blue";
+
+// By TAg Name
+let x = document.getElementsByTagName("h2")[1];
+x.style.color = "red";
+x.style.backgroundColor = "black";
+x.style.padding = "20px";
+x.style.fontFamily = "cursive";
+x.style.width = "50%";
+
+// By ID
+let y = document.getElementById('hello');
+y.style.backgroundColor = "yellow";
+y.style.padding =  "20px";
+y.style.width = "50%";
+y.style.fontFamily = "verdana";
+
+
+
+// Onclick Event
+
+function btnonclick() {
+    alert("I Alert When Button is clicked !"); 
+}
+
+// Chnage Styles by button click 
+
+function changestyle() {
+   let x = document.getElementsByTagName("h3")[2];
+   x.style.color = "white";
+x.style.backgroundColor = "blue";
+x.style.padding = "30px";
+x.style.fontFamily = "cursive";
+x.style.width = "80%";
+}
+
+
+// Text Chnage By onclick event 
+
+function textchange() {
+    let text = document.getElementById("para");
+    text.innerText = "Hello, I m Chnaged !";
+}
+
+
+// Change HTML Element p to h2 and color and Fontfamily
+
+function elementchange() {
+    let x = document.getElementById("para2");
+    x.innerHTML = "<h2>Hello, i chnage paragraph to heading , style</h2>";
+    x.style.fontFamily = "cursive";
+}
+     </pre>
+
+    <h3>JavaScript Output :</h3>
+
+    <h2 id="hello">Getelementbyid</h2>
+
+
+    <h2>Hello H2 tag , ByTagName</h2>
+
+    <button onclick="btnonclick()">Button onClick Function</button><br><br>
+
+
+    <h3>Hello, I chnage By button click </h3>
+    <button onclick="changestyle()">Style Change By Click Me</button><br><br>
+
+
+    <p id="para">This Text Will chnage !</p>
+    <button onclick="textchange()">Click Me to chnage the text </button>
+   
+    <p id="para2"> I will chnage paragraph to heading 2 !</p>
+    <button onclick="elementchange()">Click to paragraph to h2 and styles</button>
+   
+   
+   
+    <script src="./Javascript/Day-9.1-javascript.js"></script>
+</body>
+</html>
