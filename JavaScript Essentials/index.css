@@ -23,7 +23,7 @@ button a {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: white;
 }
-.container {
+.js-container {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -36,4 +36,25 @@ h1 {
 }
 h2, h3, h4 {
     text-align: center;
+}
+
+@media screen and (min-width:786px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .js-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+}
+
+
+
 }
