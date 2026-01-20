@@ -17,11 +17,11 @@ const in1=document.getElementById("inputbox1")
 let value =parseInt(in1.value)
 const p =document.getElementById("primePara")
 if(isPrime(value)){
-    p.textContent="number is prime "
+    p.textContent= `The Number ${in1.value} is Prime`
 
 }
 else{
-    p.textContent="Number is not prime"
+    p.textContent= `The Number ${in1.value} is Not Prime`
 }
 }
 

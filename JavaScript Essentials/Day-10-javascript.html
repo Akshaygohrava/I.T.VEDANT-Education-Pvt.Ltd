@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM MANUPLATION</title>
+    <title>DOM MANUPLATION 2.0</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <h1>DOM Manuplation</h1>
+    <h1>DOM Manuplation 2.0</h1>
 
     <input type="text" name="Input" id="change"><br><br>
 
@@ -26,13 +26,13 @@
     <h3 class="classname">Index 2</h3>
     <h3 class="classname">Index 3</h3>
 
-    <button class="classname()">Chnaeg By ClassName</button>
+    <button onclick="classname()">Change By ClassName</button>
     
     <p>**********************************</p>
 
      <p>Querty Selector</p>
      <p>Query Selector All</p>
-     <button onclick="queryselector()">QuerySelector</button>
+     <button onclick="queryselector()">QuerySelector & QuerySelectorAll</button>
 
      <p>**********************************</p>
       
@@ -42,7 +42,86 @@
         <li>css3</li>
         <li>javascript</li>
      </ul>
-     <button class="chnagecolor()">Chnage List Color</button>
+     <button onclick="changecolor()">Change List(ul) Children Color (li)</button>
+     <p>Note: I Make Through DOM Manuplation, and already done 2-3 year ago, make quick revise every Month , For better Grasp 1</p>
+     <h3>JavaScript File :</h3>
+     <pre style="margin: 20px;">
+        // DOM MANUPLATION
+
+// Changing attribute values
+
+function changeattri() {
+    const input = document.getElementById("change");
+    input.type = "number";
+    input.value = 123;
+}
+
+
+document.writeln("<br><br>");
+
+// Input value to text of paragraph
+
+function changevalue() {
+    let input = document.getElementById("input");
+    let para = document.getElementById("ans");
+    para.textContent = "My Name Is : " + input.value;
+    input.value = '';
+}
+
+document.writeln("<br><br>");
+
+// get By ClassName 
+function classname() {
+    let classname = document.getElementsByClassName("classname");
+    for (let i = 0; i < classname.length; i++) {
+        classname[i].style.color = "red";
+        classname[i].style.backgroundColor = "green";
+        classname[i].style.padding = "5px";
+        
+    }
+}
+
+document.writeln("<br><br>");
+
+// QuerySelect and QueryselectorAll
+    
+function queryselector() {
+    document.querySelectorAll("p").forEach(p => {
+        p.style.color = "blue";
+        p.style.fontSize = "1.3rem";
+    })
+}
+// OR Using Loop Also works same
+// function queryselector() {
+//     let querys = document.querySelectorAll("p");
+//     for (let i = 0; i < querys.length; i++) {
+//         querys[i].style.color = "yellow";
+//         querys[i].style.fontSize = "1.4rem";
+//     }
+// }
+
+
+document.writeln("<br><br>");
+
+
+// Chnage List Color
+function changecolor() {
+    const ul = document.querySelector(".list");
+    const listitems = ul.children;
+
+    for (let i = 0; i < listitems.length; i++) {
+            listitems[i].style.color = "gold";
+        listitems[i].style.textAlign = "center";
+        listitems[i].style.backgroundColor = "darkblue";
+        listitems[i].style.padding = "10px";
+        listitems[i].style.margin = "5px 0";
+        listitems[i].style.fontWeight = "bold";
+        listitems[i].style.borderRadius = "5px";
+        
+    }
+
+}
+     </pre>
 
     <script src="./Javascript/Day-10-javascript.js"></script>
 </body>

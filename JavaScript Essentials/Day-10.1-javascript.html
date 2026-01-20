@@ -67,6 +67,39 @@
 
         </main>
 
+        <h3 class="text-center">Javascript File :</h3>
+         
+        <pre class="m-3">
+  const isPrime=(n)=> {
+  let count = 0;
+  for (let i = 1; i <= n; i++) {
+    if (n % i == 0) {
+      count++;
+    }
+  }
+
+  return count == 2;
+}
+
+
+
+function checkPrime(){
+
+const in1=document.getElementById("inputbox1")
+let value =parseInt(in1.value)
+const p =document.getElementById("primePara")
+if(isPrime(value)){
+    p.textContent= `The Number ${in1.value} is Prime`
+
+}
+else{
+    p.textContent= `The Number ${in1.value} is Not Prime`
+}
+}
+
+
+    
+        </pre>
 
         <script src="./Javascript/Day-10.1-javascript.js"></script>
 

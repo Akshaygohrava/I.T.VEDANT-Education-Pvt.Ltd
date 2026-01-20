@@ -47,7 +47,7 @@ x.style.width = "80%";
 
 function textchange() {
     let text = document.getElementById("para");
-    text.innerText = "Hello, I m Chnaged !";
+    text.innerText = "Hello, I m Chnaged, Using InnerText ";
 }
 
 
@@ -55,6 +55,6 @@ function textchange() {
 
 function elementchange() {
     let x = document.getElementById("para2");
-    x.innerHTML = "<h2>Hello, i chnage paragraph to heading , style</h2>";
+    x.innerHTML = "<h2>Hello, i chnage paragraph to heading ,style, Using InnerHTML</h2>";
     x.style.fontFamily = "cursive";
 }
