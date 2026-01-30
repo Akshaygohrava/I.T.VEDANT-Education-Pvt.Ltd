@@ -25,19 +25,35 @@
         <main class="m-4">
             <form>
                <div class="mb-3">
-                <label for="" class="form-label">Name</label>
+                <label for="" class="form-label">Input 1</label>
                 <input
-                    type="text"
-                    class="form-control"
+                    type="number"
+                    class="form-control text-lg-center"
                     name=""
-                    id=""
+                    id="input1"
                     aria-describedby="helpId"
                     placeholder=""
                 />
-                <small id="helpId" class="form-text text-muted">Help text</small>
+                <div class="mb-3">
+                <label for="" class="form-label">Input 2</label>
+                <input
+                    type="number"
+                    class="form-control text-lg-center"
+                    name=""
+                    id="input2"
+                    aria-describedby="helpId"
+                    placeholder=""
+                />
             </div>
+            <h2 class="bg-info p-3 mb-4" id="output">Output :</h2>
+           
             </form>
-            
+             <div class="d-flex flex-wrap justify-content-evenly align-content-center">
+                <button type="button" class="btn btn-outline-danger" onclick="add()">Addition</button>
+                <button type="button" class="btn btn-outline-primary" onclick="sub()">Subtraction</button>
+                <button type="button" class="btn btn-outline-success" onclick="multi()">Multiplication</button>
+                <button type="button" class="btn btn-outline-secondary" onclick="div()">Division</button>
+            </div>
         </main>
 
 
@@ -58,7 +74,7 @@
 
         <script src="./Javascript/Day-10.2-javascript.js"></script>
         <!-- Bootstrap JavaScript Libraries -->
-        <script
+        <!-- <script
             src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
             integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
             crossorigin="anonymous"
@@ -68,6 +84,6 @@
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
-        ></script>
+        ></script> -->
     </body>
 </html>
