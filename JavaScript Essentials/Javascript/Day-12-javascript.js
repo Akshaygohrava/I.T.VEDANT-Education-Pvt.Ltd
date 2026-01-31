@@ -79,3 +79,7 @@ fetch('https://api.example.com/data/1', {
 fetch('https://api.example.com/data/1', {
   method: 'DELETE'
 });
+
+
+
+// Data Fetch from Restful APis

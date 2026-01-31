@@ -71,6 +71,16 @@ for (let h = 1; h <= 20; h++) {
 
 
 
+// For loop is used , when number of iteration is fixed 
+// while, when we dont know number of iterations
+// Do while, run atleast one time , even if condition is falsed !
+// Map method , Transform data & return new array.
+//  For In , return Indexs
+// For Of , Return Elements
+// For Each , Returns Index, elemnts
+
+
+
 
 
 
