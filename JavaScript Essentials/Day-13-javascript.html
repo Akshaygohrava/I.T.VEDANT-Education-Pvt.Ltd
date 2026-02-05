@@ -4,15 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>async Function</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <h1>Async Func & Fetch APi</h1>
 
+    <p>We Use async await, beacuase javascript is single threaded interpreted language , 
+        JavaScript is single-threaded - it can only do one thing at a time. Some tasks take time: e.g :Fetching data from a server</p>
+    
     <p>learn and print , fetch , fetch data and display data and afterward , 
         move to async wait functions !</p>
     
-
+    
     
     <script src="./Javascript/Day-13-javascript.js"></script>
+    <h3>JavaScript File</h3>
+    <pre>
+        // Fetch data from an API
+async function fetchUserData() {
+  console.log("Starting to fetch...");
+  
+  const response = await fetch('https://api.example.com/user'); // Wait for API
+  const user = await response.json(); // Wait for JSON conversion
+  
+  console.log("User data:", user);
+  console.log("Done!");
+}
+
+fetchUserData();
+console.log("I can run immediately - don't have to wait!");
+
+// Output
+Starting to fetch...
+I can run immediately - don't have to wait!
+User data: {name: "John", age: 30}
+Done!
+See? The last console.log didn't wait for the fetch to complete!
+    </pre>
 </body>
 </html>

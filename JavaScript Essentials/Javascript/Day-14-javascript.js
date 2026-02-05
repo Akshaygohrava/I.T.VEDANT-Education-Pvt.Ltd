@@ -1,6 +1,36 @@
 
 document.writeln("Hello, Promises <br><br><br>");
 
+
+// Promises ,first resolve and reject, then ..... then, catch , finally
+
+// Creating a Promise
+const myPromise = new Promise((resolve, reject) => {
+  const success = true; // Change to false to see reject
+  
+  // Simulating an async operation (e.g., API call, file read)
+  setTimeout(() => {
+    if (success) {
+      resolve("Operation successful! Data received.");
+    } else {
+      reject("Operation failed! Error occurred.");
+    }
+  }, 60000);
+});
+
+// Using the Promise
+myPromise
+  .then((result) => {
+    document.writeln("Success:", result); // Runs when promise resolves
+  })
+  .catch((error) => {
+    document.writeln("Error:", error); // Runs when promise rejects
+  })
+  .finally(() => {
+    document.writeln("Promise settled - cleanup done"); // Always runs
+  });
+
+
 // Fetch Returns Promise, Promise to solve or rejects
 // Promise All , Promise Any, Promise race ....
 
@@ -30,49 +60,6 @@ const p4 = new Promise((resolve) => setTimeout(() =>
 
 
 // Promise.allSettled([p3, p4]).then((data) => document.writeln(data));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // Types of Functions to Learns ......
 // function > anonimousy functs > arrow functions > Callbacks > fetch > async wait > promises 
