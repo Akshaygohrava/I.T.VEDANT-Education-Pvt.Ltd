@@ -14,9 +14,9 @@ Welcome to my comprehensive learning repository documenting my Full Stack Java D
 | Module | Topic | Status | Timeline | Key Technologies |
 |--------|-------|--------|----------|------------------|
 | **Module 1** | **Profile Building & Career Foundation** | ✅ Completed | November 2025 | LinkedIn, Resume, Portfolio |
-| **Module 2** | **Web Development Essentials** | 🟡 In Progress | December 2025 | HTML5, CSS3, Bootstrap |
-| **Module 3** | **JavaScript Essentials** | ⏳ Upcoming | January 2026 | JavaScript ES6+, DOM, APIs |
-| **Module 4** | **React Essentials** | ⏳ Upcoming | February 2026 | React.js, Hooks, Components |
+| **Module 2** | **Web Development Essentials** | ✅ Completed | December 2025 | HTML5, CSS3, Bootstrap |
+| **Module 3** | **JavaScript Essentials** | ✅ Completed | January 2026 | JavaScript ES6+, DOM, APIs |
+| **Module 4** | **React Essentials** | 🟡 In Progress | February 2026 | React.js, Hooks, Components |
 | **Module 5** | **SQL Deep Dive** | ⏳ Upcoming | March 2026 | MySQL, PostgreSQL, Queries |
 | **Module 6** | **Java Essentials** | ⏳ Upcoming | April 2026 | Core Java, OOP, Collections |
 | **Module 7** | **Mastering Spring Boot** | ⏳ Upcoming | May 2026 | Spring Boot, REST APIs |
@@ -27,161 +27,29 @@ Welcome to my comprehensive learning repository documenting my Full Stack Java D
 
 ---
 
-## 🛠️ Tech Stack & Skills
+## 🎯 Current Focus: Module 4 - React Essentials
 
-### **Frontend Development**
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Angular](https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white)
-
-### **Backend Development**
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Spring](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
-
-### **Database**
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-
-### **Tools & Platforms**
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-![VSCode](https://img.shields.io/badge/VSCode-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-![Eclipse](https://img.shields.io/badge/Eclipse-2C2255?style=for-the-badge&logo=eclipse&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-FF9900?style=for-the-badge&logo=amazon-aws&logoColor=white)
-
-### **Testing & DevOps**
-![JUnit](https://img.shields.io/badge/JUnit-25A162?style=for-the-badge&logo=junit5&logoColor=white)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-
----
-
-## 📁 Repository Structure
-
-```
-I.T.VEDANT-Education-Pvt.Ltd/
-│
-├── 📂 module-1-profile-building/
-│   ├── resume-templates/
-│   ├── linkedin-optimization/
-│   ├── personal-branding/
-│   └── career-strategy/
-│
-├── 📂 module-2-web-development/
-│   ├── html-projects/
-│   ├── css-frameworks/
-│   ├── javascript-basics/
-│   ├── responsive-design/
-│   ├── bootstrap-projects/
-│   └── mini-projects/
-│
-├── 📂 module-3-javascript-essentials/
-│   ├── es6-features/
-│   ├── dom-manipulation/
-│   ├── asynchronous-js/
-│   ├── api-integration/
-│   └── javascript-projects/
-│
-├── 📂 module-4-react-essentials/
-│   ├── components/
-│   ├── hooks/
-│   ├── routing/
-│   ├── state-management/
-│   └── react-projects/
-│
-├── 📂 module-5-sql-deep-dive/
-│   ├── sql-queries/
-│   ├── database-design/
-│   ├── normalization/
-│   ├── stored-procedures/
-│   └── database-projects/
-│
-├── 📂 module-6-java-essentials/
-│   ├── oop-concepts/
-│   ├── data-structures/
-│   ├── exception-handling/
-│   ├── collections-framework/
-│   └── java-projects/
-│
-├── 📂 module-7-spring-boot/
-│   ├── spring-core/
-│   ├── spring-mvc/
-│   ├── rest-apis/
-│   ├── spring-security/
-│   └── spring-boot-projects/
-│
-├── 📂 module-8-testing-java/
-│   ├── junit-tests/
-│   ├── mockito/
-│   ├── integration-tests/
-│   └── test-projects/
-│
-├── 📂 module-9-mongodb/
-│   ├── crud-operations/
-│   ├── aggregation/
-│   ├── indexing/
-│   └── nosql-projects/
-│
-├── 📂 module-10-angular/
-│   ├── components/
-│   ├── services/
-│   ├── routing/
-│   ├── forms/
-│   └── angular-projects/
-│
-├── 📂 module-11-aws/
-│   ├── ec2-deployments/
-│   ├── s3-storage/
-│   ├── rds-databases/
-│   ├── lambda-functions/
-│   └── aws-projects/
-│
-├── 📂 capstone-projects/
-│   ├── e-commerce-platform/
-│   ├── blog-management-system/
-│   ├── task-manager-app/
-│   ├── social-media-platform/
-│   └── real-time-chat-app/
-│
-├── 📂 resources/
-│   ├── cheat-sheets/
-│   ├── study-notes/
-│   ├── interview-prep/
-│   └── useful-links/
-│
-└── 📄 README.md
-```
-
----
-
-## 🎯 Current Focus: Module 2 - Web Development Essentials
-
-**Timeline:** December 2025  
+**Timeline:** February 2026  
 **Status:** 🟡 **Actively Learning**
 
 ### **Topics Being Covered:**
-- ✅ HTML5 Semantic Elements & Modern Structure
-- ✅ CSS3 Flexbox, Grid Layouts, and Animations
-- 🟡 Advanced CSS (Transitions, Transforms, Variables)
-- ⏳ JavaScript Fundamentals (ES6+ Features)
-- ⏳ DOM Manipulation & Event Handling
-- ⏳ Responsive Web Design Principles
-- ⏳ Bootstrap 5 Framework Mastery
-- ⏳ Git & GitHub Version Control
-- ⏳ Web Hosting with GitHub Pages
+- ✅ React Components & JSX Fundamentals
+- ✅ Props & State Management Basics
+- 🟡 React Hooks (useState, useEffect, useContext)
+- 🟡 Component Lifecycle & Side Effects
+- ⏳ Conditional Rendering & Lists
+- ⏳ Event Handling & Forms in React
+- ⏳ React Router & Navigation
+- ⏳ State Management with Context API
+- ⏳ Performance Optimization Techniques
 
 ### **Projects in Development:**
-1. **Personal Portfolio Website** - Live deployment on GitHub Pages
-2. **Responsive Restaurant Landing Page** - Mobile-first design
-3. **Interactive Calculator** - Vanilla JavaScript implementation
-4. **Weather Dashboard** - API integration practice
-5. **Task Management App** - Local storage implementation
-6. **E-commerce Product Gallery** - Filtering and sorting features
+1. **Todo Application with React Hooks** - State management with hooks
+2. **Weather App with API Integration** - Fetch data and display dynamically
+3. **E-commerce Product Listing** - Component composition and props
+4. **Blog Platform with React Router** - Multi-page navigation
+5. **Social Media Feed** - Advanced state management
+6. **Dashboard with Charts** - Data visualization with React
 
 ---
 
@@ -190,9 +58,9 @@ I.T.VEDANT-Education-Pvt.Ltd/
 ### **🎯 Module Completion Status**
 ```
 Profile Building    ██████████ 100%
-Web Development     ██████░░░░ 50%
-JavaScript          ░░░░░░░░░░ 0%
-React               ░░░░░░░░░░ 0%
+Web Development     ██████████ 100%
+JavaScript          ██████████ 100%
+React               ██████░░░░ 50%
 SQL                 ░░░░░░░░░░ 0%
 Java                ░░░░░░░░░░ 0%
 Spring Boot         ░░░░░░░░░░ 0%
@@ -209,33 +77,38 @@ AWS                 ░░░░░░░░░░ 0%
 - [x] CSS3 Fundamentals (Selectors, Box Model, Positioning)
 - [x] Flexbox & CSS Grid Layouts
 - [x] Basic Git Operations & Repository Management
+- [x] JavaScript ES6+ Features (Arrow Functions, Destructuring)
+- [x] DOM Manipulation & Event Listeners
+- [x] Asynchronous JavaScript (Promises, Async/Await)
+- [x] API Integration with Fetch/Axios
+- [x] Responsive Web Design Principles
+- [x] Bootstrap 5 Framework & Components
 
 ### **🟡 Currently Learning**
-- [ ] Advanced CSS (Animations, Transitions, Variables)
-- [ ] Bootstrap 5 Framework & Components
-- [ ] JavaScript Fundamentals (Variables, Functions, Loops)
-- [ ] DOM Manipulation & Event Listeners
-- [ ] Responsive Design (Media Queries, Mobile-First)
-- [ ] Version Control with Git Branching
+- [ ] React Components & JSX
+- [ ] Props & State Management
+- [ ] React Hooks (useState, useEffect, useContext)
+- [ ] Component Lifecycle & Side Effects
+- [ ] Conditional Rendering & List Rendering
+- [ ] Event Handling & Form Handling in React
+- [ ] React Router & Navigation
+- [ ] Context API & State Management
 
 ### **⏳ Upcoming Skills**
-- [ ] JavaScript ES6+ Features (Arrow Functions, Destructuring)
-- [ ] Asynchronous JavaScript (Promises, Async/Await)
-- [ ] API Integration with Fetch/Axios
-- [ ] React Components & State Management
+- [ ] Redux & Advanced State Management
+- [ ] React Performance Optimization
+- [ ] Testing React Components (Jest, React Testing Library)
+- [ ] SQL Database Fundamentals
 - [ ] Java Programming Fundamentals
 - [ ] Object-Oriented Programming Concepts
-- [ ] Database Design & SQL Queries
+- [ ] Database Design & Complex SQL Queries
 - [ ] Spring Boot REST API Development
 - [ ] Unit Testing with JUnit
 - [ ] MongoDB NoSQL Database Operations
 - [ ] Angular Framework & TypeScript
 - [ ] AWS Cloud Deployment
 
---- 
-Learning Experience : 
-Pre-study topics < Classes < Digital Learning : Video tutorial, Pdf Study, Quizs , Assignment = Mastering Module Topics & Modules !
-
+---
 
 ## 🏆 Projects Gallery
 
@@ -243,16 +116,16 @@ Pre-study topics < Classes < Digital Learning : Video tutorial, Pdf Study, Quizs
 | Project | Status | Technologies | Live Demo |
 |---------|--------|--------------|-----------|
 | **Personal Portfolio** | ✅ Completed | HTML5, CSS3, JavaScript | [Live Preview](https://akshaygohrava.github.io/I.T.VEDANT-Education-Pvt.Ltd/) |
-| **E-commerce Template** | 🟡 In Progress | HTML5, CSS3, Bootstrap | Coming Soon |
-| **Task Manager App** | ⏳ Planned | JavaScript, Local Storage | Coming Soon |
-| **Weather Dashboard** | ⏳ Planned | JavaScript, API Integration | Coming Soon |
-| **Blog Platform UI** | ⏳ Planned | HTML5, CSS3, Responsive | Coming Soon |
+| **JavaScript Projects** | ✅ Completed | JavaScript ES6+, DOM, APIs | Coming Soon |
+| **React Todo App** | 🟡 In Progress | React, Hooks, Local Storage | Coming Soon |
+| **Weather Dashboard** | 🟡 In Progress | React, API Integration | Coming Soon |
+| **E-commerce Platform** | ⏳ Planned | React, Redux, Routing | Coming Soon |
 
 ### **📂 Module Projects**
 - **Module 1:** Professional Resume Template
 - **Module 2:** 5+ Responsive Website Projects
-- **Module 3:** JavaScript Interactive Applications
-- **Module 4:** React Single Page Applications
+- **Module 3:** JavaScript Interactive Applications (Calculator, Todo, Weather App)
+- **Module 4:** React Single Page Applications (In Progress)
 - **Module 5:** Database-Driven Applications
 - **Module 6:** Java Console Applications
 - **Module 7:** Spring Boot REST APIs
@@ -319,7 +192,7 @@ Pre-study topics < Classes < Digital Learning : Video tutorial, Pdf Study, Quizs
 git clone https://github.com/akshaygohrava/I.T.VEDANT-Education-Pvt.Ltd.git
 
 # Navigate to specific module
-cd I.T.VEDANT-Education-Pvt.Ltd/module-2-web-development/
+cd I.T.VEDANT-Education-Pvt.Ltd/module-4-react-essentials/
 
 # View project structure
 tree -L 3
@@ -364,11 +237,12 @@ This repository is maintained for **educational purposes** as part of my learnin
 *"Education is not preparation for life; education is life itself."* – John Dewey
 
 ---
-**Last Updated:** December 2025  
-**Current Module:** Web Development Essentials  
-**Next Module Preview:** JavaScript Essentials (January 2026)
+**Last Updated:** February 2026  
+**Current Module:** React Essentials  
+**Next Module Preview:** SQL Deep Dive (March 2026)
 
 ---
+
 <div align="center">
 
 ### 🌟 **"The Expert in Anything Was Once a Beginner"** 🌟
