@@ -45,7 +45,7 @@
 
 // Fetch data from an API : Example !
 async function fetchUserData() {
-  document.writeln("Starting to fetch...<br><br>");
+  
   console.log("Starting to fetch...<br><br>");
   
   const response = await fetch('https://fakestoreapi.com/products'); // Wait for API
@@ -76,4 +76,19 @@ console.log("I can run immediately - don't have to wait!");
 //     return "Task 2"
 // }
 
+
+document.writeln("Starting to fetch...<br><br>");
+async function hello() {
+      try {
+        const fetching = await fetch("https://jsonplaceholder.typicode.com/todos/3");
+        const data = await fetching.json();
+        const name = document.getElementById("fetch");
+        name.innerText = `${JSON.stringify(data)}`
+           // document.writeln(data[0].title);
+      } catch (error) {
+        name.innerText = `This is Error : ${error}`
+      }
+}
+
+hello();
 
