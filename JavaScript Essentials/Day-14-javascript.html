@@ -82,6 +82,29 @@ const p4 = new Promise((resolve) => setTimeout(() =>
 // Practise, Practise, Practise ..........
 
 // Self Study, Only 12-14 lecture of Javascript and React , SO Study 2-3 w3 and practise more ......
+
+
+
+const newPromises = new Promise((resolve, reject) => {
+    const test = true;
+    setTimeout(() => {
+         if(test) {
+            resolve("The Query is Resolve");
+         }
+         else{
+            reject("The Query is Rejected !")
+         }
+    }, 2000)
+})
+
+newPromises
+.then(() => {
+    document.writeln("The Query is Solved, From Then")
+})
+.catch(() => {
+    document.writeln("The Query is Rejected from Catch!")
+})
+
   </pre>
 
 
