@@ -83,3 +83,42 @@ fetch('https://api.example.com/data/1', {
 
 
 // Data Fetch from Restful APis
+
+
+
+// A simple app that gets user data
+async function getUserData() {
+  try {
+    // 1. FETCH - Get user from API
+    const response = await fetch('https://jsonplaceholder.typicode.com/users/1');
+    
+    // 2. Check if response is ok
+    if (!response.ok) {
+      throw new Error('User not found');
+    }
+    
+    // 3. Parse JSON (also returns a promise!)
+    const user = await response.json();
+    
+    // 4. Use the data
+    document.writeln(`👤 User: ${user.name}<br>`);
+    document.writeln(`📧 Email: ${user.email}<br>`);
+    
+    // 5. Chain another request - get their posts
+    const postsResponse = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${user.id}`);
+    const posts = await postsResponse.json();
+    
+    document.writeln(`📝 Posts: ${posts.length}<br>`);
+    
+    return { user, posts };
+    
+  } catch(error) {
+    document.writeln("❌ Error: " + error.message + "<br>");
+  }
+}
+
+// Run it
+// getUserData();
+
+setTimeout(getUserData, 30000);
+
