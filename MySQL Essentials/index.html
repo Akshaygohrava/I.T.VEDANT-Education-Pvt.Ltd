@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySQL · beautiful cheatsheet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #f8faff 0%, #f0f4fa 100%);
+            font-family: 'Inter', 'Segoe UI', Roboto, system-ui, sans-serif;
+            padding: 2rem 1.5rem;
+            display: flex;
+            justify-content: center;
+            line-height: 1.5;
+        }
+
+        .cheat-container {
+            max-width: 1300px;
+            width: 100%;
+            background: rgba(255,255,255,0.75);
+            backdrop-filter: blur(2px);
+            border-radius: 2.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0,20,40,0.35), 0 4px 18px 0 rgba(0,0,0,0.06);
+            padding: 2.2rem 2rem;
+            border: 1px solid rgba(255,255,255,0.6);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.2rem;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: #0b2b4a;
+            border-bottom: 3px solid #2d6eb0;
+            padding-bottom: 0.6rem;
+        }
+
+        h1 span {
+            background: #1a3d5c;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 500;
+            padding: 0.4rem 1rem;
+            border-radius: 60px;
+            letter-spacing: normal;
+            margin-left: 10px;
+        }
+
+        .sub-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0.5rem;
+            margin-bottom: 2rem;
+            color: #2f4a6e;
+            font-weight: 500;
+            padding: 0 0.3rem;
+        }
+
+        .badge-group {
+            display: flex;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: white;
+            padding: 0.25rem 1.2rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            box-shadow: 0 4px 8px rgba(0,30,60,0.08);
+            color: #1b4b77;
+            border: 1px solid #cbdbe9;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 1.8rem;
+            margin-top: 1.8rem;
+        }
+
+        .card {
+            background: #ffffffd9;
+            backdrop-filter: blur(4px);
+            border-radius: 2rem;
+            padding: 1.6rem 1.5rem;
+            box-shadow: 0 10px 20px -5px rgba(24, 50, 80, 0.15);
+            border: 1px solid #ffffff;
+            transition: all 0.2s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 20px 30px -8px #1e3f5f33;
+            border-color: #b9d5f0;
+            background: white;
+        }
+
+        .card-header {
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+            color: #103a5e;
+            border-left: 7px solid #3a7bb5;
+            padding-left: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .card-header i {
+            font-size: 1.7rem;
+            color: #2e6a9e;
+        }
+
+        .sql-block {
+            background: #0e1f2f;
+            color: #e3f0fd;
+            border-radius: 1.3rem;
+            padding: 1rem 1.3rem;
+            font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            word-break: break-word;
+            tab-size: 2;
+            margin: 1.2rem 0;
+            border: 1px solid #2c4b6e;
+            box-shadow: inset 0 0 10px #0000001a;
+            overflow-x: auto;
+        }
+
+        .sql-block .keyword {
+            color: #ffb77c;
+            font-weight: 600;
+        }
+
+        .sql-block .string {
+            color: #a7e0a7;
+        }
+
+        .sql-block .comment {
+            color: #7a9bba;
+            font-style: italic;
+        }
+
+        .note {
+            background: #e5eff9;
+            padding: 0.6rem 1rem;
+            border-radius: 1.2rem;
+            color: #103a5e;
+            font-weight: 450;
+            margin: 1rem 0 0.5rem 0;
+            border-left: 4px solid #2e6a9e;
+            font-size: 0.95rem;
+        }
+
+        .flex-tag {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 0.8rem 0;
+        }
+
+        .pill {
+            background: #d1e3fa;
+            color: #0e3e62;
+            border-radius: 30px;
+            padding: 0.2rem 1rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px dashed #b3cce5;
+            margin: 1.5rem 0 0.5rem 0;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .caption {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #2c577b;
+            margin-top: 0.3rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #f3f8ff;
+            border-radius: 1.2rem;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+
+        th {
+            background: #1d3f60;
+            color: white;
+            font-weight: 600;
+            padding: 0.4rem 0.8rem;
+            font-size: 0.9rem;
+        }
+
+        td {
+            padding: 0.5rem 0.8rem;
+            border-bottom: 1px solid #cbdae9;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="cheat-container">
+        <h1>
+            ⚡ MySQL BASICS · cheatsheet
+            <span>v1.0</span>
+        </h1>
+        <div class="sub-meta">
+            <div class="badge-group">
+                <span class="badge">📦 DDL</span>
+                <span class="badge">🔐 constraints</span>
+                <span class="badge">🔗 foreign key</span>
+                <span class="badge">👁️ views</span>
+                <span class="badge">⚙️ procedure</span>
+            </div>
+            <div>🔥 normalization & relationships</div>
+        </div>
+
+        <!-- grid layout -->
+        <div class="grid">
+            <!-- CARD 1 : DATABASE BASICS -->
+            <div class="card">
+                <div class="card-header">🗄️ database & table</div>
+                <div class="sql-block"><span class="keyword">CREATE DATABASE</span> demodatabase;</div>
+                <div class="sql-block"><span class="keyword">USE</span> demodatabase;</div>
+                <div class="sql-block"><span class="keyword">SHOW TABLES</span>;</div>
+                <div class="note">⭐ select / switch database</div>
+                <div class="sql-block"><span class="keyword">CREATE TABLE</span> demotable ( <br>
+  &nbsp;&nbsp;Id <span class="keyword">INT PRIMARY KEY AUTO_INCREMENT</span>, <br>
+  &nbsp;&nbsp;Name <span class="keyword">VARCHAR(100) NOT NULL</span>, <br>
+  &nbsp;&nbsp;Email <span class="keyword">VARCHAR(100) UNIQUE NOT NULL</span>, <br>
+  &nbsp;&nbsp;Phone <span class="keyword">CHAR(10) NOT NULL</span> <br>
+);</div>
+                <div class="sql-block"><span class="keyword">DESC</span> demotable; &nbsp; <span class="comment">-- describe columns</span></div>
+                <div class="flex-tag"><span class="pill">🔍 AUTO_INCREMENT</span><span class="pill">🔒 NOT NULL</span><span class="pill">🆔 PRIMARY KEY</span></div>
+            </div>
+
+            <!-- CARD 2 : NORMALIZATION + RELATIONSHIPS -->
+            <div class="card">
+                <div class="card-header">📐 design & relationships</div>
+                <div class="note"><strong>Normalization</strong> · organize to reduce redundancy</div>
+                <ul style="margin-left:1.4rem; color:#1e3d5e; font-weight:450;">
+                    <li>🔹 <strong>1:1</strong> — person ↔ pan card</li>
+                    <li>🔹 <strong>1:N</strong> — school ↔ student</li>
+                    <li>🔹 <strong>N:N</strong> — customers ↔ products</li>
+                </ul>
+                <div class="note" style="margin-top:12px;">🔑 PRIMARY = NOT NULL + UNIQUE (one per table)<br>
+                🔗 FOREIGN KEY : link tables, many FKs allowed, references PK</div>
+                <div class="sql-block"><span class="keyword">CREATE TABLE</span> department (<br>
+  &nbsp;&nbsp;Id <span class="keyword">INT PRIMARY KEY</span>,<br>
+  &nbsp;&nbsp;Name <span class="keyword">VARCHAR(100) NOT NULL</span><br>);</div>
+                <div class="sql-block"><span class="keyword">CREATE TABLE</span> employee (<br>
+  &nbsp;&nbsp;Id <span class="keyword">INT PRIMARY KEY</span>,<br>
+  &nbsp;&nbsp;Name <span class="keyword">VARCHAR(100) NOT NULL</span>,<br>
+  &nbsp;&nbsp;Salary INT, Department_id INT,<br>
+  &nbsp;&nbsp;<span class="keyword">CONSTRAINT</span> emp_depart  <span class="comment">-- FK name</span><br>
+  &nbsp;&nbsp;<span class="keyword">FOREIGN KEY</span> (Department_id) <span class="keyword">REFERENCES</span> department(Id)<br>);</div>
+                <div class="sql-block"><span class="keyword">DESC</span> employee;</div>
+            </div>
+
+            <!-- CARD 3 : INSERTS + SCHOOL-STUDENT FK EXAMPLE -->
+            <div class="card">
+                <div class="card-header">📥 inserts & more FK</div>
+                <div class="sql-block"><span class="keyword">INSERT INTO</span> department <span class="keyword">VALUES</span> <br>(1, <span class="string">"I.T"</span>), (2, <span class="string">"H.R"</span>), (3, <span class="string">"OPERATION"</span>);<br>
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> department;</div>
+                <div class="sql-block"><span class="keyword">INSERT INTO</span> employee <span class="keyword">VALUES</span><br>(101, <span class="string">"A"</span>, 23000, 1),<br>(102, <span class="string">"B"</span>, 45000, 2),<br>(103, <span class="string">"C"</span>, 15000, 3);<br>
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> employee;</div>
+                <hr>
+                <div class="sql-block"><span class="keyword">CREATE TABLE</span> student ( Id <span class="keyword">INT PRIMARY KEY</span>, Name <span class="keyword">VARCHAR(50)</span> );</div>
+                <div class="sql-block"><span class="keyword">CREATE TABLE</span> school (<br>
+  &nbsp;&nbsp;Id <span class="keyword">INT PRIMARY KEY</span>,<br>
+  &nbsp;&nbsp;Name <span class="keyword">VARCHAR(100) NOT NULL</span>,<br>
+  &nbsp;&nbsp;student_id <span class="keyword">INT NOT NULL</span>,<br>
+  &nbsp;&nbsp;<span class="keyword">CONSTRAINT</span> school_student <br>
+  &nbsp;&nbsp;<span class="keyword">FOREIGN KEY</span> (student_id) <span class="keyword">REFERENCES</span> student(Id)<br>);</div>
+            </div>
+
+            <!-- CARD 4 : ALTER (modify table) -->
+            <div class="card">
+                <div class="card-header">✏️ ALTER table</div>
+                <div class="sql-block"><span class="comment">-- ADD column</span><br><span class="keyword">ALTER TABLE</span> student <span class="keyword">ADD COLUMN</span> address <span class="keyword">VARCHAR(250) NOT NULL</span>;</div>
+                <div class="sql-block"><span class="comment">-- DROP column</span><br><span class="keyword">ALTER TABLE</span> student <span class="keyword">DROP COLUMN</span> address;</div>
+                <div class="sql-block"><span class="comment">-- ADD AFTER another column</span><br><span class="keyword">ALTER TABLE</span> student <span class="keyword">ADD COLUMN</span> Marks <span class="keyword">INT AFTER</span> Email;</div>
+                <div class="sql-block"><span class="comment">-- ADD FIRST</span><br><span class="keyword">ALTER TABLE</span> student <span class="keyword">ADD COLUMN</span> Course_Id <span class="keyword">INT FIRST</span>;</div>
+                <div class="sql-block"><span class="comment">-- RENAME column</span><br><span class="keyword">ALTER TABLE</span> student <span class="keyword">RENAME COLUMN</span> DOB TO Date_of_Birth;</div>
+                <div class="sql-block"><span class="comment">-- MODIFY datatype</span><br><span class="keyword">ALTER TABLE</span> student <span class="keyword">MODIFY COLUMN</span> Age <span class="keyword">VARCHAR(100)</span>;</div>
+                <div class="sql-block"><span class="comment">-- ADD CONSTRAINT (e.g. UNIQUE)</span><br><span class="keyword">ALTER TABLE</span> student <span class="keyword">ADD CONSTRAINT</span> <span class="comment">-- (unique constraint)</span></div>
+            </div>
+
+            <!-- CARD 5 : CONSTRAINTS examples -->
+            <div class="card">
+                <div class="card-header">⚠️ CONSTRAINTS</div>
+                <div class="sql-block"><span class="keyword">CREATE TABLE</span> check_default (<br>
+  &nbsp;&nbsp;col_1 <span class="keyword">INT PRIMARY KEY AUTO_INCREMENT</span>,<br>
+  &nbsp;&nbsp;col_2 <span class="keyword">VARCHAR(100) NOT NULL</span>,<br>
+  &nbsp;&nbsp;col_3 <span class="keyword">CHAR(10) UNIQUE</span>,<br>
+  &nbsp;&nbsp;col_4 <span class="keyword">INT CHECK (col_1 > 3)</span>,<br>
+  &nbsp;&nbsp;col_5 <span class="keyword">INT DEFAULT 111</span><br>);</div>
+                <div class="sql-block"><span class="keyword">CREATE TABLE</span> check_constraints (<br>
+  &nbsp;&nbsp;Id <span class="keyword">INT PRIMARY KEY AUTO_INCREMENT</span>,<br>
+  &nbsp;&nbsp;Name <span class="keyword">VARCHAR(100) NOT NULL</span>,<br>
+  &nbsp;&nbsp;Phone <span class="keyword">CHAR(10) UNIQUE</span>,<br>
+  &nbsp;&nbsp;Email <span class="keyword">VARCHAR(50) UNIQUE NOT NULL</span>,<br>
+  &nbsp;&nbsp;Age <span class="keyword">INT CHECK (Age > 18)</span>,<br>
+  &nbsp;&nbsp;Date <span class="keyword">DATE DEFAULT (CURRENT_DATE)</span><br>);</div>
+                <div class="flex-tag"><span class="pill">✅ CHECK</span><span class="pill">🔁 DEFAULT</span><span class="pill">🔄 AUTO_INCREMENT</span></div>
+            </div>
+
+            <!-- CARD 6 : INDEX + VIEW -->
+            <div class="card">
+                <div class="card-header">⚡ INDEX & VIEW</div>
+                <div class="sql-block"><span class="comment">-- CREATE INDEX</span><br><span class="keyword">CREATE INDEX</span> demo <span class="keyword">ON</span> student (Id, Name, Age, Email);</div>
+                <div class="sql-block"><span class="comment">-- DROP INDEX</span><br><span class="keyword">ALTER TABLE</span> student <span class="keyword">DROP INDEX</span> demo;</div>
+                <div class="sql-block"><span class="comment">-- CREATE VIEW</span><br><span class="keyword">CREATE VIEW</span> demo_view <span class="keyword">AS</span> <span class="keyword">SELECT</span> Id, Name, Email, Age <span class="keyword">FROM</span> student;</div>
+                <div class="sql-block"><span class="keyword">DROP VIEW</span> demo_view;</div>
+                <div class="note">📌 views = virtual tables, simplify complex queries</div>
+            </div>
+
+            <!-- CARD 7 : STORED PROCEDURE -->
+            <div class="card">
+                <div class="card-header">📦 STORED PROCEDURE</div>
+                <div class="sql-block"><span class="keyword">DELIMITER //</span> <br>
+<span class="keyword">CREATE PROCEDURE</span> demo_procedure()<br>
+<span class="keyword">BEGIN</span><br>
+&nbsp;&nbsp;<span class="keyword">CREATE DATABASE</span> demo_db;<br>
+&nbsp;&nbsp;<span class="keyword">CREATE TABLE</span> demo_db.demo_table (<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Id <span class="keyword">INT AUTO_INCREMENT PRIMARY KEY</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Name <span class="keyword">VARCHAR(100) NOT NULL</span>,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Email <span class="keyword">VARCHAR(100) UNIQUE NOT NULL</span><br>
+&nbsp;&nbsp;);<br>
+&nbsp;&nbsp;<span class="keyword">INSERT INTO</span> demo_db.demo_table (Id, Name, Email)<br>
+&nbsp;&nbsp;<span class="keyword">VALUES</span> <br>
+&nbsp;&nbsp;(1, <span class="string">"Akshay Gohrava"</span>, <span class="string">"akshay@gmail.com"</span>),<br>
+&nbsp;&nbsp;(2, <span class="string">"Arjun Gohrava"</span>, <span class="string">"arjun@gmail.com"</span>);<br>
+&nbsp;&nbsp;<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> demo_db.demo_table;<br>
+<span class="keyword">END //</span> <br>
+<span class="keyword">DELIMITER</span> ;</div>
+                <div class="sql-block"><span class="keyword">CALL</span> demo_procedure;</div>
+                <div class="sql-block"><span class="keyword">DROP PROCEDURE</span> demo_procedure;</div>
+                <div class="flex-tag"><span class="pill">🧩 DELIMITER</span><span class="pill">📞 CALL</span></div>
+            </div>
+
+            <!-- CARD 8 : extra goodies / quick summary -->
+            <div class="card">
+                <div class="card-header">🔖 quick lookup</div>
+                <table>
+                    <tr><th>term</th><th>description</th></tr>
+                    <tr><td>AUTO_INCREMENT</td><td>auto fill increasing number</td></tr>
+                    <tr><td>UNIQUE</td><td>no duplicate values</td></tr>
+                    <tr><td>CHECK</td><td>condition must hold</td></tr>
+                    <tr><td>DEFAULT</td><td>fallback value</td></tr>
+                    <tr><td>PRIMARY KEY</td><td>NOT NULL + UNIQUE</td></tr>
+                    <tr><td>FOREIGN KEY</td><td>references other table</td></tr>
+                </table>
+                <div class="note" style="margin-top:0.8rem;">✨ one-to-one · one-to-many · many-to-many</div>
+                <div class="sql-block"><span class="comment">-- auto increment example</span><br>Id <span class="keyword">INT PRIMARY KEY AUTO_INCREMENT</span></div>
+            </div>
+        </div> <!-- end grid -->
+
+        <!-- footer extra line: show complete create db company etc -->
+        <hr style="margin: 2rem 0 1rem 0;">
+        <div class="two-col">
+            <div class="caption">⭐ COMPANY database snippet</div>
+            <div class="caption">⭐ INSERT + SELECT examples</div>
+        </div>
+        <div style="background: #e4eefa; border-radius: 1.5rem; padding: 1rem 1.5rem; display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
+            <div style="flex:1;">
+                <div class="sql-block" style="background: #1b2d3f;"><span class="keyword">CREATE DATABASE</span> company;<br>
+<span class="keyword">USE</span> company;<br>
+<span class="keyword">CREATE TABLE</span> department (<br> Id INT PRIMARY KEY, Name VARCHAR(100) NOT NULL );<br>
+<span class="keyword">CREATE TABLE</span> employee (<br> Id INT PRIMARY KEY, Name VARCHAR(100) NOT NULL,<br> Salary INT, Department_id INT,<br>
+<span class="keyword">CONSTRAINT</span> emp_depart <span class="keyword">FOREIGN KEY</span> (Department_id) <span class="keyword">REFERENCES</span> department(Id) );</div>
+            </div>
+            <div style="flex:1;">
+                <div class="sql-block" style="background: #1b2d3f;"><span class="keyword">INSERT INTO</span> department <span class="keyword">VALUES</span> (1, <span class="string">"I.T"</span>),(2,<span class="string">"H.R"</span>),(3,<span class="string">"OPERATION"</span>);<br>
+<span class="keyword">INSERT INTO</span> employee <span class="keyword">VALUES</span> (101,<span class="string">"A"</span>,23000,1), (102,<span class="string">"B"</span>,45000,2), (103,<span class="string">"C"</span>,15000,3);<br>
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> employee;</div>
+            </div>
+        </div>
+        <div style="margin-top: 2rem; font-size: 0.9rem; color: #365f85; border-top: 1px solid #b9d1e7; padding-top: 1.2rem; text-align: center;">
+            ⚡ MySQL basics · one-to-one · one-to-many · many-to-many · Foreign key · constraints · alter · indexing · view · procedure
+        </div>
+    </div> <!-- end cheat-container -->
+</body>
+</html>
