@@ -1,0 +1,36 @@
+Quick Console Setup Summary:
+Firestore Database → Click "Start Collection"
+
+Enter collection name: products → Add sample data → Save
+
+Click "Start Collection" → Enter: users → Add sample user → Save
+
+Click on the user you created → "Start Collection" → wishlist → Add item
+
+Click on user again → "Start Collection" → orders → Add order
+
+Set Security Rules:
+Go to Firestore Database → Rules tab → Replace with:
+
+text
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /products/{document} {
+      allow read: if true;
+      allow write: if false; // Only allow writes in development
+    }
+    
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+      
+      match /wishlist/{document} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+      
+      match /orders/{document} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
+    }
+  }
+}

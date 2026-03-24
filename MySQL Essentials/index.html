@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MySQL · beautiful cheatsheet</title>
+    <title>MySQL · Advanced Cheatsheet | DDL, Constraints, Procedures & More</title>
     <style>
         * {
             margin: 0;
@@ -12,89 +12,90 @@
         }
 
         body {
-            background: linear-gradient(145deg, #f8faff 0%, #f0f4fa 100%);
+            background: linear-gradient(145deg, #f4f9ff 0%, #eef2f8 100%);
             font-family: 'Inter', 'Segoe UI', Roboto, system-ui, sans-serif;
-            padding: 2rem 1.5rem;
+            padding: 2rem 1.8rem;
             display: flex;
             justify-content: center;
             line-height: 1.5;
         }
 
         .cheat-container {
-            max-width: 1300px;
+            max-width: 1400px;
             width: 100%;
-            background: rgba(255,255,255,0.75);
+            background: rgba(255,255,255,0.85);
             backdrop-filter: blur(2px);
             border-radius: 2.5rem;
-            box-shadow: 0 25px 50px -12px rgba(0,20,40,0.35), 0 4px 18px 0 rgba(0,0,0,0.06);
-            padding: 2.2rem 2rem;
-            border: 1px solid rgba(255,255,255,0.6);
+            box-shadow: 0 25px 45px -12px rgba(0,20,45,0.35);
+            padding: 2rem 2rem;
+            border: 1px solid rgba(255,255,255,0.7);
         }
 
         h1 {
-            font-size: 2.8rem;
+            font-size: 2.6rem;
             font-weight: 700;
             letter-spacing: -0.02em;
             margin-bottom: 0.2rem;
             display: flex;
             align-items: center;
             gap: 15px;
-            color: #0b2b4a;
+            color: #0a2a44;
             border-bottom: 3px solid #2d6eb0;
             padding-bottom: 0.6rem;
+            flex-wrap: wrap;
         }
 
         h1 span {
             background: #1a3d5c;
             color: white;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 500;
-            padding: 0.4rem 1rem;
-            border-radius: 60px;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
             letter-spacing: normal;
-            margin-left: 10px;
         }
 
         .sub-meta {
             display: flex;
             justify-content: space-between;
-            margin-top: 0.5rem;
+            margin-top: 0.7rem;
             margin-bottom: 2rem;
-            color: #2f4a6e;
+            color: #2c577b;
             font-weight: 500;
-            padding: 0 0.3rem;
+            flex-wrap: wrap;
+            gap: 12px;
         }
 
         .badge-group {
             display: flex;
-            gap: 0.8rem;
+            gap: 0.7rem;
             flex-wrap: wrap;
         }
 
         .badge {
             background: white;
             padding: 0.25rem 1.2rem;
-            border-radius: 30px;
-            font-size: 0.9rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
             font-weight: 600;
-            box-shadow: 0 4px 8px rgba(0,30,60,0.08);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
             color: #1b4b77;
             border: 1px solid #cbdbe9;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
             gap: 1.8rem;
-            margin-top: 1.8rem;
+            margin-top: 1.5rem;
         }
 
         .card {
-            background: #ffffffd9;
+            background: #ffffffea;
             backdrop-filter: blur(4px);
-            border-radius: 2rem;
+            border-radius: 1.8rem;
             padding: 1.6rem 1.5rem;
-            box-shadow: 0 10px 20px -5px rgba(24, 50, 80, 0.15);
+            box-shadow: 0 10px 20px -5px rgba(24, 50, 80, 0.1);
             border: 1px solid #ffffff;
             transition: all 0.2s ease;
         }
@@ -107,9 +108,9 @@
 
         .card-header {
             font-weight: 700;
-            font-size: 1.5rem;
+            font-size: 1.45rem;
             margin-bottom: 1.2rem;
-            color: #103a5e;
+            color: #0f3d62;
             border-left: 7px solid #3a7bb5;
             padding-left: 1rem;
             display: flex;
@@ -117,41 +118,24 @@
             gap: 0.6rem;
         }
 
-        .card-header i {
-            font-size: 1.7rem;
-            color: #2e6a9e;
-        }
-
         .sql-block {
             background: #0e1f2f;
             color: #e3f0fd;
-            border-radius: 1.3rem;
-            padding: 1rem 1.3rem;
+            border-radius: 1.2rem;
+            padding: 0.9rem 1.2rem;
             font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
-            font-size: 0.9rem;
-            line-height: 1.6;
+            font-size: 0.85rem;
+            line-height: 1.55;
             white-space: pre-wrap;
             word-break: break-word;
-            tab-size: 2;
-            margin: 1.2rem 0;
+            margin: 1rem 0;
             border: 1px solid #2c4b6e;
-            box-shadow: inset 0 0 10px #0000001a;
             overflow-x: auto;
         }
 
-        .sql-block .keyword {
-            color: #ffb77c;
-            font-weight: 600;
-        }
-
-        .sql-block .string {
-            color: #a7e0a7;
-        }
-
-        .sql-block .comment {
-            color: #7a9bba;
-            font-style: italic;
-        }
+        .sql-block .keyword { color: #ffb77c; font-weight: 600; }
+        .sql-block .string { color: #b5f0b0; }
+        .sql-block .comment { color: #7a9bba; font-style: italic; }
 
         .note {
             background: #e5eff9;
@@ -161,7 +145,7 @@
             font-weight: 450;
             margin: 1rem 0 0.5rem 0;
             border-left: 4px solid #2e6a9e;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
         }
 
         .flex-tag {
@@ -172,19 +156,18 @@
         }
 
         .pill {
-            background: #d1e3fa;
+            background: #d9eafb;
             color: #0e3e62;
             border-radius: 30px;
             padding: 0.2rem 1rem;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
-            letter-spacing: 0.01em;
         }
 
         hr {
             border: none;
-            border-top: 2px dashed #b3cce5;
-            margin: 1.5rem 0 0.5rem 0;
+            border-top: 2px dashed #bbd2e8;
+            margin: 1.3rem 0;
         }
 
         .two-col {
@@ -194,16 +177,16 @@
         }
 
         .caption {
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: #2c577b;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #1c557c;
             margin-top: 0.3rem;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            background: #f3f8ff;
+            background: #f5fafe;
             border-radius: 1.2rem;
             overflow: hidden;
             margin: 1rem 0;
@@ -213,201 +196,255 @@
             background: #1d3f60;
             color: white;
             font-weight: 600;
-            padding: 0.4rem 0.8rem;
-            font-size: 0.9rem;
+            padding: 0.4rem 0.7rem;
+            font-size: 0.85rem;
         }
 
         td {
-            padding: 0.5rem 0.8rem;
+            padding: 0.45rem 0.7rem;
             border-bottom: 1px solid #cbdae9;
+            font-size: 0.85rem;
         }
-
-        tr:last-child td {
-            border-bottom: none;
+        .accent-text {
+            background: #fef7e0;
+            border-radius: 1rem;
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            margin-top: 0.8rem;
+        }
+        .highlight-blue {
+            background: #e2effb;
+            border-radius: 20px;
+            padding: 0.2rem 0.8rem;
+            font-weight: 500;
+            display: inline-block;
         }
     </style>
 </head>
 <body>
-    <div class="cheat-container">
-        <h1>
-            ⚡ MySQL BASICS · cheatsheet
-            <span>v1.0</span>
-        </h1>
-        <div class="sub-meta">
-            <div class="badge-group">
-                <span class="badge">📦 DDL</span>
-                <span class="badge">🔐 constraints</span>
-                <span class="badge">🔗 foreign key</span>
-                <span class="badge">👁️ views</span>
-                <span class="badge">⚙️ procedure</span>
-            </div>
-            <div>🔥 normalization & relationships</div>
+<div class="cheat-container">
+    <h1>
+        🐬 MySQL MASTERY · cheatsheet
+        <span>v2.0 · advanced</span>
+    </h1>
+    <div class="sub-meta">
+        <div class="badge-group">
+            <span class="badge">📁 DDL & ALTER</span>
+            <span class="badge">🔗 FK & normalization</span>
+            <span class="badge">🧩 CONSTRAINTS</span>
+            <span class="badge">📊 GROUP BY / HAVING</span>
+            <span class="badge">⚡ PROCEDURE</span>
+            <span class="badge">🎯 LIKE / IN / BETWEEN</span>
         </div>
+        <div>🔥 1:1 · 1:N · N:N · indexes · views</div>
+    </div>
 
-        <!-- grid layout -->
-        <div class="grid">
-            <!-- CARD 1 : DATABASE BASICS -->
-            <div class="card">
-                <div class="card-header">🗄️ database & table</div>
-                <div class="sql-block"><span class="keyword">CREATE DATABASE</span> demodatabase;</div>
-                <div class="sql-block"><span class="keyword">USE</span> demodatabase;</div>
-                <div class="sql-block"><span class="keyword">SHOW TABLES</span>;</div>
-                <div class="note">⭐ select / switch database</div>
-                <div class="sql-block"><span class="keyword">CREATE TABLE</span> demotable ( <br>
+    <div class="grid">
+        <!-- CARD 1: DATABASE & TABLE FUNDAMENTALS (UPDATED) -->
+        <div class="card">
+            <div class="card-header">🗄️ CREATE & USE & DESCRIBE</div>
+            <div class="sql-block"><span class="keyword">CREATE DATABASE</span> demodatabase;</div>
+            <div class="sql-block"><span class="keyword">USE</span> demodatabase;   <span class="comment">-- select db to work</span></div>
+            <div class="sql-block"><span class="keyword">SHOW TABLES</span>;</div>
+            <div class="sql-block"><span class="keyword">CREATE TABLE</span> demotable ( <br>
   &nbsp;&nbsp;Id <span class="keyword">INT PRIMARY KEY AUTO_INCREMENT</span>, <br>
   &nbsp;&nbsp;Name <span class="keyword">VARCHAR(100) NOT NULL</span>, <br>
   &nbsp;&nbsp;Email <span class="keyword">VARCHAR(100) UNIQUE NOT NULL</span>, <br>
-  &nbsp;&nbsp;Phone <span class="keyword">CHAR(10) NOT NULL</span> <br>
-);</div>
-                <div class="sql-block"><span class="keyword">DESC</span> demotable; &nbsp; <span class="comment">-- describe columns</span></div>
-                <div class="flex-tag"><span class="pill">🔍 AUTO_INCREMENT</span><span class="pill">🔒 NOT NULL</span><span class="pill">🆔 PRIMARY KEY</span></div>
-            </div>
-
-            <!-- CARD 2 : NORMALIZATION + RELATIONSHIPS -->
-            <div class="card">
-                <div class="card-header">📐 design & relationships</div>
-                <div class="note"><strong>Normalization</strong> · organize to reduce redundancy</div>
-                <ul style="margin-left:1.4rem; color:#1e3d5e; font-weight:450;">
-                    <li>🔹 <strong>1:1</strong> — person ↔ pan card</li>
-                    <li>🔹 <strong>1:N</strong> — school ↔ student</li>
-                    <li>🔹 <strong>N:N</strong> — customers ↔ products</li>
-                </ul>
-                <div class="note" style="margin-top:12px;">🔑 PRIMARY = NOT NULL + UNIQUE (one per table)<br>
-                🔗 FOREIGN KEY : link tables, many FKs allowed, references PK</div>
-                <div class="sql-block"><span class="keyword">CREATE TABLE</span> department (<br>
-  &nbsp;&nbsp;Id <span class="keyword">INT PRIMARY KEY</span>,<br>
-  &nbsp;&nbsp;Name <span class="keyword">VARCHAR(100) NOT NULL</span><br>);</div>
-                <div class="sql-block"><span class="keyword">CREATE TABLE</span> employee (<br>
-  &nbsp;&nbsp;Id <span class="keyword">INT PRIMARY KEY</span>,<br>
-  &nbsp;&nbsp;Name <span class="keyword">VARCHAR(100) NOT NULL</span>,<br>
-  &nbsp;&nbsp;Salary INT, Department_id INT,<br>
-  &nbsp;&nbsp;<span class="keyword">CONSTRAINT</span> emp_depart  <span class="comment">-- FK name</span><br>
-  &nbsp;&nbsp;<span class="keyword">FOREIGN KEY</span> (Department_id) <span class="keyword">REFERENCES</span> department(Id)<br>);</div>
-                <div class="sql-block"><span class="keyword">DESC</span> employee;</div>
-            </div>
-
-            <!-- CARD 3 : INSERTS + SCHOOL-STUDENT FK EXAMPLE -->
-            <div class="card">
-                <div class="card-header">📥 inserts & more FK</div>
-                <div class="sql-block"><span class="keyword">INSERT INTO</span> department <span class="keyword">VALUES</span> <br>(1, <span class="string">"I.T"</span>), (2, <span class="string">"H.R"</span>), (3, <span class="string">"OPERATION"</span>);<br>
-<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> department;</div>
-                <div class="sql-block"><span class="keyword">INSERT INTO</span> employee <span class="keyword">VALUES</span><br>(101, <span class="string">"A"</span>, 23000, 1),<br>(102, <span class="string">"B"</span>, 45000, 2),<br>(103, <span class="string">"C"</span>, 15000, 3);<br>
-<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> employee;</div>
-                <hr>
-                <div class="sql-block"><span class="keyword">CREATE TABLE</span> student ( Id <span class="keyword">INT PRIMARY KEY</span>, Name <span class="keyword">VARCHAR(50)</span> );</div>
-                <div class="sql-block"><span class="keyword">CREATE TABLE</span> school (<br>
-  &nbsp;&nbsp;Id <span class="keyword">INT PRIMARY KEY</span>,<br>
-  &nbsp;&nbsp;Name <span class="keyword">VARCHAR(100) NOT NULL</span>,<br>
-  &nbsp;&nbsp;student_id <span class="keyword">INT NOT NULL</span>,<br>
-  &nbsp;&nbsp;<span class="keyword">CONSTRAINT</span> school_student <br>
-  &nbsp;&nbsp;<span class="keyword">FOREIGN KEY</span> (student_id) <span class="keyword">REFERENCES</span> student(Id)<br>);</div>
-            </div>
-
-            <!-- CARD 4 : ALTER (modify table) -->
-            <div class="card">
-                <div class="card-header">✏️ ALTER table</div>
-                <div class="sql-block"><span class="comment">-- ADD column</span><br><span class="keyword">ALTER TABLE</span> student <span class="keyword">ADD COLUMN</span> address <span class="keyword">VARCHAR(250) NOT NULL</span>;</div>
-                <div class="sql-block"><span class="comment">-- DROP column</span><br><span class="keyword">ALTER TABLE</span> student <span class="keyword">DROP COLUMN</span> address;</div>
-                <div class="sql-block"><span class="comment">-- ADD AFTER another column</span><br><span class="keyword">ALTER TABLE</span> student <span class="keyword">ADD COLUMN</span> Marks <span class="keyword">INT AFTER</span> Email;</div>
-                <div class="sql-block"><span class="comment">-- ADD FIRST</span><br><span class="keyword">ALTER TABLE</span> student <span class="keyword">ADD COLUMN</span> Course_Id <span class="keyword">INT FIRST</span>;</div>
-                <div class="sql-block"><span class="comment">-- RENAME column</span><br><span class="keyword">ALTER TABLE</span> student <span class="keyword">RENAME COLUMN</span> DOB TO Date_of_Birth;</div>
-                <div class="sql-block"><span class="comment">-- MODIFY datatype</span><br><span class="keyword">ALTER TABLE</span> student <span class="keyword">MODIFY COLUMN</span> Age <span class="keyword">VARCHAR(100)</span>;</div>
-                <div class="sql-block"><span class="comment">-- ADD CONSTRAINT (e.g. UNIQUE)</span><br><span class="keyword">ALTER TABLE</span> student <span class="keyword">ADD CONSTRAINT</span> <span class="comment">-- (unique constraint)</span></div>
-            </div>
-
-            <!-- CARD 5 : CONSTRAINTS examples -->
-            <div class="card">
-                <div class="card-header">⚠️ CONSTRAINTS</div>
-                <div class="sql-block"><span class="keyword">CREATE TABLE</span> check_default (<br>
-  &nbsp;&nbsp;col_1 <span class="keyword">INT PRIMARY KEY AUTO_INCREMENT</span>,<br>
-  &nbsp;&nbsp;col_2 <span class="keyword">VARCHAR(100) NOT NULL</span>,<br>
-  &nbsp;&nbsp;col_3 <span class="keyword">CHAR(10) UNIQUE</span>,<br>
-  &nbsp;&nbsp;col_4 <span class="keyword">INT CHECK (col_1 > 3)</span>,<br>
-  &nbsp;&nbsp;col_5 <span class="keyword">INT DEFAULT 111</span><br>);</div>
-                <div class="sql-block"><span class="keyword">CREATE TABLE</span> check_constraints (<br>
-  &nbsp;&nbsp;Id <span class="keyword">INT PRIMARY KEY AUTO_INCREMENT</span>,<br>
-  &nbsp;&nbsp;Name <span class="keyword">VARCHAR(100) NOT NULL</span>,<br>
-  &nbsp;&nbsp;Phone <span class="keyword">CHAR(10) UNIQUE</span>,<br>
-  &nbsp;&nbsp;Email <span class="keyword">VARCHAR(50) UNIQUE NOT NULL</span>,<br>
-  &nbsp;&nbsp;Age <span class="keyword">INT CHECK (Age > 18)</span>,<br>
-  &nbsp;&nbsp;Date <span class="keyword">DATE DEFAULT (CURRENT_DATE)</span><br>);</div>
-                <div class="flex-tag"><span class="pill">✅ CHECK</span><span class="pill">🔁 DEFAULT</span><span class="pill">🔄 AUTO_INCREMENT</span></div>
-            </div>
-
-            <!-- CARD 6 : INDEX + VIEW -->
-            <div class="card">
-                <div class="card-header">⚡ INDEX & VIEW</div>
-                <div class="sql-block"><span class="comment">-- CREATE INDEX</span><br><span class="keyword">CREATE INDEX</span> demo <span class="keyword">ON</span> student (Id, Name, Age, Email);</div>
-                <div class="sql-block"><span class="comment">-- DROP INDEX</span><br><span class="keyword">ALTER TABLE</span> student <span class="keyword">DROP INDEX</span> demo;</div>
-                <div class="sql-block"><span class="comment">-- CREATE VIEW</span><br><span class="keyword">CREATE VIEW</span> demo_view <span class="keyword">AS</span> <span class="keyword">SELECT</span> Id, Name, Email, Age <span class="keyword">FROM</span> student;</div>
-                <div class="sql-block"><span class="keyword">DROP VIEW</span> demo_view;</div>
-                <div class="note">📌 views = virtual tables, simplify complex queries</div>
-            </div>
-
-            <!-- CARD 7 : STORED PROCEDURE -->
-            <div class="card">
-                <div class="card-header">📦 STORED PROCEDURE</div>
-                <div class="sql-block"><span class="keyword">DELIMITER //</span> <br>
-<span class="keyword">CREATE PROCEDURE</span> demo_procedure()<br>
-<span class="keyword">BEGIN</span><br>
-&nbsp;&nbsp;<span class="keyword">CREATE DATABASE</span> demo_db;<br>
-&nbsp;&nbsp;<span class="keyword">CREATE TABLE</span> demo_db.demo_table (<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Id <span class="keyword">INT AUTO_INCREMENT PRIMARY KEY</span>,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Name <span class="keyword">VARCHAR(100) NOT NULL</span>,<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Email <span class="keyword">VARCHAR(100) UNIQUE NOT NULL</span><br>
-&nbsp;&nbsp;);<br>
-&nbsp;&nbsp;<span class="keyword">INSERT INTO</span> demo_db.demo_table (Id, Name, Email)<br>
-&nbsp;&nbsp;<span class="keyword">VALUES</span> <br>
-&nbsp;&nbsp;(1, <span class="string">"Akshay Gohrava"</span>, <span class="string">"akshay@gmail.com"</span>),<br>
-&nbsp;&nbsp;(2, <span class="string">"Arjun Gohrava"</span>, <span class="string">"arjun@gmail.com"</span>);<br>
-&nbsp;&nbsp;<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> demo_db.demo_table;<br>
-<span class="keyword">END //</span> <br>
-<span class="keyword">DELIMITER</span> ;</div>
-                <div class="sql-block"><span class="keyword">CALL</span> demo_procedure;</div>
-                <div class="sql-block"><span class="keyword">DROP PROCEDURE</span> demo_procedure;</div>
-                <div class="flex-tag"><span class="pill">🧩 DELIMITER</span><span class="pill">📞 CALL</span></div>
-            </div>
-
-            <!-- CARD 8 : extra goodies / quick summary -->
-            <div class="card">
-                <div class="card-header">🔖 quick lookup</div>
-                <table>
-                    <tr><th>term</th><th>description</th></tr>
-                    <tr><td>AUTO_INCREMENT</td><td>auto fill increasing number</td></tr>
-                    <tr><td>UNIQUE</td><td>no duplicate values</td></tr>
-                    <tr><td>CHECK</td><td>condition must hold</td></tr>
-                    <tr><td>DEFAULT</td><td>fallback value</td></tr>
-                    <tr><td>PRIMARY KEY</td><td>NOT NULL + UNIQUE</td></tr>
-                    <tr><td>FOREIGN KEY</td><td>references other table</td></tr>
-                </table>
-                <div class="note" style="margin-top:0.8rem;">✨ one-to-one · one-to-many · many-to-many</div>
-                <div class="sql-block"><span class="comment">-- auto increment example</span><br>Id <span class="keyword">INT PRIMARY KEY AUTO_INCREMENT</span></div>
-            </div>
-        </div> <!-- end grid -->
-
-        <!-- footer extra line: show complete create db company etc -->
-        <hr style="margin: 2rem 0 1rem 0;">
-        <div class="two-col">
-            <div class="caption">⭐ COMPANY database snippet</div>
-            <div class="caption">⭐ INSERT + SELECT examples</div>
+  &nbsp;&nbsp;Phone <span class="keyword">CHAR(10) NOT NULL</span> <br>);</div>
+            <div class="sql-block"><span class="keyword">DESC</span> demotable;  <span class="comment">-- describe table structure</span></div>
+            <div class="note">⭐ PRIMARY KEY = NOT NULL + UNIQUE · only one per table.<br>FOREIGN KEY links tables (many allowed).</div>
         </div>
-        <div style="background: #e4eefa; border-radius: 1.5rem; padding: 1rem 1.5rem; display: flex; flex-wrap: wrap; gap: 2rem; align-items: flex-start;">
-            <div style="flex:1;">
-                <div class="sql-block" style="background: #1b2d3f;"><span class="keyword">CREATE DATABASE</span> company;<br>
-<span class="keyword">USE</span> company;<br>
-<span class="keyword">CREATE TABLE</span> department (<br> Id INT PRIMARY KEY, Name VARCHAR(100) NOT NULL );<br>
-<span class="keyword">CREATE TABLE</span> employee (<br> Id INT PRIMARY KEY, Name VARCHAR(100) NOT NULL,<br> Salary INT, Department_id INT,<br>
+
+        <!-- CARD 2: NORMALIZATION + RELATIONSHIPS (ENHANCED) -->
+        <div class="card">
+            <div class="card-header">📐 normalization & relationships</div>
+            <div class="note"><strong>Normalization</strong> reduces redundancy & improves integrity</div>
+            <ul style="margin-left:1.3rem; color:#1e4a6e; font-weight:450;">
+                <li>🔹 <strong>1:1</strong> — person ↔ pan card</li>
+                <li>🔹 <strong>1:N</strong> — school ↔ student</li>
+                <li>🔹 <strong>N:N</strong> — customers ↔ products (junction table)</li>
+            </ul>
+            <div class="sql-block"><span class="keyword">CREATE TABLE</span> department (<br> Id <span class="keyword">INT PRIMARY KEY</span>, Name <span class="keyword">VARCHAR(100) NOT NULL</span> );<br>
+<span class="keyword">CREATE TABLE</span> employee(<br> Id <span class="keyword">INT PRIMARY KEY</span>, Name <span class="keyword">VARCHAR(100)</span>, Salary INT, Department_id INT,<br>
 <span class="keyword">CONSTRAINT</span> emp_depart <span class="keyword">FOREIGN KEY</span> (Department_id) <span class="keyword">REFERENCES</span> department(Id) );</div>
-            </div>
-            <div style="flex:1;">
-                <div class="sql-block" style="background: #1b2d3f;"><span class="keyword">INSERT INTO</span> department <span class="keyword">VALUES</span> (1, <span class="string">"I.T"</span>),(2,<span class="string">"H.R"</span>),(3,<span class="string">"OPERATION"</span>);<br>
-<span class="keyword">INSERT INTO</span> employee <span class="keyword">VALUES</span> (101,<span class="string">"A"</span>,23000,1), (102,<span class="string">"B"</span>,45000,2), (103,<span class="string">"C"</span>,15000,3);<br>
-<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> employee;</div>
-            </div>
+            <div class="flex-tag"><span class="pill">🔑 PK unique id</span><span class="pill">🔗 foreign key reference</span></div>
         </div>
-        <div style="margin-top: 2rem; font-size: 0.9rem; color: #365f85; border-top: 1px solid #b9d1e7; padding-top: 1.2rem; text-align: center;">
-            ⚡ MySQL basics · one-to-one · one-to-many · many-to-many · Foreign key · constraints · alter · indexing · view · procedure
+
+        <!-- CARD 3: REAL STUDENTS TABLE + INSERTS (from your dataset) -->
+        <div class="card">
+            <div class="card-header">📚 students dataset · real example</div>
+            <div class="sql-block"><span class="keyword">CREATE TABLE</span> students (<br>
+  student_id <span class="keyword">INT PRIMARY KEY</span>, name <span class="keyword">VARCHAR(50)</span>, age INT, gender <span class="keyword">VARCHAR(10)</span>,<br>
+  course <span class="keyword">VARCHAR(50)</span>, city <span class="keyword">VARCHAR(50)</span>, marks INT, admission_year INT );</div>
+            <div class="sql-block"><span class="comment">-- 15 sample rows (Amit, Priya, Rahul...)</span><br>
+<span class="keyword">INSERT INTO</span> students VALUES<br>
+(101,'Amit Sharma',21,'Male','Java','Mumbai',78,2023),<br>
+(102,'Priya Mehta',20,'Female','Python','Pune',85,2024),<br>
+(103,'Rahul Patil',22,'Male','Java','Mumbai',65,2022),<br>
+(104,'Sneha Joshi',21,'Female','Data Science','Delhi',92,2023);<br>
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">LIMIT</span> 5;</div>
+            <div class="note">📌 More rows: 15 total entries (Mumbai, Pune, Delhi etc) — check full dataset in footer.</div>
         </div>
-    </div> <!-- end cheat-container -->
+
+        <!-- CARD 4: ALTER TABLE (ALL MODIFICATIONS) -->
+        <div class="card">
+            <div class="card-header">✏️ ALTER table · column mastery</div>
+            <div class="sql-block"><span class="comment">-- ADD column</span><br><span class="keyword">ALTER TABLE</span> student <span class="keyword">ADD COLUMN</span> address <span class="keyword">VARCHAR(250) NOT NULL</span>;</div>
+            <div class="sql-block"><span class="comment">-- DROP column</span><br><span class="keyword">ALTER TABLE</span> student <span class="keyword">DROP COLUMN</span> address;</div>
+            <div class="sql-block"><span class="comment">-- ADD AFTER specific column</span><br><span class="keyword">ALTER TABLE</span> student <span class="keyword">ADD COLUMN</span> Marks <span class="keyword">INT AFTER</span> Email;</div>
+            <div class="sql-block"><span class="comment">-- ADD FIRST</span><br><span class="keyword">ALTER TABLE</span> student <span class="keyword">ADD COLUMN</span> Course_Id <span class="keyword">INT FIRST</span>;</div>
+            <div class="sql-block"><span class="comment">-- RENAME column</span><br><span class="keyword">ALTER TABLE</span> student <span class="keyword">RENAME COLUMN</span> DOB <span class="keyword">TO</span> Date_of_Birth;</div>
+            <div class="sql-block"><span class="comment">-- MODIFY datatype</span><br><span class="keyword">ALTER TABLE</span> student <span class="keyword">MODIFY COLUMN</span> Age <span class="keyword">VARCHAR(100)</span>;</div>
+            <div class="sql-block"><span class="comment">-- ADD CONSTRAINT (unique/check)</span><br><span class="keyword">ALTER TABLE</span> student <span class="keyword">ADD CONSTRAINT</span> unique_email <span class="keyword">UNIQUE</span>(Email);</div>
+        </div>
+
+        <!-- CARD 5: CONSTRAINTS (CHECK, DEFAULT, UNIQUE) + extra demo -->
+        <div class="card">
+            <div class="card-header">⚠️ advanced constraints</div>
+            <div class="sql-block"><span class="keyword">CREATE TABLE</span> check_constraints (<br>
+  Id <span class="keyword">INT PRIMARY KEY AUTO_INCREMENT</span>,<br>
+  Name <span class="keyword">VARCHAR(100) NOT NULL</span>, Phone <span class="keyword">CHAR(10) UNIQUE</span>,<br>
+  Email <span class="keyword">VARCHAR(50) UNIQUE NOT NULL</span>, Age <span class="keyword">INT CHECK (Age > 18)</span>,<br>
+  join_date <span class="keyword">DATE DEFAULT (CURRENT_DATE)</span> );</div>
+            <div class="sql-block"><span class="comment">-- Adding / dropping constraints via ALTER</span><br>
+<span class="keyword">ALTER TABLE</span> customers <span class="keyword">ADD PRIMARY KEY</span>(Id);<br>
+<span class="keyword">ALTER TABLE</span> customers <span class="keyword">DROP PRIMARY KEY</span>;<br>
+<span class="keyword">ALTER TABLE</span> customers <span class="keyword">ADD CONSTRAINT</span> chk_id <span class="keyword">CHECK</span> (Id > 999);<br>
+<span class="keyword">ALTER TABLE</span> customers <span class="keyword">DROP CONSTRAINT</span> chk_id;</div>
+            <div class="flex-tag"><span class="pill">✅ CHECK</span><span class="pill">🔁 DEFAULT</span><span class="pill">🔒 UNIQUE</span><span class="pill">🔄 AUTO_INCREMENT</span></div>
+        </div>
+
+        <!-- CARD 6: ORDER BY, GROUP BY, HAVING (New from your notes) -->
+        <div class="card">
+            <div class="card-header">📊 ORDER BY · GROUP BY · HAVING</div>
+            <div class="sql-block"><span class="comment">-- ORDER BY (ASC/DESC)</span><br>
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">ORDER BY</span> marks <span class="keyword">DESC</span>;<br>
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> city = 'Mumbai' <span class="keyword">ORDER BY</span> admission_year;</div>
+            <div class="sql-block"><span class="comment">-- GROUP BY + aggregate</span><br>
+<span class="keyword">SELECT</span> course, <span class="keyword">AVG</span>(marks) as avg_marks <span class="keyword">FROM</span> students <span class="keyword">GROUP BY</span> course;</div>
+            <div class="sql-block"><span class="comment">-- HAVING (filter groups)</span><br>
+<span class="keyword">SELECT</span> city, <span class="keyword">COUNT</span>(*) as total <span class="keyword">FROM</span> students <br>
+<span class="keyword">GROUP BY</span> city <span class="keyword">HAVING</span> <span class="keyword">COUNT</span>(*) > 2;</div>
+            <div class="note">💡 HAVING works on grouped data, WHERE on raw rows.</div>
+        </div>
+
+        <!-- CARD 7: LIKE, IN, BETWEEN, LIMIT (Pattern matching) -->
+        <div class="card">
+            <div class="card-header">🎯 pattern filters · LIKE / IN / BETWEEN</div>
+            <div class="sql-block"><span class="comment">-- LIKE wildcards</span><br>
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> name <span class="keyword">LIKE</span> <span class="string">"A%"</span>;   <span class="comment">-- starts with A</span><br>
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> name <span class="keyword">LIKE</span> <span class="string">"%a"</span>;   <span class="comment">-- ends with a</span><br>
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> name <span class="keyword">LIKE</span> <span class="string">"_a%"</span>; <span class="comment">-- second char = 'a'</span></div>
+            <div class="sql-block"><span class="comment">-- IN & BETWEEN</span><br>
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> course_id <span class="keyword">IN</span> (102,105,108);<br>
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> age <span class="keyword">BETWEEN</span> 20 <span class="keyword">AND</span> 22;<br>
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">LIMIT</span> 5;      <span class="comment">-- first 5 rows</span><br>
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">LIMIT</span> 1,3;  <span class="comment">-- skip 1, show 3</span></div>
+        </div>
+
+        <!-- CARD 8: STRING + AGGREGATE FUNCTIONS (UPPER, LOWER, CONCAT, LENGTH) -->
+        <div class="card">
+            <div class="card-header">🔤 string & built-in functions</div>
+            <div class="sql-block"><span class="keyword">SELECT</span> <span class="keyword">UPPER</span>(<span class="string">'mysql'</span>), <span class="keyword">LOWER</span>(<span class="string">'LEARN'</span>);<br>
+<span class="keyword">SELECT</span> name, <span class="keyword">LOWER</span>(name) as lower_name <span class="keyword">FROM</span> students;<br>
+<span class="keyword">SELECT</span> <span class="keyword">CONCAT</span>(name, <span class="string">' - '</span>, course) <span class="keyword">FROM</span> students;<br>
+<span class="keyword">SELECT</span> <span class="keyword">SUBSTRING</span>(<span class="string">'DATABASE'</span>, 1, 4);   <span class="comment">-- 'DATA'</span><br>
+<span class="keyword">SELECT</span> name, <span class="keyword">LENGTH</span>(name) <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> <span class="keyword">LENGTH</span>(name) > 10;<br>
+<span class="keyword">SELECT</span> <span class="keyword">AVG</span>(marks), <span class="keyword">SUM</span>(marks), <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> students;</div>
+            <div class="accent-text">📌 Aggregate: MIN, MAX, SUM, AVG, COUNT work great with GROUP BY</div>
+        </div>
+
+        <!-- CARD 9: INDEX & VIEW (performance + virtual tables) -->
+        <div class="card">
+            <div class="card-header">⚡ INDEX & VIEW</div>
+            <div class="sql-block"><span class="comment">-- CREATE INDEX (faster search)</span><br><span class="keyword">CREATE INDEX</span> idx_students_city <span class="keyword">ON</span> students(city, marks);<br>
+<span class="comment">-- DROP INDEX</span><br><span class="keyword">ALTER TABLE</span> students <span class="keyword">DROP INDEX</span> idx_students_city;<br>
+<span class="comment">-- CREATE VIEW (simplify complex queries)</span><br>
+<span class="keyword">CREATE VIEW</span> high_scorers <span class="keyword">AS</span> <span class="keyword">SELECT</span> name, course, marks <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> marks > 85;<br>
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> high_scorers;<br>
+<span class="keyword">DROP VIEW</span> high_scorers;</div>
+            <div class="note">🔍 Views are virtual tables — secure & reusable.</div>
+        </div>
+
+        <!-- CARD 10: STORED PROCEDURE (complete example) -->
+        <div class="card">
+            <div class="card-header">📦 STORED PROCEDURE · automation</div>
+            <div class="sql-block"><span class="keyword">DELIMITER //</span><br>
+<span class="keyword">CREATE PROCEDURE</span> get_mumbai_students()<br>
+<span class="keyword">BEGIN</span><br>
+&nbsp;&nbsp;<span class="keyword">SELECT</span> name, course, marks <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> city = <span class="string">'Mumbai'</span> <span class="keyword">ORDER BY</span> marks <span class="keyword">DESC</span>;<br>
+<span class="keyword">END //</span><br>
+<span class="keyword">DELIMITER</span> ;<br>
+<span class="keyword">CALL</span> get_mumbai_students();<br>
+<span class="keyword">DROP PROCEDURE</span> get_mumbai_students;</div>
+            <div class="sql-block"><span class="comment">-- procedure with parameters (optional)</span><br>
+<span class="keyword">CREATE PROCEDURE</span> filter_by_course(<span class="keyword">IN</span> course_name <span class="keyword">VARCHAR</span>(50))<br>
+<span class="keyword">BEGIN</span> <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> course = course_name; <span class="keyword">END</span> //<br>
+<span class="keyword">CALL</span> filter_by_course(<span class="string">'Java'</span>);</div>
+        </div>
+
+        <!-- CARD 11: company database snippet (department + employee FK) -->
+        <div class="card">
+            <div class="card-header">🏢 company schema · FK in action</div>
+            <div class="sql-block"><span class="keyword">CREATE DATABASE</span> company;<br>
+<span class="keyword">USE</span> company;<br>
+<span class="keyword">CREATE TABLE</span> department (Id <span class="keyword">INT PRIMARY KEY</span>, Name <span class="keyword">VARCHAR(100) NOT NULL</span>);<br>
+<span class="keyword">CREATE TABLE</span> employee (<br>
+  Id <span class="keyword">INT PRIMARY KEY</span>, Name <span class="keyword">VARCHAR(100)</span>, Salary INT, Department_id INT,<br>
+  <span class="keyword">CONSTRAINT</span> fk_dept <span class="keyword">FOREIGN KEY</span> (Department_id) <span class="keyword">REFERENCES</span> department(Id)<br>);<br>
+<span class="keyword">INSERT INTO</span> department <span class="keyword">VALUES</span> (1,<span class="string">'I.T'</span>),(2,<span class="string">'H.R'</span>),(3,<span class="string">'OPERATION'</span>);<br>
+<span class="keyword">INSERT INTO</span> employee <span class="keyword">VALUES</span> (101,<span class="string">'A'</span>,23000,1),(102,<span class="string">'B'</span>,45000,2),(103,<span class="string">'C'</span>,15000,3);<br>
+<span class="keyword">SELECT</span> e.Name, d.Name <span class="keyword">FROM</span> employee e <span class="keyword">JOIN</span> department d <span class="keyword">ON</span> e.Department_id = d.Id;</div>
+        </div>
+
+        <!-- CARD 12: Quick summary + Constraints Lookup -->
+        <div class="card">
+            <div class="card-header">📋 quick lookup · constraints & clauses</div>
+            <table>
+                <tr><th>Concept</th><th>Purpose</th></tr>
+                <tr><td>PRIMARY KEY</td><td>UNIQUE + NOT NULL, only one</td></tr>
+                <tr><td>FOREIGN KEY</td><td>References PK of another table</td></tr>
+                <tr><td>UNIQUE</td><td>No duplicate values</td></tr>
+                <tr><td>CHECK</td><td>Condition on values</td></tr>
+                <tr><td>DEFAULT</td><td>Fallback value if not provided</td></tr>
+                <tr><td>AUTO_INCREMENT</td><td>Auto-increment integer</td></tr>
+                <tr><td>GROUP BY</td><td>Groups rows for aggregation</td></tr>
+                <tr><td>HAVING</td><td>Filters after GROUP BY</td></tr>
+            </table>
+            <div class="note">✨ Many-to-many: bridge table with two foreign keys. Normalization avoids redundancy.</div>
+        </div>
+    </div> <!-- end grid -->
+
+    <hr>
+    <div class="two-col">
+        <div class="caption">📌 FULL STUDENTS TABLE (15 records) — quick reference</div>
+        <div class="caption">📌 CLAUSES SUMMARY: WHERE, ORDER BY, GROUP BY, HAVING</div>
+    </div>
+    <div style="background: #eef3fc; border-radius: 1.5rem; padding: 1rem 1.5rem; display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: flex-start; margin-top: 0.5rem;">
+        <div style="flex:1;">
+            <div class="sql-block" style="background: #112433;"><span class="comment">-- Additional students (complete set)</span><br>
+INSERT INTO students VALUES <br>
+(105,'Rohan Deshmukh',23,'Male','Python','Nagpur',70,2022),<br>
+(106,'Anjali Verma',20,'Female','Java','Pune',88,2024),<br>
+(107,'Karan Singh',24,'Male','Data Science','Delhi',60,2021),<br>
+(108,'Pooja Nair',22,'Female','Java','Mumbai',95,2023),<br>
+(109,'Vikas Gupta',21,'Male','Python','Bangalore',72,2024),<br>
+(110,'Neha Kulkarni',23,'Female','Java','Pune',81,2022);<br>
+SELECT city, COUNT(*) FROM students GROUP BY city HAVING COUNT(*) >= 2;</div>
+        </div>
+        <div style="flex:1;">
+            <div class="sql-block" style="background: #112433;"><span class="comment">-- Filtering examples with operators</span><br>
+SELECT * FROM students WHERE marks BETWEEN 80 AND 95 AND city IN ('Mumbai','Pune');<br>
+SELECT name, marks,<br>
+CASE WHEN marks >= 85 THEN 'Distinction' ELSE 'Average' END AS grade<br>
+FROM students LIMIT 8;<br>
+<span class="comment">-- String functions in action</span><br>
+SELECT UPPER(course), LENGTH(name), CONCAT(name, ' (', city, ')') FROM students;</div>
+        </div>
+    </div>
+    <div style="margin-top: 2rem; font-size: 0.85rem; color: #2b5d87; border-top: 1px solid #cbe0f0; padding-top: 1.2rem; text-align: center;">
+        🧠 MySQL complete: DDL · ALTER · CONSTRAINTS · JOINS · INDEXES · VIEWS · PROCEDURES · NORMALIZATION (1:1,1:N,N:N) · AGGREGATIONS
+    </div>
+</div>
 </body>
 </html>
