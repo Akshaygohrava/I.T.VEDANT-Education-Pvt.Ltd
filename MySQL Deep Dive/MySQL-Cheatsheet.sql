@@ -262,6 +262,31 @@ SELECT * FROM student WHERE City IN ("Mumbai", "Pune", "Nagpur"); -- All student
 
    SELECT * FROM students LIMIT 1, 3;  -- SKIP 1ST ROW DATA, AND THEN NEXT 3 DATA 
 
+
+  Different LIMIT commands:
+Command	Skip	Show	Result
+LIMIT 1	0	1	75000 (highest)
+LIMIT 1,1 or LIMIT 1 OFFSET 1	1	1	60000 (2nd highest)
+LIMIT 2,1 or LIMIT 1 OFFSET 2	2	1	55000 (3rd highest)
+LIMIT 0,3 or LIMIT 3 OFFSET 0	0	3	75000, 60000, 55000 (top 3)
+Simple Analogy 🎬
+Movie theater seats (in order of salary highest to lowest):
+
+Command	What it means
+LIMIT 1	Take first seat only
+LIMIT 1,1	Skip 1 seat, then take 1 seat
+LIMIT 3	Take first 3 seats
+LIMIT 2 OFFSET 1	Skip 1 seat, then take 2 seats
+One Line Summary
+LIMIT a,b = Skip 'a' rows, show 'b' rows
+LIMIT b OFFSET a = Show 'b' rows after skipping 'a' rows
+
+For 2nd highest salary: Skip the highest (1 row), show the next (1 row) → LIMIT 1,1 ✅
+  SELECT salary FROM employee ORDER BY salary DESC LIMIT 1 OFFSET 1;
+--                                      show 1 row, skip 1 row
+
+
+
 ************************************************************************************************
    FUNCTIONS IN MYSQL & SQL
 

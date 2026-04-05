@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MySQL · Advanced Cheatsheet | DDL, Constraints, Procedures & More</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>MySQL · Advanced Cheatsheet | Responsive Mobile Design</title>
     <style>
         * {
             margin: 0;
@@ -13,211 +13,311 @@
 
         body {
             background: linear-gradient(145deg, #f4f9ff 0%, #eef2f8 100%);
-            font-family: 'Inter', 'Segoe UI', Roboto, system-ui, sans-serif;
-            padding: 2rem 1.8rem;
-            display: flex;
-            justify-content: center;
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
+            padding: 1rem;
             line-height: 1.5;
+            min-height: 100vh;
         }
 
+        /* MAIN CONTAINER - FULLY RESPONSIVE */
         .cheat-container {
             max-width: 1400px;
             width: 100%;
-            background: rgba(255,255,255,0.85);
+            margin: 0 auto;
+            background: rgba(255,255,255,0.92);
             backdrop-filter: blur(2px);
-            border-radius: 2.5rem;
-            box-shadow: 0 25px 45px -12px rgba(0,20,45,0.35);
-            padding: 2rem 2rem;
-            border: 1px solid rgba(255,255,255,0.7);
+            border-radius: 2rem;
+            box-shadow: 0 20px 40px -12px rgba(0,20,45,0.25);
+            padding: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.8);
+            transition: all 0.2s ease;
         }
 
+        /* TYPOGRAPHY SCALING */
         h1 {
-            font-size: 2.6rem;
+            font-size: clamp(1.8rem, 6vw, 2.6rem);
             font-weight: 700;
             letter-spacing: -0.02em;
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.5rem;
             display: flex;
             align-items: center;
-            gap: 15px;
+            flex-wrap: wrap;
+            gap: 12px;
             color: #0a2a44;
             border-bottom: 3px solid #2d6eb0;
             padding-bottom: 0.6rem;
-            flex-wrap: wrap;
         }
 
         h1 span {
             background: #1a3d5c;
             color: white;
-            font-size: 1.1rem;
+            font-size: clamp(0.75rem, 3.5vw, 1rem);
             font-weight: 500;
-            padding: 0.3rem 1rem;
+            padding: 0.25rem 0.9rem;
             border-radius: 40px;
-            letter-spacing: normal;
+            white-space: nowrap;
         }
 
         .sub-meta {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            gap: 0.8rem;
             margin-top: 0.7rem;
-            margin-bottom: 2rem;
-            color: #2c577b;
-            font-weight: 500;
-            flex-wrap: wrap;
-            gap: 12px;
+            margin-bottom: 1.5rem;
         }
 
         .badge-group {
             display: flex;
-            gap: 0.7rem;
             flex-wrap: wrap;
+            gap: 0.6rem;
         }
 
         .badge {
             background: white;
-            padding: 0.25rem 1.2rem;
+            padding: 0.3rem 1rem;
             border-radius: 40px;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             font-weight: 600;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
             color: #1b4b77;
             border: 1px solid #cbdbe9;
+            white-space: nowrap;
         }
 
+        /* RESPONSIVE GRID: mobile first, then larger */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-            gap: 1.8rem;
-            margin-top: 1.5rem;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 1.2rem;
         }
 
+        /* tablets and up */
+        @media (min-width: 640px) {
+            .grid {
+                grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+                gap: 1.6rem;
+            }
+            body {
+                padding: 1.5rem;
+            }
+            .cheat-container {
+                padding: 1.8rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .grid {
+                gap: 1.8rem;
+            }
+            .cheat-container {
+                padding: 2rem;
+            }
+        }
+
+        /* CARD DESIGN */
         .card {
             background: #ffffffea;
             backdrop-filter: blur(4px);
-            border-radius: 1.8rem;
-            padding: 1.6rem 1.5rem;
-            box-shadow: 0 10px 20px -5px rgba(24, 50, 80, 0.1);
+            border-radius: 1.5rem;
+            padding: 1.2rem;
+            box-shadow: 0 8px 18px -6px rgba(24, 50, 80, 0.08);
             border: 1px solid #ffffff;
             transition: all 0.2s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
 
         .card:hover {
-            box-shadow: 0 20px 30px -8px #1e3f5f33;
+            box-shadow: 0 18px 28px -10px #1e3f5f33;
             border-color: #b9d5f0;
             background: white;
         }
 
         .card-header {
             font-weight: 700;
-            font-size: 1.45rem;
-            margin-bottom: 1.2rem;
+            font-size: clamp(1.2rem, 4vw, 1.45rem);
+            margin-bottom: 1rem;
             color: #0f3d62;
-            border-left: 7px solid #3a7bb5;
-            padding-left: 1rem;
+            border-left: 6px solid #3a7bb5;
+            padding-left: 0.8rem;
             display: flex;
             align-items: center;
-            gap: 0.6rem;
+            gap: 0.5rem;
+            flex-wrap: wrap;
         }
 
+        /* SQL BLOCK - MOBILE OPTIMIZED (overflow handling) */
         .sql-block {
             background: #0e1f2f;
             color: #e3f0fd;
-            border-radius: 1.2rem;
-            padding: 0.9rem 1.2rem;
+            border-radius: 1rem;
+            padding: 0.8rem;
             font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
-            font-size: 0.85rem;
-            line-height: 1.55;
+            font-size: 0.8rem;
+            line-height: 1.5;
             white-space: pre-wrap;
             word-break: break-word;
-            margin: 1rem 0;
+            margin: 0.8rem 0;
             border: 1px solid #2c4b6e;
             overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
         }
 
-        .sql-block .keyword { color: #ffb77c; font-weight: 600; }
-        .sql-block .string { color: #b5f0b0; }
-        .sql-block .comment { color: #7a9bba; font-style: italic; }
+        /* For extremely long lines, ensure scroll */
+        .sql-block::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .keyword { color: #ffb77c; font-weight: 600; }
+        .string { color: #b5f0b0; }
+        .comment { color: #7a9bba; font-style: italic; }
 
         .note {
             background: #e5eff9;
-            padding: 0.6rem 1rem;
-            border-radius: 1.2rem;
+            padding: 0.6rem 0.9rem;
+            border-radius: 1rem;
             color: #103a5e;
             font-weight: 450;
-            margin: 1rem 0 0.5rem 0;
+            margin: 0.8rem 0 0.3rem;
             border-left: 4px solid #2e6a9e;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
         }
 
         .flex-tag {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
-            margin: 0.8rem 0;
+            margin: 0.7rem 0;
         }
 
         .pill {
             background: #d9eafb;
             color: #0e3e62;
             border-radius: 30px;
-            padding: 0.2rem 1rem;
-            font-size: 0.8rem;
+            padding: 0.2rem 0.9rem;
+            font-size: 0.75rem;
             font-weight: 600;
         }
 
         hr {
             border: none;
             border-top: 2px dashed #bbd2e8;
-            margin: 1.3rem 0;
+            margin: 1.2rem 0;
         }
 
         .two-col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        @media (min-width: 640px) {
+            .two-col {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
         }
 
         .caption {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
             color: #1c557c;
-            margin-top: 0.3rem;
+            margin-top: 0.2rem;
         }
 
+        /* TABLE RESPONSIVE */
         table {
             width: 100%;
             border-collapse: collapse;
             background: #f5fafe;
-            border-radius: 1.2rem;
+            border-radius: 1rem;
             overflow: hidden;
-            margin: 1rem 0;
+            margin: 0.8rem 0;
+            display: block;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        @media (min-width: 560px) {
+            table {
+                white-space: normal;
+                display: table;
+            }
         }
 
         th {
             background: #1d3f60;
             color: white;
             font-weight: 600;
-            padding: 0.4rem 0.7rem;
-            font-size: 0.85rem;
+            padding: 0.5rem 0.6rem;
+            font-size: 0.75rem;
         }
 
         td {
-            padding: 0.45rem 0.7rem;
+            padding: 0.45rem 0.6rem;
             border-bottom: 1px solid #cbdae9;
-            font-size: 0.85rem;
+            font-size: 0.75rem;
         }
+
         .accent-text {
             background: #fef7e0;
             border-radius: 1rem;
-            padding: 0.5rem 1rem;
-            font-size: 0.85rem;
-            margin-top: 0.8rem;
+            padding: 0.5rem 0.9rem;
+            font-size: 0.8rem;
+            margin-top: 0.6rem;
         }
+
         .highlight-blue {
             background: #e2effb;
             border-radius: 20px;
-            padding: 0.2rem 0.8rem;
+            padding: 0.2rem 0.7rem;
             font-weight: 500;
             display: inline-block;
+            font-size: 0.75rem;
+        }
+
+        ul, .card ul {
+            margin-left: 1.2rem;
+            color: #1e4a6e;
+            font-weight: 450;
+            font-size: 0.85rem;
+        }
+
+        li {
+            margin-bottom: 0.2rem;
+        }
+
+        /* footer & additional data containers */
+        .extra-data {
+            background: #eef3fc;
+            border-radius: 1.3rem;
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 0.8rem;
+        }
+
+        .footer-note {
+            margin-top: 1.5rem;
+            font-size: 0.75rem;
+            color: #2b5d87;
+            border-top: 1px solid #cbe0f0;
+            padding-top: 1rem;
+            text-align: center;
+        }
+
+        /* Improve spacing for stacked elements */
+        .card .sql-block:last-child {
+            margin-bottom: 0;
+        }
+
+        /* touch targets */
+        .badge, .pill {
+            cursor: default;
         }
     </style>
 </head>
@@ -236,11 +336,14 @@
             <span class="badge">⚡ PROCEDURE</span>
             <span class="badge">🎯 LIKE / IN / BETWEEN</span>
         </div>
-        <div>🔥 1:1 · 1:N · N:N · indexes · views</div>
+        <div class="badge-group">
+            <span class="badge">🔥 1:1 · 1:N · N:N</span>
+            <span class="badge">📐 indexes & views</span>
+        </div>
     </div>
 
     <div class="grid">
-        <!-- CARD 1: DATABASE & TABLE FUNDAMENTALS (UPDATED) -->
+        <!-- CARD 1: DATABASE & TABLE FUNDAMENTALS -->
         <div class="card">
             <div class="card-header">🗄️ CREATE & USE & DESCRIBE</div>
             <div class="sql-block"><span class="keyword">CREATE DATABASE</span> demodatabase;</div>
@@ -255,11 +358,11 @@
             <div class="note">⭐ PRIMARY KEY = NOT NULL + UNIQUE · only one per table.<br>FOREIGN KEY links tables (many allowed).</div>
         </div>
 
-        <!-- CARD 2: NORMALIZATION + RELATIONSHIPS (ENHANCED) -->
+        <!-- CARD 2: NORMALIZATION + RELATIONSHIPS -->
         <div class="card">
             <div class="card-header">📐 normalization & relationships</div>
             <div class="note"><strong>Normalization</strong> reduces redundancy & improves integrity</div>
-            <ul style="margin-left:1.3rem; color:#1e4a6e; font-weight:450;">
+            <ul>
                 <li>🔹 <strong>1:1</strong> — person ↔ pan card</li>
                 <li>🔹 <strong>1:N</strong> — school ↔ student</li>
                 <li>🔹 <strong>N:N</strong> — customers ↔ products (junction table)</li>
@@ -270,7 +373,7 @@
             <div class="flex-tag"><span class="pill">🔑 PK unique id</span><span class="pill">🔗 foreign key reference</span></div>
         </div>
 
-        <!-- CARD 3: REAL STUDENTS TABLE + INSERTS (from your dataset) -->
+        <!-- CARD 3: STUDENTS TABLE + INSERTS -->
         <div class="card">
             <div class="card-header">📚 students dataset · real example</div>
             <div class="sql-block"><span class="keyword">CREATE TABLE</span> students (<br>
@@ -283,10 +386,10 @@
 (103,'Rahul Patil',22,'Male','Java','Mumbai',65,2022),<br>
 (104,'Sneha Joshi',21,'Female','Data Science','Delhi',92,2023);<br>
 <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">LIMIT</span> 5;</div>
-            <div class="note">📌 More rows: 15 total entries (Mumbai, Pune, Delhi etc) — check full dataset in footer.</div>
+            <div class="note">📌 More rows: 15 total entries (Mumbai, Pune, Delhi etc) — check full dataset below.</div>
         </div>
 
-        <!-- CARD 4: ALTER TABLE (ALL MODIFICATIONS) -->
+        <!-- CARD 4: ALTER TABLE -->
         <div class="card">
             <div class="card-header">✏️ ALTER table · column mastery</div>
             <div class="sql-block"><span class="comment">-- ADD column</span><br><span class="keyword">ALTER TABLE</span> student <span class="keyword">ADD COLUMN</span> address <span class="keyword">VARCHAR(250) NOT NULL</span>;</div>
@@ -298,7 +401,7 @@
             <div class="sql-block"><span class="comment">-- ADD CONSTRAINT (unique/check)</span><br><span class="keyword">ALTER TABLE</span> student <span class="keyword">ADD CONSTRAINT</span> unique_email <span class="keyword">UNIQUE</span>(Email);</div>
         </div>
 
-        <!-- CARD 5: CONSTRAINTS (CHECK, DEFAULT, UNIQUE) + extra demo -->
+        <!-- CARD 5: CONSTRAINTS -->
         <div class="card">
             <div class="card-header">⚠️ advanced constraints</div>
             <div class="sql-block"><span class="keyword">CREATE TABLE</span> check_constraints (<br>
@@ -314,7 +417,7 @@
             <div class="flex-tag"><span class="pill">✅ CHECK</span><span class="pill">🔁 DEFAULT</span><span class="pill">🔒 UNIQUE</span><span class="pill">🔄 AUTO_INCREMENT</span></div>
         </div>
 
-        <!-- CARD 6: ORDER BY, GROUP BY, HAVING (New from your notes) -->
+        <!-- CARD 6: ORDER BY, GROUP BY, HAVING -->
         <div class="card">
             <div class="card-header">📊 ORDER BY · GROUP BY · HAVING</div>
             <div class="sql-block"><span class="comment">-- ORDER BY (ASC/DESC)</span><br>
@@ -328,45 +431,45 @@
             <div class="note">💡 HAVING works on grouped data, WHERE on raw rows.</div>
         </div>
 
-        <!-- CARD 7: LIKE, IN, BETWEEN, LIMIT (Pattern matching) -->
+        <!-- CARD 7: LIKE, IN, BETWEEN, LIMIT -->
         <div class="card">
             <div class="card-header">🎯 pattern filters · LIKE / IN / BETWEEN</div>
             <div class="sql-block"><span class="comment">-- LIKE wildcards</span><br>
 <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> name <span class="keyword">LIKE</span> <span class="string">"A%"</span>;   <span class="comment">-- starts with A</span><br>
 <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> name <span class="keyword">LIKE</span> <span class="string">"%a"</span>;   <span class="comment">-- ends with a</span><br>
-<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> name <span class="keyword">LIKE</span> <span class="string">"_a%"</span>; <span class="comment">-- second char = 'a'</span></div>
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> name <span class="keyword">LIKE</span> <span class="string">"_a%"</span>;</div>
             <div class="sql-block"><span class="comment">-- IN & BETWEEN</span><br>
-<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> course_id <span class="keyword">IN</span> (102,105,108);<br>
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> student_id <span class="keyword">IN</span> (102,105,108);<br>
 <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> age <span class="keyword">BETWEEN</span> 20 <span class="keyword">AND</span> 22;<br>
-<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">LIMIT</span> 5;      <span class="comment">-- first 5 rows</span><br>
-<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">LIMIT</span> 1,3;  <span class="comment">-- skip 1, show 3</span></div>
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">LIMIT</span> 5;<br>
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">LIMIT</span> 1,3;</div>
         </div>
 
-        <!-- CARD 8: STRING + AGGREGATE FUNCTIONS (UPPER, LOWER, CONCAT, LENGTH) -->
+        <!-- CARD 8: STRING + AGGREGATE FUNCTIONS -->
         <div class="card">
             <div class="card-header">🔤 string & built-in functions</div>
             <div class="sql-block"><span class="keyword">SELECT</span> <span class="keyword">UPPER</span>(<span class="string">'mysql'</span>), <span class="keyword">LOWER</span>(<span class="string">'LEARN'</span>);<br>
 <span class="keyword">SELECT</span> name, <span class="keyword">LOWER</span>(name) as lower_name <span class="keyword">FROM</span> students;<br>
 <span class="keyword">SELECT</span> <span class="keyword">CONCAT</span>(name, <span class="string">' - '</span>, course) <span class="keyword">FROM</span> students;<br>
-<span class="keyword">SELECT</span> <span class="keyword">SUBSTRING</span>(<span class="string">'DATABASE'</span>, 1, 4);   <span class="comment">-- 'DATA'</span><br>
+<span class="keyword">SELECT</span> <span class="keyword">SUBSTRING</span>(<span class="string">'DATABASE'</span>, 1, 4);<br>
 <span class="keyword">SELECT</span> name, <span class="keyword">LENGTH</span>(name) <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> <span class="keyword">LENGTH</span>(name) > 10;<br>
 <span class="keyword">SELECT</span> <span class="keyword">AVG</span>(marks), <span class="keyword">SUM</span>(marks), <span class="keyword">COUNT</span>(*) <span class="keyword">FROM</span> students;</div>
             <div class="accent-text">📌 Aggregate: MIN, MAX, SUM, AVG, COUNT work great with GROUP BY</div>
         </div>
 
-        <!-- CARD 9: INDEX & VIEW (performance + virtual tables) -->
+        <!-- CARD 9: INDEX & VIEW -->
         <div class="card">
             <div class="card-header">⚡ INDEX & VIEW</div>
             <div class="sql-block"><span class="comment">-- CREATE INDEX (faster search)</span><br><span class="keyword">CREATE INDEX</span> idx_students_city <span class="keyword">ON</span> students(city, marks);<br>
 <span class="comment">-- DROP INDEX</span><br><span class="keyword">ALTER TABLE</span> students <span class="keyword">DROP INDEX</span> idx_students_city;<br>
-<span class="comment">-- CREATE VIEW (simplify complex queries)</span><br>
+<span class="comment">-- CREATE VIEW</span><br>
 <span class="keyword">CREATE VIEW</span> high_scorers <span class="keyword">AS</span> <span class="keyword">SELECT</span> name, course, marks <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> marks > 85;<br>
 <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> high_scorers;<br>
 <span class="keyword">DROP VIEW</span> high_scorers;</div>
             <div class="note">🔍 Views are virtual tables — secure & reusable.</div>
         </div>
 
-        <!-- CARD 10: STORED PROCEDURE (complete example) -->
+        <!-- CARD 10: STORED PROCEDURE -->
         <div class="card">
             <div class="card-header">📦 STORED PROCEDURE · automation</div>
             <div class="sql-block"><span class="keyword">DELIMITER //</span><br>
@@ -377,13 +480,13 @@
 <span class="keyword">DELIMITER</span> ;<br>
 <span class="keyword">CALL</span> get_mumbai_students();<br>
 <span class="keyword">DROP PROCEDURE</span> get_mumbai_students;</div>
-            <div class="sql-block"><span class="comment">-- procedure with parameters (optional)</span><br>
+            <div class="sql-block"><span class="comment">-- procedure with parameters</span><br>
 <span class="keyword">CREATE PROCEDURE</span> filter_by_course(<span class="keyword">IN</span> course_name <span class="keyword">VARCHAR</span>(50))<br>
 <span class="keyword">BEGIN</span> <span class="keyword">SELECT</span> * <span class="keyword">FROM</span> students <span class="keyword">WHERE</span> course = course_name; <span class="keyword">END</span> //<br>
 <span class="keyword">CALL</span> filter_by_course(<span class="string">'Java'</span>);</div>
         </div>
 
-        <!-- CARD 11: company database snippet (department + employee FK) -->
+        <!-- CARD 11: company schema -->
         <div class="card">
             <div class="card-header">🏢 company schema · FK in action</div>
             <div class="sql-block"><span class="keyword">CREATE DATABASE</span> company;<br>
@@ -397,9 +500,10 @@
 <span class="keyword">SELECT</span> e.Name, d.Name <span class="keyword">FROM</span> employee e <span class="keyword">JOIN</span> department d <span class="keyword">ON</span> e.Department_id = d.Id;</div>
         </div>
 
-        <!-- CARD 12: Quick summary + Constraints Lookup -->
+        <!-- CARD 12: Quick lookup -->
         <div class="card">
             <div class="card-header">📋 quick lookup · constraints & clauses</div>
+            <div style="overflow-x: auto;">
             <table>
                 <tr><th>Concept</th><th>Purpose</th></tr>
                 <tr><td>PRIMARY KEY</td><td>UNIQUE + NOT NULL, only one</td></tr>
@@ -411,18 +515,18 @@
                 <tr><td>GROUP BY</td><td>Groups rows for aggregation</td></tr>
                 <tr><td>HAVING</td><td>Filters after GROUP BY</td></tr>
             </table>
+            </div>
             <div class="note">✨ Many-to-many: bridge table with two foreign keys. Normalization avoids redundancy.</div>
         </div>
-    </div> <!-- end grid -->
+    </div>
 
     <hr>
     <div class="two-col">
         <div class="caption">📌 FULL STUDENTS TABLE (15 records) — quick reference</div>
         <div class="caption">📌 CLAUSES SUMMARY: WHERE, ORDER BY, GROUP BY, HAVING</div>
     </div>
-    <div style="background: #eef3fc; border-radius: 1.5rem; padding: 1rem 1.5rem; display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: flex-start; margin-top: 0.5rem;">
-        <div style="flex:1;">
-            <div class="sql-block" style="background: #112433;"><span class="comment">-- Additional students (complete set)</span><br>
+    <div class="extra-data">
+        <div class="sql-block" style="background: #112433;"><span class="comment">-- Additional students (complete set)</span><br>
 INSERT INTO students VALUES <br>
 (105,'Rohan Deshmukh',23,'Male','Python','Nagpur',70,2022),<br>
 (106,'Anjali Verma',20,'Female','Java','Pune',88,2024),<br>
@@ -431,18 +535,16 @@ INSERT INTO students VALUES <br>
 (109,'Vikas Gupta',21,'Male','Python','Bangalore',72,2024),<br>
 (110,'Neha Kulkarni',23,'Female','Java','Pune',81,2022);<br>
 SELECT city, COUNT(*) FROM students GROUP BY city HAVING COUNT(*) >= 2;</div>
-        </div>
-        <div style="flex:1;">
-            <div class="sql-block" style="background: #112433;"><span class="comment">-- Filtering examples with operators</span><br>
+
+        <div class="sql-block" style="background: #112433;"><span class="comment">-- Filtering examples with operators</span><br>
 SELECT * FROM students WHERE marks BETWEEN 80 AND 95 AND city IN ('Mumbai','Pune');<br>
 SELECT name, marks,<br>
 CASE WHEN marks >= 85 THEN 'Distinction' ELSE 'Average' END AS grade<br>
 FROM students LIMIT 8;<br>
 <span class="comment">-- String functions in action</span><br>
 SELECT UPPER(course), LENGTH(name), CONCAT(name, ' (', city, ')') FROM students;</div>
-        </div>
     </div>
-    <div style="margin-top: 2rem; font-size: 0.85rem; color: #2b5d87; border-top: 1px solid #cbe0f0; padding-top: 1.2rem; text-align: center;">
+    <div class="footer-note">
         🧠 MySQL complete: DDL · ALTER · CONSTRAINTS · JOINS · INDEXES · VIEWS · PROCEDURES · NORMALIZATION (1:1,1:N,N:N) · AGGREGATIONS
     </div>
 </div>
