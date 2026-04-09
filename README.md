@@ -1,3 +1,77 @@
+# 🌟 My Full Stack Java Developer Learning Journey
+
+![Course Banner](https://i.ytimg.com/vi/L4sOI8ffsqs/maxresdefault.jpg)
+
+Welcome to my comprehensive learning repository documenting my Full Stack Java Development journey at **I.T. VEDANT Education Pvt. Ltd.** This repository serves as a living portfolio of my growth, projects, and skills development throughout the course.
+
+## 🚀 Live Preview
+**[Click here to view the live portfolio →](https://akshaygohrava.github.io/I.T.VEDANT-Education-Pvt.Ltd/)**
+
+---
+
+## 📚 Course Overview & Roadmap
+
+| Module | Topic | Status | Timeline | Key Technologies |
+|--------|-------|--------|----------|------------------|
+| **Module 1** | **Profile Building & Career Foundation** | ✅ Completed | November 2025 | LinkedIn, Resume, Portfolio |
+| **Module 2** | **Web Development Essentials** | ✅ Completed | December 2025 | HTML5, CSS3, Bootstrap |
+| **Module 3** | **JavaScript Essentials** | ✅ Completed | January 2026 | JavaScript ES6+, DOM, APIs |
+| **Module 4** | **React Essentials** | ✅ Completed | February 2026 | React.js, Hooks, Components |
+| **Module 5** | **SQL Deep Dive** | ✅ Completed | March 2026 | MySQL, PostgreSQL, Queries |
+| **Module 6** | **Java Essentials** | 🟡 In Progress | April 2026 | Core Java, OOP, Collections |
+| **Module 7** | **Mastering Spring Boot** | ⏳ Upcoming | May 2026 | Spring Boot, REST APIs |
+| **Module 8** | **Mastering Testing in Java** | ⏳ Upcoming | June 2026 | JUnit, Mockito, TestNG |
+| **Module 9** | **NoSQL With MongoDB** | ⏳ Upcoming | July 2026 | MongoDB, Aggregation |
+| **Module 10** | **Angular** | ⏳ Upcoming | August 2026 | Angular, TypeScript, RxJS |
+| **Module 11** | **AWS** | ⏳ Upcoming | September 2026 | AWS EC2, S3, RDS, Lambda |
+
+---
+
+## 🎯 Current Focus: Module 6 - Java Essentials
+
+**Timeline:** April 2026  
+**Status:** 🟡 **Actively Learning (55% Complete)**
+
+### **Topics Being Covered:**
+- ✅ Java Fundamentals & Environment Setup
+- ✅ Data Types, Variables & Operators
+- ✅ Control Flow Statements (if-else, loops)
+- 🟡 Object-Oriented Programming (OOP) Concepts
+- 🟡 Inheritance & Polymorphism
+- 🟡 Encapsulation & Abstraction
+- ⏳ Exception Handling & Error Management
+- ⏳ Collections Framework (List, Set, Map)
+- ⏳ File I/O Operations
+- ⏳ Multithreading Basics
+- ⏳ JDBC Connection & Database Integration
+
+### **Projects in Development:**
+1. **Java Banking System** - OOP principles and file handling
+2. **Library Management System** - Collections and data structures
+3. **Student Information System** - Database integration with JDBC
+4. **Payroll Management System** - Business logic and calculations
+5. **Employee Attendance Tracker** - File I/O and data persistence
+6. **ATM Machine Simulation** - Exception handling and user interaction
+
+---
+
+## 📈 Learning Progress Dashboard
+
+### **🎯 Module Completion Status**
+Profile Building ██████████ 100% 
+Web Development ██████████ 100% 
+JavaScript ██████████ 100% 
+React ██████████ 100% 
+SQL ██████████ 100% 
+Java ██████░░░░ 55% 
+
+Spring Boot ░░░░░░░░░░ 0% 
+Testing ░░░░░░░░░░ 0% 
+MongoDB ░░░░░░░░░░ 0% 
+Angular ░░░░░░░░░░ 0% 
+AWS ░░░░░░░░░░ 0%
+
+Code
 
 ### **✅ Completed Skills**
 - [x] Professional Profile Building & Personal Branding
@@ -21,6 +95,9 @@
 - [x] Complex Queries (JOINs, Subqueries, Aggregate Functions)
 - [x] Database Design & Normalization
 - [x] JDBC Connection & Database Integration
+- [x] Java Fundamentals & Environment Setup
+- [x] Data Types, Variables & Operators
+- [x] Control Flow Statements (if-else, loops, switch)
 
 ### **🟡 Currently Learning**
 - [ ] Object-Oriented Programming (OOP) Concepts
@@ -133,51 +210,32 @@ cd I.T.VEDANT-Education-Pvt.Ltd/module-6-java-essentials/
 
 # View project structure
 tree -L 3
-
 For Fellow Learners:
 Each module contains organized learning materials
-
 Code examples are commented for better understanding
-
 Projects increase in complexity as modules progress
-
 Regular updates reflect current learning status
-
 🎓 Certification Path
 Upon completion of all modules, I will earn:
 
 I.T. VEDANT Full Stack Java Development Certificate
-
 NSDC Professional Certification (Planned)
-
 IBM Professional Certification (Planned)
-
 AWS Cloud Practitioner Certification (Planned)
-
 Spring Professional Certification (Planned)
-
 Oracle Certified Associate Java Programmer (Planned)
-
 🔄 Update Schedule
 Daily: Code commits and practice exercises
-
 Weekly: Project updates and module progress
-
 Monthly: New module completion and portfolio updates
-
 Quarterly: Major project deployments and skill assessments
-
 📄 Educational Purpose Notice
 This repository is maintained for educational purposes as part of my learning journey at I.T. VEDANT Education Pvt. Ltd. All code, projects, and documentation are created to:
 
 Document my learning progress
-
 Build a practical portfolio
-
 Share knowledge with the community
-
 Demonstrate skills to potential employers
-
 "Education is not preparation for life; education is life itself." – John Dewey
 
 Last Updated: April 2026
