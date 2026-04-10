@@ -310,6 +310,85 @@ SELECT SUBSTR("AKSAHY", 2, 4);  -- KASH
 SELECT LENGTH("FINDMYLENGTH");  -- LENGTH OF THE STRING
 SELECT * FROM students WHERE LENGTH(name) < 12;
 
+BUILT-IN FUNCTIONS : 
+
+-- Build -In FUnctions 
+DELIMITER $ 
+CREATE FUNCTION addition(a INT, b INT)
+RETURNS INT
+DETERMINISTIC 
+BEGIN
+     RETURN a+b;
+END$
+
+DELIMITER 
+
+SELECT addition(14, 70);   -- Calling Function
+-- OUTPUT : 84
+
+
+
+-- Build -In FUnctions 
+DELIMITER $
+
+CREATE FUNCTION is_even(n INT)
+RETURNS BOOLEAN
+DETERMINISTIC
+BEGIN 
+    RETURN n % 2 = 0;
+END$
+
+DELIMITER ;
+
+SELECT is_even(5); -- Calling Function
+
+
+-- Build -In FUnctions 
+DELIMITER $
+   CREATE FUNCTION student_marks(marks INT)
+   RETURNS TEXT
+   DETERMINISTIC
+   BEGIN 
+       IF marks>35 THEN 
+          RETURN "PASS";
+		ELSE 
+           RETURN "FAILS";
+           END IF;
+   END$
+DELIMITER ;
+
+-- Test with different marks
+SELECT student_marks(85);  -- Returns: PASS
+SELECT student_marks(35);  -- Returns: FAIL
+SELECT student_marks(20);  -- Returns: FAIL
+SELECT student_marks(100); -- Returns: PASS
+
+SELECT 
+    *, 
+    student_marks(marks) AS result
+FROM students;   -- USED IN A TABLE COLUMN NAMED marks 
+
+
+DELIMITER $
+
+CREATE FUNCTION grade(marks INT)
+RETURNS TEXT
+DETERMINISTIC
+BEGIN
+    IF marks BETWEEN 1 AND 35 THEN 
+        RETURN 'C';
+    ELSEIF marks BETWEEN 36 AND 75 THEN 
+        RETURN 'B';
+    ELSEIF marks BETWEEN 76 AND 100 THEN 
+        RETURN 'A';
+    ELSE 
+        RETURN 'INVALID MARKS';
+    END IF;
+END$
+
+DELIMITER ;
+
+SELECT grade(40); -- Retruns B
 
 ************************************************************************************************
 -- CREATE INDEXING
@@ -346,6 +425,20 @@ SELECT * FROM students WHERE LENGTH(name) < 12;
    CALL demo_procedure;
 
    DROP PROCEDURE demo_procedure;
+
+
+
+***********************************************************************************************
+
+TRIGGER :
+
+A trigger is like an automatic action that happens when something specific occurs in your database (INSERT, UPDATE, or DELETE).
+
+Think of it as: "When this happens, automatically do that.
+
+"Use a trigger when you want something to happen automatically every time someone INSERT, UPDATE, or DELETE data.
+
+
 
 
 
