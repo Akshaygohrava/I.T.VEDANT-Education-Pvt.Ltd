@@ -58,18 +58,19 @@ Welcome to my comprehensive learning repository documenting my Full Stack Java D
 ## 📈 Learning Progress Dashboard
 
 ### **🎯 Module Completion Status**
-Profile Building ██████████ 100% 
-Web Development ██████████ 100% 
-JavaScript ██████████ 100% 
-React ██████████ 100% 
-SQL ██████████ 100% 
-Java ██████░░░░ 55% 
-
-Spring Boot ░░░░░░░░░░ 0% 
-Testing ░░░░░░░░░░ 0% 
-MongoDB ░░░░░░░░░░ 0% 
-Angular ░░░░░░░░░░ 0% 
-AWS ░░░░░░░░░░ 0%
+```
+Profile Building    ██████████ 100%
+Web Development     ██████████ 100%
+JavaScript          ██████████ 100%
+React               ██████████ 100%
+SQL                 ██████████ 100%
+Java                █████      40%
+Spring Boot         ░░░░░░░░░░ 0%
+Testing             ░░░░░░░░░░ 0%
+MongoDB             ░░░░░░░░░░ 0%
+Angular             ░░░░░░░░░░ 0%
+AWS                 ░░░░░░░░░░ 0%
+```
 
 Code
 
@@ -206,44 +207,64 @@ Code
 git clone https://github.com/akshaygohrava/I.T.VEDANT-Education-Pvt.Ltd.git
 
 # Navigate to specific module
-cd I.T.VEDANT-Education-Pvt.Ltd/module-6-java-essentials/
+cd I.T.VEDANT-Education-Pvt.Ltd/module-4-react-essentials/
 
 # View project structure
 tree -L 3
-For Fellow Learners:
-Each module contains organized learning materials
-Code examples are commented for better understanding
-Projects increase in complexity as modules progress
-Regular updates reflect current learning status
-🎓 Certification Path
+```
+
+### **For Fellow Learners:**
+1. Each module contains organized learning materials
+2. Code examples are commented for better understanding
+3. Projects increase in complexity as modules progress
+4. Regular updates reflect current learning status
+
+---
+
+## 🎓 Certification Path
+
 Upon completion of all modules, I will earn:
+- **I.T. VEDANT Full Stack Java Development Certificate**
+- **NSDC Professional Certification** (Planned)
+- **IBM Professional Certification** (Planned)
+- **AWS Cloud Practitioner Certification** (Planned)
+- **Spring Professional Certification** (Planned)
 
-I.T. VEDANT Full Stack Java Development Certificate
-NSDC Professional Certification (Planned)
-IBM Professional Certification (Planned)
-AWS Cloud Practitioner Certification (Planned)
-Spring Professional Certification (Planned)
-Oracle Certified Associate Java Programmer (Planned)
-🔄 Update Schedule
-Daily: Code commits and practice exercises
-Weekly: Project updates and module progress
-Monthly: New module completion and portfolio updates
-Quarterly: Major project deployments and skill assessments
-📄 Educational Purpose Notice
-This repository is maintained for educational purposes as part of my learning journey at I.T. VEDANT Education Pvt. Ltd. All code, projects, and documentation are created to:
+---
 
-Document my learning progress
-Build a practical portfolio
-Share knowledge with the community
-Demonstrate skills to potential employers
-"Education is not preparation for life; education is life itself." – John Dewey
+## 🔄 Update Schedule
 
-Last Updated: April 2026
-Current Module: Java Essentials (55% Complete)
-Next Module Preview: Mastering Spring Boot (May 2026)
+- **Daily:** Code commits and practice exercises
+- **Weekly:** Project updates and module progress
+- **Monthly:** New module completion and portfolio updates
+- **Quarterly:** Major project deployments and skill assessments
+
+---
+
+## 📄 Educational Purpose Notice
+
+This repository is maintained for **educational purposes** as part of my learning journey at I.T. VEDANT Education Pvt. Ltd. All code, projects, and documentation are created to:
+- Document my learning progress
+- Build a practical portfolio
+- Share knowledge with the community
+- Demonstrate skills to potential employers
+
+*"Education is not preparation for life; education is life itself."* – John Dewey
+
+---
+**Last Updated:** February 2026  
+**Current Module:** React Essentials  
+**Next Module Preview:** SQL Deep Dive (March 2026)
+
+---
 
 <div align="center">
-🌟 "The Expert in Anything Was Once a Beginner" 🌟
-Every line of code is a step toward mastery
+
+### 🌟 **"The Expert in Anything Was Once a Beginner"** 🌟
+#### *Every line of code is a step toward mastery*
+  
 </div>
-Note: This README is a living document that evolves with my learning journey. Regular updates reflect new skills, projects, and insights gained throughout the Full Stack Java Development course at I.T. VEDANT Education Pvt. Ltd.
+
+---
+
+*Note: This README is a living document that evolves with my learning journey. Regular updates reflect new skills, projects, and insights gained throughout the Full Stack Java Development course at I.T. VEDANT Education Pvt. Ltd.*
