@@ -11,7 +11,7 @@ public class Operators {
 
     System.out.println("Enter Second Number :");
     int num2 = sc.nextInt();
-
+    
     System.out.println("Addition of Two Number : " + (num1+num2));
 
     System.out.println("Subtraction is :" + (num1 - num2));
