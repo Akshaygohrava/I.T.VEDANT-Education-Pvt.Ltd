@@ -1,0 +1,71 @@
+Projects I Have To Do
+
+1.An Full-Stack E-Commerece website - Done 
+
+2.An Intermidiate Java Project
+
+*if laptop starts lagging, i made a restart, and its working now smoothly... as fast also, 11/april/26
+
+test-1
+6.15 pe 94%
+13% used in 30MINS in Best Performance
+test-2
+6:45 pe 81%
+12% used in 30MINS in Best Performance
+Results = 25% Used in 1HOUR
+
+
+laptop is working well in charging , if pluged before , low than 20-30% 
+
+
+its working after 2030min loading time!
+once evrything is loaded , itswill working smooth ...
+reagentc /info
+reagentc /enable
+
+
+test
+5:11 pe 70%
+5:47 pe 42%
+6:17 pe 16%
+50% in 1 hr
+
+1.5hr worked only, in 96%, from 2hr to 1.5hr
+
+git config --global user.email "akshaygohrava@gmail.com"
+git config --global user.name "Akshay Gohrava"
+
+
+netstat -ano | findstr :8080
+
+taskkill /PID 11968 /F
+
+
+
+
+
+
+SQL Root Password
+Qwerty@1234
+
+1s blink timing
+
+1% per Min is charging used
+20% in 30Mins Used 
+2.5HR can used IN 100% Charging 
+
+
+Charging
+20% in 09.02pm
+45% at 09.32
+25% in 30Min Charging
+2Hr For 100% Charging
+After Vinay 
+6:25 pe 9%
+7:25 pe 60%
+50% charged in 1HRS
+Charging Used
+9:26 pe 80%
+9:56 pe ?/ 62%
+
+
