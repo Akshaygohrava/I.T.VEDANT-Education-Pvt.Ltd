@@ -1,0 +1,18 @@
+CSS media queries allow you to apply styles based on the characteristics of a device or the environment displaying the web page.
+
+CSS media queries are essential for creating responsive web pages.
+
+The CSS @media rule is used to add media queries to your style sheet.
+
+Example : 
+
+body {
+  background-color: red;
+}
+
+
+@media screen and (min-width: 600px) {
+  body {
+    background-color: yellow; 
+  }
+}

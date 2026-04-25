@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive-Image</title>
+    <style>
+       @media screen and (min-width: 700px)  {
+        .responsive-image {
+            height: 100vh;
+            width: 100vw;
+            background-image: url('https://images.unsplash.com/photo-1515705576963-95cad62945b6?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWlsa3klMjB3YXl8ZW58MHx8MHx8fDA%3D');
+            background-size: cover;
+        }
+        .below {
+            display: none;
+        }
+        .above {
+            text-align: center;
+        }
+       }
+
+       @media screen and (max-width: 700px)  {
+        .responsive-image {
+           height: 100vh;
+           width: 100vw;
+           background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTW8eaSFXG81Q6qwMsg7E3EYUnvi7aFlFNysA&s');  
+           background-size: cover;
+           background-repeat: no-repeat;         
+        }
+        .below {
+            text-align: center;
+        }
+        .above {
+            display: none;
+        }
+       }
+    </style>
+</head>
+<body>
+    <h1 class="below">Below 700px</h1>
+    <h1 class="above">Above 700px</h1>
+    <div class="responsive-image">
+
+    </div>
+</body>
+</html>

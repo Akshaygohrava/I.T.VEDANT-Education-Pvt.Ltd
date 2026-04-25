@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizza Palace - Code & Crust</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="./Images/pizza-shop.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./Stylesheets/style.css">
+  <link rel="stylesheet" href="./Stylesheets/responsive.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg p-3 navbar-dark bg-black home-navbar">
+    <div class="container">
+      <a class="navbar-brand fw-bold fs-3 text-dark text-white text-2" href="./index.html"><i class="fas fa-pizza-slice"></i> Pizza
+        Palace</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 onhover">
+          <li class="nav-item text-center">
+            <a class="nav-link active px-3 fs-5 text-danger" aria-current="page" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item text-center">
+            <a class="nav-link px-3 fs-5 text-primary" href="./menu.html">Menu</a>
+          </li>
+          <li class="nav-item text-center">
+            <a class="nav-link px-3 fs-5 text-warning" href="./about.html">About</a>
+          </li>
+          <li class="nav-item text-center">
+            <a class="nav-link px-3 fs-5 text-white text-navcolor" href="./contact.html">Contact</a>
+          </li>
+          <li class="nav-item dropdown text-center">
+            <a class="nav-link dropdown-toggle px-3 fs-5 text-center text-success" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Login
+            </a>
+            <ul class="dropdown-menu bg-primary">
+              <li><a class="dropdown-item fs-6 text-center text-black" href="./Login/sign-up.html">Sign Up</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item fs-6 text-center text-black" href="./Login/sign-in.html">Sign In</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container home">
+      <h1 class="text-white fw-bold display-3 h1-text-shadow">Welcome To Pizza Palace</h1>
+      <p class="fs-5 text-white h1-text-shadow mt-4 mt-lg-4">Authentic Italian Pizzas Baked to Perfection</p>
+      <div class="mt-4 mt-lg-5">
+        <a class="home-btn text-black home-btn1 bg-white fw-bold me-3 me-lg-5" href="./menu.html">View Menu</a>
+        <a class="home-btn text-black home-btn2 bg-warning fw-bold" href="./Login/sign-up.html">Order Now</a>
+      </div>
+  </div>
+  
+  <h1 class="text-danger mt-4 text-center fw-bolder h1-shadow">Our Signature Pizzas</h1><br><br>
+
+  <div class="container text-center s-pizzas">
+     <div class="card-img">
+      <img src="https://thumbs.dreamstime.com/b/genuine-italian-margherita-pizza-topped-fresh-basil-melted-mozzarella-vibrant-tomato-sauce-all-set-against-rustic-wood-370929038.jpg" alt="pizza-img">
+      <h5 class="fw-bold mt-3" style="color: rgb(236, 12, 12);">Margherita</h5>
+      <p class="text-muted mt-3">Fresh mozzarella, basil & tomato sauce</p>
+      <span class="badge bg-danger fs-6 mb-3">₹299</span>
+     </div>
+     <div class="card-img">
+      <img src="https://www.splenda.com/wp-content/uploads/2023/02/grilled-bbq-chicken-pizza-2000x1000.jpg" alt="pizza-img">
+      <h5 class="fw-bold mt-3" style="color: rgb(236, 12, 12);">BBQ Chicken</h5>
+      <p class="text-muted mt-3">Grilled chicken with BBQ sauce</p>
+      <span class="badge bg-danger fs-6 mb-3">₹380</span>
+     </div>
+     <div class="card-img">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.BNQJTBF5ZL72lwuYYNW-BgHaE8?rs=1&pid=ImgDetMain&o=7&rm=3" alt="pizza-img">
+      <h5 class="fw-bold mt-3" style="color: rgb(236, 12, 12);">Veggie Deluxe</h5>
+      <p class="text-muted mt-3">Bell peppers, onions, mushrooms & olives</p>
+      <span class="badge bg-danger fs-6 mb-3">₹329</span>
+     </div>
+     <div class="card-img">
+      <img src="https://img.freepik.com/premium-photo/loaded-pepperoni-pizza_1234738-188130.jpg" alt="pizza-img">
+      <h5 class="fw-bold mt-3" style="color: rgb(236, 12, 12);">Pepperoni</h5>
+      <p class="text-muted mt-3">Loaded with spicy pepperoni slices</p>
+      <span class="badge bg-danger fs-6 mb-3">₹349</span>
+     </div>
+  </div>
+
+  <section class="mt-4 mt-lg-5 py-5 section1">
+    <div class="container">
+      <h2 class="text-center text-white mb-5 fw-bold" style="font-size: 2.5rem;">Special Offers</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+           <div class="p-4 rounded-3 border-2 border-warning text-white" style="background: rgba(255,111,0,0.1); border-color: #ff6f00;">
+            <h4 class="fw-bold mb-2"><i class="bi bi-tag-fill me-2" style="color: #ff6f00;"></i>Buy 1 Get 1 Free</h4>
+            <p class="mb-3">On medium pizzas every Friday evening</p>
+            <small class="text-white">Valid on selected pizzas only. T&C apply</small>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="p-4 rounded-3 border-2 text-white" style="background: rgba(211,47,47,0.1); border-color: #d32f2f;">
+            <h4 class="fw-bold mb-2"><i class="bi bi-percent me-2" style="color: #d32f2f;"></i>50% Off Family Pack</h4>
+            <p class="mb-3">Large pizzas + sides on minimum order of ₹1000</p>
+            <small class="text-white">Limited time offer. Order now and enjoy!</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+ 
+  <section class="py-4 bg-white mt-lg-3 mt-3 whychooseus">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-4" style="color: #d32f2f; font-size: 2.5rem;">Why Choose Us</h2>
+      <div class="row card-main">
+        <div class="col-md-6 col-lg-4 text-center p-5 rounded-3 home-card1" style="background-color: azure;">
+          <i class="bi bi-fire fs-1" style="color: #ff6f00;"></i>
+           <h5 class="mt-3 fw-bold">Wood Fired Oven</h5>
+           <p class="text-muted mt-3">Authentic Italian pizzas baked in our traditional wood-fired oven</p>
+        </div>
+        <div class="col-md-6 col-lg-4 text-center p-5 rounded-3 home-card home-card1" style="background-color: antiquewhite;">
+          <i class="bi bi-heart fs-1" style="color: #d32f2f;"></i>
+          <h5 class="mt-3 fw-bold">Fresh Ingredients</h5>
+           <p class="text-muted mt-3">Only premium ingredients sourced locally and imported directly</p>      
+        </div>
+        <div class="col-md-6 col-lg-4 text-center p-5 rounded-3 home-card" style="background-color: bisque;">
+          <i class="bi bi-lightning-charge fs-1" style="color: #9c27b0;"></i>
+          <h5 class="mt-3 fw-bold">Fast Delivery</h5>
+           <p class="text-muted mt-3">Hot pizzas delivered to your doorstep in 30 minutes or less</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+      
+
+<footer class="bg-dark text-white mt-1">
+    <div class="container py-4">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <h4 class="text-danger mb-3">Pizza Palace</h4>
+          <p class="mb-4">Serving the most delicious, authentic Italian pizzas since 1995. Fresh ingredients, traditional recipes, and oven-baked perfection.</p>
+            <div class="d-flex gap-4">
+              <a href="#" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="text-white fs-4"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="text-white fs-4"><i class="bi bi-tiktok"></i></a>
+              <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+           <h4 class="text-warning mb-3"><i class="bi bi-geo-alt-fill me-2"></i>Our Locations</h4>
+           <p class="mb-2"><strong class="text-light">Main Branch</strong></p>
+           <p class="text-white-50 mb-3">Shop No. 5, Plot No. 263, Shri Narottom Niwas CHS. Ltd, Sion M</p>
+        
+           <p class="mb-2"><strong class="text-light">Pizza Express</strong></p>
+           <p class="text-white-50 mb-3">Ground Floor, VIOS Tower, B-02, off Eastern Freeway, Wadala East</p>
+        
+           <p class="mb-2"><strong class="text-light">Pizza Castle</strong></p>
+           <p class="text-white-50"> Shop no. 1, Kirti Kunj, 211/A, Deodhar Rd, Matunga East, Mumbai 400019</p>
+        </div>
+        
+        <div class="col-lg-4">
+          <h4 class="text-success mb-3"><i class="bi bi-clock-fill me-2"></i>Opening Hours</h4>
+          <div class="mb-3">
+          <p class="mb-1">Monday - Thursday</p>
+          <p class="text-white-50">11:00 AM - 12:00 AM</p>
+          </div>
+          <div class="mb-3">
+          <p class="mb-1">Friday - Saturday</p>
+          <p class="text-white-50">11:00 AM - 1:00 AM</p>
+          </div>
+          <div>
+          <p class="mb-1">Sunday</p>
+          <p class="text-white-50">12:00 PM - 10:00 PM</p>
+          </div>
+
+        </div>
+      </div>
+      
+      <div class="row mt-5 pt-4 border-top border-primary">
+      <div class="col-12">
+        <div class="d-flex align-items-center gap-3 justify-content-center">
+          <div class="text-center">
+            <p class="mb-0 fw-bold">Order Now</p>
+            <p class="mb-0 fs-5 text-warning">1800-208-1234</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col-12 text-center">
+        <p class="mb-0 text-white-50">&copy; 2026 Pizza Palace. All rights reserved. Made By Akshay Gohrava</p>
+      </div>
+    </div>
+
+
+    </div>
+</footer>
+
+</body>
+</html>

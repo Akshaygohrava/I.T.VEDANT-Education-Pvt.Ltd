@@ -1,0 +1,3 @@
+The target attribute specifies where to open the linked document when the user clicks on a hyperlink.
+
+<a href="https://example.com" target="_blank">Visit Example (New Tab)</a>

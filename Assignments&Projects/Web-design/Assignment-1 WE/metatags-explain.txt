@@ -1,0 +1,20 @@
+Meta tags are HTML elements that provide metadata (data about data) about a web document. They reside in the <head> section and are not displayed on the page but provide crucial information to browsers, search engines, and other web services.
+
+Some Useful Meta Tags :
+
+
+charset="UTF-8"
+
+viewport for mobile
+
+title tag
+
+description meta
+
+og:title, og:description, og:image
+
+twitter:card, twitter:title
+
+theme-color
+
+X-UA-Compatible.

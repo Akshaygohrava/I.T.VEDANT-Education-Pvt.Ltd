@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <style>
+        h3 {
+            padding-top: 15px;
+        }
+        .forum {
+            background-color: white;
+            padding: 10px;
+            width: 400px;
+            margin: 5px auto;
+            margin-top: 4%  !important;
+            box-shadow: 2px 2px 4px black;
+        }
+        body {
+            height: 100vh !important;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly !important;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h3><a class="text-decoration-none p-2 mt-5 ms-5 text-center" href="./home.html">Home</a></h3>
+    
+    <div class="mt-3 forum d-flex justify-content-center align-items-center">
+      
+        <form>
+        <h3 class="text-center">Registration</h3>
+        <div class="d-flex flex-column">
+        <label for="username">Username: </label>
+        <input class="w-100" type="text" placeholder="Enter Username" name="username" id="username" required><br>
+        <label for="email">Email Id: </label>
+        <input type="email" placeholder="Enter a valid email adr..." name="email" id="email" required><br>
+        <label for="password">Password: </label>
+        <input type="password" name="password" id="password" required><br>
+        <label for="c-password">Confirm Password: </label>
+        <input type="password" name="c-password" id="c-password" required><br>
+        <input class="bg-primary p-1 ps-3 pe-3 text-white border-0" type="submit" value="Register">
+        <br>
+      <p>Already User? <a class="text-decoration-none" href="./login.html"><span class="text-primary">Login</span></a></p>
+        </div>
+    </form>
+    </div>
+    
+</body>
+</html>

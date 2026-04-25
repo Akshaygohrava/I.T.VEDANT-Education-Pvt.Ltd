@@ -1,0 +1,21 @@
+Inline CSS
+CSS styles applied directly to an HTML element using the style attribute.
+
+Example : 
+<h1 style="color: blue; font-size: 24px; margin: 10px;">Hello World</h1>
+<p style="background-color: yellow; padding: 15px;">This is a paragraph.</p>
+
+
+External CSS
+CSS styles written in a separate .css file and linked to HTML using <link> tag.
+
+in CSS File:
+h1 {
+    color: blue;
+    font-size: 24px;
+    margin: 10px;
+}
+p {
+    background-color: yellow;
+    padding: 15px;
+}

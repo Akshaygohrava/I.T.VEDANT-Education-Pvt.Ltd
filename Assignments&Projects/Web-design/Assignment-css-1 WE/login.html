@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            height: 100vh;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #F1E7BA;
+            padding: 30px;
+            height: 190px;
+            width: 230px;
+        }
+        label, input, button {
+            width: 100%;
+        }
+        input {
+            padding: 5px;
+        }
+        label {
+            color: white;
+            font-size: 1.1rem;
+        }
+        button[type="submit"] {
+            background-color: #E84420;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 9px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+       <div class="container">
+           <form>
+            <label for="username">Enter Username:</label><br>
+            <input type="text" name="username" placeholder="Enter enail ID" id="username" required autofocus><br>
+            <label for="username">Enter Password:</label><br>
+            <input type="password" name="password" placeholder="Password here" id="password" required><br><br>
+            <button type="submit" value="Login">Login</button>
+        </form>
+       </div>
+        
+</body>
+</html>

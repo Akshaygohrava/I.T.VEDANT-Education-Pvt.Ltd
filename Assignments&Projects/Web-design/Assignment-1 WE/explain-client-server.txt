@@ -1,0 +1,35 @@
+Client-Server Architecture is a computing model where tasks are divided between service providers (servers) and service requesters (clients), communicating over a network. This is the foundation of most modern networked applications.
+
+Core Components
+1. Client
+Role: Requests and uses services/resources
+
+Characteristics:
+
+Initiates requests to servers
+
+Waits for and receives responses
+
+Typically has user interface
+
+Examples: Web browsers, email clients, mobile apps
+
+2. Server
+Role: Provides services/resources
+
+Characteristics:
+
+Listens for client requests
+
+Processes requests and returns responses
+
+Typically more powerful hardware
+
+Examples: Web servers, database servers, file servers
+
+3. Network
+Role: Communication medium
+
+Enables: Data exchange between clients and servers
+
+Protocols: HTTP, FTP, SMTP, TCP/IP

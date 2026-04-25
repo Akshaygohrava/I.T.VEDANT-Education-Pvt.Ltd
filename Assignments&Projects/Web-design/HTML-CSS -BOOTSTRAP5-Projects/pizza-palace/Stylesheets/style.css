@@ -1,0 +1,293 @@
+body {
+    background-color: whitesmoke;
+}
+::selection {
+    background-color: black;
+    color: red;
+}
+
+/* Home Page Styling */
+
+.text-2 {
+    color: red !important;
+}
+
+.h1-shadow {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+} 
+.h1-shadow::after {
+    content: '';
+    display: block;
+    width: 110px;
+    height: 4px;
+    /* background: black; */
+    background-color: orange;
+    background-image: linear-gradient(120deg, red, green, blue);
+    margin: 1rem auto 0;
+    border-radius: 22px;
+}
+.home {
+    /* background-image: linear-gradient(135deg, #d32f2f 0%, #ff6f00 100%); */
+    background-image: url('../Images/Margherita\ Pizza.jpg');
+    background-size: cover;
+    /* background-attachment: fixed; */
+    height: 84vh;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.h1-text-shadow {
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+}
+.home-btn {
+    text-decoration: none;
+    font-size: 1.1rem;
+    border: 2px solid #fff;
+    border-radius: 7px;
+    padding: 12px 19px;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+    transition: .5s all;
+}
+.home-btn1:hover {
+    background-color: black !important;
+    color: white !important;
+}
+.home-btn2:hover {
+    background-color: white !important;
+    color: red !important;
+}
+.s-pizzas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: -25px;
+}
+.card-img img {
+    object-fit: cover;
+    height: 260px;
+    width: 100%;
+    border-radius: 9px;
+}
+.card-img {
+    border: none;
+    border-radius: 9px;
+    background-color: white;
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+    margin: 0;
+    padding: 0;
+}
+.card-img:hover {
+    transform: translateY(-15px);
+    transition: .5s all;
+}
+ /* .card-img:hover {
+    border: 2px solid transparent;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    border-color: #ff6b6b !important;
+} */
+
+.section1 {
+    background-image: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);;
+}
+/* Home Page Styling */
+
+
+
+
+
+/* Menu Page Styling ! */
+
+.menu-box {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 25px;
+   width: 100%;
+}
+.menu-items {
+   /* background-color: green; */
+   /* height: 360px; */
+   width: 90%;
+   border-radius: 12px;
+   box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+   transition: .4s all;
+
+}
+.menu-items:hover {
+    border: 2px solid transparent;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    border-color: #ff6b6b !important;
+}
+.menu-img {
+    background-size: contain;
+    width: 100%;
+    /* height: 300px; */
+    border-radius: 12px;
+}
+.menu-btn:hover {
+     background-color: white;
+     color: red;
+}
+
+
+
+/* About Page Styling */
+
+
+
+
+
+
+
+
+
+
+
+/* Contact Page Styling */
+
+.c-form {
+    height: 400px;
+    background-color: rgba(245, 245, 245, 0.425);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+    border: 1px solid black;
+    margin-bottom: 30px;
+    width: 90%;
+    border-radius: 15px;
+    margin-top: -10px;
+    /* background-color: transparent; */
+}
+.c-form input, textarea {
+    background-color: rgba(245, 245, 245, 0.507) !important;
+    border: none;
+    border-radius: 4px;
+    padding: 11px 11px;
+    outline: none;
+    width: 90%;
+}
+.c-form input:focus {
+    border: 1px solid orange;
+    background-color: rgba(0, 0, 0, 0.521) !important;
+    color: orange !important;
+}
+.c-form textarea:focus {
+    border: 1px solid orange;
+    background-color: rgba(0, 0, 0, 0.521) !important;
+    color: orange !important;
+}
+.c-form input:focus::placeholder  {
+    color: orange !important;
+}
+.c-form textarea:focus::placeholder  {
+    color: orange !important;
+}
+.c-form input::placeholder {
+   color: black !important;
+   font-size: 1.1rem;
+}
+.c-form textarea::placeholder {
+   color: black !important;
+   font-size: 1.1rem;
+}
+.c-btn {
+    background-color: red;
+    padding: 8px 14px;
+    font-size: 1.2rem;
+    border: 2px solid white;
+    border-radius: 4px;
+    color: white;
+    width: 150px;
+    transition: .3s ease-in-out;
+}
+.c-btn:hover {
+    background-color: white;
+    color: red;
+    border: 2px solid white;
+}
+.contact {
+    background-image: url('../Images/Menu-Items/download\ \(3\).jpg');
+    background-size: contain;
+}
+
+/* Sign Up */
+
+.sign-up-form {
+    border: 1px solid red;
+    height: 500px;
+    width: 88%;
+    margin: 0 auto;
+    border-radius: 10px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #ff66006b;
+}
+.sign-up-form input {
+    padding: 7px 5px;
+    width: 80%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-top: 2px;
+}
+.sign-up-form label {
+    color: black;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: black;
+}
+
+
+/* Sign In  */
+.sign-in-form {
+    height: 350px;
+    border: 1px solid red;
+    width: 85%;
+    margin: 0 auto;
+    background-color: rgba(0, 128, 0, 0.568);
+    border-radius: 8px;
+    
+
+}
+.sign-in-form input {
+    padding: 7px 5px;
+    width: 80%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    margin-top: 2px;
+    background-color: rgba(255, 255, 255, 0.705);
+}
+.sign-in-form label {
+    color: black;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: white;
+}
+.sign-in-form input:focus {
+    border: 1px solid red;
+    background-color: rgba(0, 0, 0, 0.521) !important;
+    color: red !important;
+}
+.sign-in-form textarea:focus {
+    border: 1px solid orange;
+    background-color: rgba(0, 0, 0, 0.521) !important;
+    color: orange !important;
+}
+.sign-in-form input:focus::placeholder  {
+    color: red !important;
+}
+.signin-btn {
+    width: 150px;
+}
