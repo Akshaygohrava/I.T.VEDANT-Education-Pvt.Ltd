@@ -1,0 +1,59 @@
+java Calculator & Javascript Calculator
+Make Everyday , One Project ,Based On Java ,Javascript, React, MySQL, To Mastering Into that !
+
+
+Java Topics Learned & Learning and Need Revision Every Months !
+
+1. Java Installation (Main : JDK includes JRE ,JVM ) Eclipse
+2. Basic Java , Syntax , Operators, Input/ouput
+3. Java Oops (Abstraction, Encapsulation, Polymorphism, Inheritance)
+4. Java Lists :- Arraylist, Linkedlists, Vector(stack)
+5. Java Sets :- 
+6. Java Loops :- For, While/Do While , Switch, If-else
+7. Java Topics :- Recurssion ,
+
+
+
+Java Developer Job Description :-
+
+Design and implement scalable RESTful or GraphQL APIs using Spring Boot
+Develop and maintain microservices with synchronous (REST/gRPC) or asynchronous (Kafka/RabbitMQ) communication
+Architect and optimize queries for relational (PostgreSQL, MySQL) and NoSQL (MongoDB, Redis) databases
+Write comprehensive unit, integration, and functional tests using JUnit and Mockito
+Identify performance bottlenecks and implement caching strategies
+Work with DevOps on CI/CD pipelines (Jenkins, GitLab CI, or GitHub Actions)
+Participate in peer code reviews to maintain code quality
+
+
+Must-Have Skills
+
+Category
+
+Skills
+
+Core Java
+Java 11/17+, Multithreading, Streams API, Memory Management
+Framework
+Spring Boot, Spring Security, Spring Data JPA
+ORM
+Hibernate or MyBatis
+Database
+SQL (PostgreSQL/MySQL)
+Testing
+JUnit, Mockito
+Version Control
+Git (branching, merging, rebasing)
+Build Tools
+Maven or Gradle
+Containerization
+Docker
+
+
+Should-Have Skills
+
+Microservices architecture
+Message brokers (Kafka or RabbitMQ)
+NoSQL databases (MongoDB, Redis)
+Performance tuning & caching
+CI/CD pipeline experience
+Agile/Scrum collaboration

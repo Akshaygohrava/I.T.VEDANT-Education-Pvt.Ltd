@@ -1,0 +1,19 @@
+java Calculator & Javascript Calculator
+Make Everyday , One Project ,Based On Java ,Javascript, React, MySQL, To Mastering Into that !
+
+Date : 21/May/2026
+
+React Topics Learned & Learning and Need Revision Every Months !
+
+1. React & NextJs Installation
+2. Styling In React (all types) (TailwindCSS)
+3. Import Export (files, Components, ects)
+4. React Hooks (useState, useEffect, useContext, useReducer) Min
+5. Api Fetching Using Fetch & Axios #done
+6. Error Handling using Try & Catch And Error Boundries 
+7. Lazy Loading ...
+8. React Routing SPA - Nextjs MPA
+9. lazy loading for images and components to improve load times
+10. Shandcn UI & Material UI
+11. Redux Toolkit, React Router DOM, React Hook Form, Zustand, ContextAPI
+12. REST APIs - Most Important One ...
