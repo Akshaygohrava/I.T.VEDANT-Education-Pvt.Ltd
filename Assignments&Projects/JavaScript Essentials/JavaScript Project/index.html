@@ -3,35 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="fetch.js"></script>
     <link rel="stylesheet" href="index.css">
-    <title>Books Library - Best Books of All Time</title>
+    <title>Book Library</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Books Library 📚</h1>
-        <div class="subtitle">Discover the best books ever written - From Atomic Habits to Rich Dad Poor Dad</div>
-
-        <div class="search-section">
-            <input type="text" id="search" placeholder="Search by title or author... (e.g., Harry Potter, Stephen King)">
-            <button onclick="searchBooks()">🔍 Search</button>
-            <button onclick="loadTopBooks()" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
-                ⭐ Show Top 50 Books
-            </button>
+    <header class="header">
+        <div class="wrapper">
+            <h1 class="logo">📚 Book Library</h1>
+            <p class="tagline">Top books like Atomic Habits & Rich Dad Poor Dad — powered by Open Library API</p>
         </div>
+    </header>
 
-        <div class="category-buttons">
-            <button class="cat-btn" onclick="filterByCategory('all')">📚 All</button>
-            <button class="cat-btn" onclick="filterByCategory('self-help')">💪 Self-Help</button>
-            <button class="cat-btn" onclick="filterByCategory('fiction')">🎭 Fiction</button>
-            <button class="cat-btn" onclick="filterByCategory('business')">💼 Business</button>
-            <button class="cat-btn" onclick="filterByCategory('science')">🔬 Science</button>
-            <button class="cat-btn" onclick="filterByCategory('classic')">📖 Classics</button>
+    <main class="wrapper">
+        <section class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search by book title or author name...">
+            <button id="searchBtn" type="button">Search</button>
+            <button id="topBooksBtn" type="button" class="btn-outline">Top Books</button>
+        </section>
+
+        <h2 id="sectionTitle" class="section-title">Top Books</h2>
+        <div id="bookGrid" class="book-grid">
+            <p class="loading">Loading books...</p>
         </div>
+    </main>
 
-        <div id="results" class="books-grid"></div>
-    </div>
-    <h3 style="margin-top: 20px;text-align: center;">My Favorites Books , Which I Readed Or will Read, I Love Reading Books... </h3>
+    <footer class="footer">
+        <p>Book Library — JavaScript Fetch API Project</p>
+    </footer>
+
     <script src="books.js"></script>
 </body>
 </html>

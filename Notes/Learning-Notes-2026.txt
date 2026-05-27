@@ -1,0 +1,38 @@
+Learning Notes :- 
+
+1. Docker 
+How To Containerized the Project In docker Project 
+how to Build up docker Project
+
+2. AWS
+What is AWS?
+How EC2 and S3 works in AWS ..
+How Deploy Application On AWS and Storage Works ?
+
+How to Think About These Services
+To help you visualize it:
+
+EC2 is like renting a storefront (or server space) . You choose the size (CPU and RAM), the operating system, and what software runs on it .
+
+S3 is like renting warehouse space for unlimited files. It's not for running software, but for storing the data—images, videos, documents—that your EC2 application might use or produce .
+
+RDS is like hiring a professional database manager. Instead of installing and maintaining database software on your EC2 server, AWS does it for you, ensuring it's backed up and scalable .
+One Line Summary (for your memory):
+EC2 runs the app, S3 stores the files, RDS organizes the data.
+
+Imagine you build Netflix:
+
+EC2 runs the Netflix website code (hosting the application).
+
+S3 stores the actual movie files (big data storage).
+
+RDS stores your login info and what movies you watched (the database).
+
+You have understood the three most important AWS services correctly. This is a solid foundation.
+
+
+3. Redis 
+Basics Of Redis
+
+4. RESTful APIs :-
+everything about rest apis and graphql , how things works 

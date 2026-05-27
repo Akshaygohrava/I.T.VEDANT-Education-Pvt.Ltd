@@ -1,6 +1,7 @@
 java Calculator & Javascript Calculator
 Make Everyday , One Project ,Based On Java ,Javascript, React, MySQL, To Mastering Into that !
 
+* Make Projects Based On Below Topics ...
 
 Java Topics Learned & Learning and Need Revision Every Months !
 
@@ -8,9 +9,15 @@ Java Topics Learned & Learning and Need Revision Every Months !
 2. Basic Java , Syntax , Operators, Input/ouput
 3. Java Oops (Abstraction, Encapsulation, Polymorphism, Inheritance)
 4. Java Lists :- Arraylist, Linkedlists, Vector(stack)
-5. Java Sets :- 
+5. Java Sets :- HashSet , 
 6. Java Loops :- For, While/Do While , Switch, If-else
-7. Java Topics :- Recurssion ,
+7. Java Topics :- Java Collections, Recurssion , Memory Chache, Garbage Collection, StreamAPI 
+
+
+
+
+
+
 
 
 

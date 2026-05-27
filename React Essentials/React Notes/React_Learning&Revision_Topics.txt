@@ -17,3 +17,11 @@ React Topics Learned & Learning and Need Revision Every Months !
 10. Shandcn UI & Material UI
 11. Redux Toolkit, React Router DOM, React Hook Form, Zustand, ContextAPI
 12. REST APIs - Most Important One ...
+
+
+Frontend (React)          Backend (Spring Boot)         Database (MySQL)
+├── Axios/Fetch      <──> ├── REST Controllers      <──> ├── JPA / Hibernate
+├── React Router          ├── Spring Security (JWT)      ├── Relationships
+├── Context/Redux         ├── Service Layer              ├── Indexes
+├── Tailwind/MUI          ├── Repository (JpaRepository) └── Stored Procedures (opt.)
+└── React Hook Form       └── Exception Handling
