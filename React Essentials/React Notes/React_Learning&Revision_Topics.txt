@@ -3,6 +3,8 @@ Make Everyday , One Project ,Based On Java ,Javascript, React, MySQL, To Masteri
 
 Date : 21/May/2026
 
+* Make Projects Based On Below Topics ...
+* Search Below Topics in Deepseek, And Learn and Practise To Master it.
 React Topics Learned & Learning and Need Revision Every Months !
 
 1. React & NextJs Installation
@@ -17,6 +19,9 @@ React Topics Learned & Learning and Need Revision Every Months !
 10. Shandcn UI & Material UI
 11. Redux Toolkit, React Router DOM, React Hook Form, Zustand, ContextAPI
 12. REST APIs - Most Important One ...
+13. useStates > useContext > Redux
+14. Props & props drilling
+15. State-Management : useState > ContextApi > Redux / Zustand 
 
 
 Frontend (React)          Backend (Spring Boot)         Database (MySQL)

@@ -2,23 +2,29 @@ java Calculator & Javascript Calculator
 Make Everyday , One Project ,Based On Java ,Javascript, React, MySQL, To Mastering Into that !
 
 * Make Projects Based On Below Topics ...
+* Search Below Topics in Deepseek, And Learn and Practise To Master it.
 
 Java Topics Learned & Learning and Need Revision Every Months !
 
 1. Java Installation (Main : JDK includes JRE ,JVM ) Eclipse
 2. Basic Java , Syntax , Operators, Input/ouput
 3. Java Oops (Abstraction, Encapsulation, Polymorphism, Inheritance)
-4. Java Lists :- Arraylist, Linkedlists, Vector(stack)
-5. Java Sets :- HashSet , 
+4. Java Lists :- Arraylist, Linkedlists, Vector(stack(extends vectors))
+5. Java Sets :- HashSet , LinkedHashSet, TreeSet
 6. Java Loops :- For, While/Do While , Switch, If-else
-7. Java Topics :- Java Collections, Recurssion , Memory Chache, Garbage Collection, StreamAPI 
+7. Java Topics :- Java Collections, Recurssion , Memory Chache, Garbage Collection, StreamAPI , Lambdas and Streams
+8. Java Arrays & Strings, StringBuilder, Numbers , 
+9. Java Class, Object, Constructor ,Methods, this & super  , Access/Non Access Modifiers, OOPs 
+10. Java Exception Handling , TryCatch
+11. MultiThreading, JDBC, 
 
 
 
-
-
-
-
+JAVA PROJECT :-
+1. Java Calculator
+2. Java Console Based Quiz App
+3. Java Console Based Banking Management System
+ 
 
 
 Java Developer Job Description :-
