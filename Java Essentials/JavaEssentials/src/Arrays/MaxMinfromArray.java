@@ -29,8 +29,15 @@ public class MaxMinfromArray {
       
       System.out.println("Minimum Array Number is :"+ min);
 
+      int num[] = {22, 45, 66,78, 999};
       
-      
-	}
-
+      int Max = num[0];
+      for(int i : num) {
+    	  if(i > Max) {
+    		  Max = i;
+    	  }
+      }
+      System.out.print(Max);
+     
+	}  // AI Cannot detect this missing , closing braces , when error ....
 }

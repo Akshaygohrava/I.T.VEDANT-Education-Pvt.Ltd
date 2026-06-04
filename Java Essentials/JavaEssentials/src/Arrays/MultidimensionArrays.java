@@ -17,9 +17,26 @@ public class MultidimensionArrays {
 	    
 	    for(int n[] : marks) {
 	    	for(int i : n) {
-	    		System.out.println(i);
+	    		System.out.print(i + ",");
 	    	}
 	    }
+	    
+	    
+	    
+	    // Revising Multi Demension Array ...
+	    
+	    int age[][] = {
+	    		{12, 34, 45, 65},
+	    		{21, 23, 41, 62}
+	    };
+	    
+	    for(int q[] : age) {
+	    	for(int b : q) {
+	    		System.out.print(b + ",");
+	    	}
+	    }
+	    
+	    
 	    
 	    
 
