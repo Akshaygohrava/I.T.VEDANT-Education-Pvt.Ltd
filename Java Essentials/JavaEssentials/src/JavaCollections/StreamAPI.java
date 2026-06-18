@@ -6,6 +6,9 @@ public class StreamAPI {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		
+		// Collection Stores Data, Stream API Perform Operating On Collectio, Lambdas Expreession Used In Stream API 
          
 		List<Integer> list = Arrays.asList(12,23,56,100,9);
 		

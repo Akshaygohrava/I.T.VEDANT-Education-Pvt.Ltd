@@ -4,7 +4,8 @@ public class ExceptionHandling {
 	
 
 	public static void main(String[] args) throws Exception {
-		
+		//An exception in Java is an event that disrupts the normal flow of program execution during runtime. 
+		// It represents an unexpected or erroneous situation, such as dividing by zero or failing to open a file, and can be "thrown" and then "caught" to handle the error gracefully.
 //		Exception Handling in Java
 //		Exception Handling in Java is a mechanism used to handle runtime errors and compile-time issues,
 //		ensuring the normal flow of application execution.

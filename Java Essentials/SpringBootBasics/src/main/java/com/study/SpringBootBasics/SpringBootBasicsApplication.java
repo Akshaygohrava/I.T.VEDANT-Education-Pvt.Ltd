@@ -20,6 +20,17 @@ public class SpringBootBasicsApplication {
 		
 		
 		
+		
+		
+		// An Ecommerce Project
+		// React - ORM,Hibernate,JPA - MySQL Ecommerce
+		// ORM - Object Relational Mapping 
+		
+		// SpringBoot, ORM, Hibernate, JPA, JDBC
+		
+		
+		
+		
 	}
 
 }

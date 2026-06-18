@@ -93,6 +93,16 @@ public static void main(String[] args) {
             }
         }
         System.out.println(sb);    // Hll Wrld
+        
+//        Need mutable string?
+//        	    ↓
+//        	Is thread safety needed? (multiple threads accessing)
+//        	    ↓                    ↓
+//        	   YES                  NO
+//        	    ↓                    ↓
+//        	StringBuffer      StringBuilder (USE THIS!)
+        
+        
     }
 
 }
