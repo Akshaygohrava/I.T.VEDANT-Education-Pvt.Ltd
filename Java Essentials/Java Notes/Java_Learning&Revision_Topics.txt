@@ -8,15 +8,16 @@ Java Topics Learned & Learning and Need Revision Every Months !
 
 1. Java Installation (Main : JDK includes JRE ,JVM ) Eclipse #Done
 2. Basic Java , Syntax , Operators, Input/ouput #Done
-3. Java Oops (Abstraction, Encapsulation, Polymorphism, Inheritance) #Done
+3. Java Oops (Abstraction, Encapsulation, Polymorphism, Inheritance) #Done 20/6
 4. Java Lists :- Arraylist, Linkedlists, Vector(stack(extends vectors)) #Done
 5. Java Sets :- HashSet , LinkedHashSet, TreeSet #Done
+6. Java Map :- HashMap, LinkedHashMap, TreeMap
 6. Java Loops :- For, While/Do While , Switch, If-else #Done
 7. Java Topics :- Java Collections, Recurssion , Memory Chache, Garbage Collection, StreamAPI , Lambdas and Streams #Done
 8. Java Arrays & Strings, StringBuilder, Numbers (Methods and all problem Solving) #Done
 9. Java Class, Object, Constructor ,Methods, this & super  , Access/Non Access Modifiers #Done
 10. Java Exception Handling , TryCatch #Done
-11. MultiThreading, JDBC
+11. MultiThreading 20/6, JDBC
 12. Spring Boot
 
 

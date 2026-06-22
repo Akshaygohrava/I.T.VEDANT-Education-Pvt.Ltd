@@ -1,0 +1,714 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "AreaOfRectangle",
+            "request": "launch",
+            "mainClass": "AreaOfRectangle",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "OddEven",
+            "request": "launch",
+            "mainClass": "OddEven",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Palindrome",
+            "request": "launch",
+            "mainClass": "Palindrome",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "GymManagement.Main",
+            "projectName": "JDBC"
+        },
+        {
+            "type": "java",
+            "name": "JDBC",
+            "request": "launch",
+            "mainClass": "JDBC.JDBC",
+            "projectName": "JDBC"
+        },
+        {
+            "type": "java",
+            "name": "JDBCSetupFETCH",
+            "request": "launch",
+            "mainClass": "JDBC.JDBCSetupFETCH",
+            "projectName": "JDBC"
+        },
+        {
+            "type": "java",
+            "name": "JDBCStepINSERT",
+            "request": "launch",
+            "mainClass": "JDBC.JDBCStepINSERT",
+            "projectName": "JDBC"
+        },
+        {
+            "type": "java",
+            "name": "Main(1)",
+            "request": "launch",
+            "mainClass": "StudentManagement.Main",
+            "projectName": "JDBC"
+        },
+        {
+            "type": "java",
+            "name": "AbstarctExamples",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Abstraction.AbstarctExamples",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "Main(2)",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Abstraction.Main",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "Arrayloops1",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Arrays.Arrayloops1",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "Arrayloops2",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Arrays.Arrayloops2",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "Arrayloops3",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Arrays.Arrayloops3",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "Arrays",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Arrays.Arrays",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "Arrays2",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Arrays.Arrays2",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "MaxMinfromArray",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Arrays.MaxMinfromArray",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "MultidimensionArrays",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Arrays.MultidimensionArrays",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "AccountHolder",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Classes_Objects.AccountHolder",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "BankAccount",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Classes_Objects.BankAccount",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "ClassObject",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Classes_Objects.ClassObject",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "ClassesandObjects",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Classes_Objects.ClassesandObjects",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "Constructor",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Classes_Objects.Constructor",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "ExceptionHandling",
+            "request": "launch",
+            "mainClass": "JavaEssentials/ExceptionHandling.ExceptionHandling",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "IdNotFound",
+            "request": "launch",
+            "mainClass": "JavaEssentials/ExceptionHandling.IdNotFound",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "NagativeNumber",
+            "request": "launch",
+            "mainClass": "JavaEssentials/ExceptionHandling.NagativeNumber",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "Employee2",
+            "request": "launch",
+            "mainClass": "JavaEssentials/FinalExamples.Employee2",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "FinalExamples",
+            "request": "launch",
+            "mainClass": "JavaEssentials/FinalExamples.FinalExamples",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "FinalKeyword",
+            "request": "launch",
+            "mainClass": "JavaEssentials/FinalExamples.FinalKeyword",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "Functions",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Functions.Functions",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "Multilevel",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Inherit.Multilevel",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "SingleInherit",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Inherit.SingleInherit",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "herical",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Inherit.herical",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "HierarchicalInheritance",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Inheritance.HierarchicalInheritance",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "HybridInheritence",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Inheritance.HybridInheritence",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "Inheritence",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Inheritance.Inheritence",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "MultiLevelInheritence",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Inheritance.MultiLevelInheritence",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "SuperKeyword",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Inheritance.SuperKeyword",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "CollectionInJava",
+            "request": "launch",
+            "mainClass": "JavaEssentials/JavaCollections.CollectionInJava",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "Example2",
+            "request": "launch",
+            "mainClass": "JavaEssentials/JavaCollections.Example2",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "Example3",
+            "request": "launch",
+            "mainClass": "JavaEssentials/JavaCollections.Example3",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "Example4",
+            "request": "launch",
+            "mainClass": "JavaEssentials/JavaCollections.Example4",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "GenericsExamples",
+            "request": "launch",
+            "mainClass": "JavaEssentials/JavaCollections.GenericsExamples",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "StreamAPI",
+            "request": "launch",
+            "mainClass": "JavaEssentials/JavaCollections.StreamAPI",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "StreamAPI2",
+            "request": "launch",
+            "mainClass": "JavaEssentials/JavaCollections.StreamAPI2",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "StreamAPI3",
+            "request": "launch",
+            "mainClass": "JavaEssentials/JavaCollections.StreamAPI3",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "StreamAPI4",
+            "request": "launch",
+            "mainClass": "JavaEssentials/JavaCollections.StreamAPI4",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "StreamAPI5",
+            "request": "launch",
+            "mainClass": "JavaEssentials/JavaCollections.StreamAPI5",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "AdditionLoops",
+            "request": "launch",
+            "mainClass": "JavaEssentials/JavaFlow.AdditionLoops",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "DoWhileLoop2",
+            "request": "launch",
+            "mainClass": "JavaEssentials/JavaFlow.DoWhileLoop2",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "DoWhileLoops",
+            "request": "launch",
+            "mainClass": "JavaEssentials/JavaFlow.DoWhileLoops",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "NestedLoops",
+            "request": "launch",
+            "mainClass": "JavaEssentials/JavaFlow.NestedLoops",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "NestedLoops2",
+            "request": "launch",
+            "mainClass": "JavaEssentials/JavaFlow.NestedLoops2",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "ArrayListExamples",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Lists.ArrayListExamples",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "ArrayLists",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Lists.ArrayLists",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "LinkedLists",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Lists.LinkedLists",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "StackLists",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Lists.StackLists",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "VectorList",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Lists.VectorList",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "loops",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Loops.loops",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "numberprogram",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Loops.numberprogram",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "palindromecheck",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Loops.palindromecheck",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "reversenumber",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Loops.reversenumber",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "tableoffive",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Loops.tableoffive",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "AccessModifiers",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Modifiers.AccessModifiers",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "NonAccessModifiers",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Modifiers.NonAccessModifiers",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "StaticOutputs",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Modifiers.StaticOutputs",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "EmergencyThreads",
+            "request": "launch",
+            "mainClass": "JavaEssentials/MultiThreading.EmergencyThreads",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "MultiThreading",
+            "request": "launch",
+            "mainClass": "JavaEssentials/MultiThreading.MultiThreading",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "MultithreadCounter2",
+            "request": "launch",
+            "mainClass": "JavaEssentials/MultiThreading.MultithreadCounter2",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "Multithreading1",
+            "request": "launch",
+            "mainClass": "JavaEssentials/MultiThreading.Multithreading1",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "MultipleInheritance",
+            "request": "launch",
+            "mainClass": "JavaEssentials/MultipleInheritance.MultipleInheritance",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "JavaNotes",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Notes.JavaNotes",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "Abstraction",
+            "request": "launch",
+            "mainClass": "JavaEssentials/ObjectOrientedProgramming.Abstraction",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "Encapsulation",
+            "request": "launch",
+            "mainClass": "JavaEssentials/ObjectOrientedProgramming.Encapsulation",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "Inheritance",
+            "request": "launch",
+            "mainClass": "JavaEssentials/ObjectOrientedProgramming.Inheritance",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "Polymorphism",
+            "request": "launch",
+            "mainClass": "JavaEssentials/ObjectOrientedProgramming.Polymorphism",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "ArrayDeques",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Queues.ArrayDeques",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "LinkedListsQueues",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Queues.LinkedListsQueues",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "PriorityQueues",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Queues.PriorityQueues",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "HashSetExamples",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Sets.HashSetExamples",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "HashSetExamples2",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Sets.HashSetExamples2",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "HashSets",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Sets.HashSets",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "LinkHashSets",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Sets.LinkHashSets",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "SetExample",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Sets.SetExample",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "TreeSetExample2",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Sets.TreeSetExample2",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "TreeSetExamples",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Sets.TreeSetExamples",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "TreeSets",
+            "request": "launch",
+            "mainClass": "JavaEssentials/Sets.TreeSets",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "StringBuilderBuffer",
+            "request": "launch",
+            "mainClass": "JavaEssentials/StringExamples.StringBuilderBuffer",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "StringExamples",
+            "request": "launch",
+            "mainClass": "JavaEssentials/StringExamples.StringExamples",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "StringExamples2",
+            "request": "launch",
+            "mainClass": "JavaEssentials/StringExamples.StringExamples2",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "StringPractices",
+            "request": "launch",
+            "mainClass": "JavaEssentials/StringExamples.StringPractices",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "StringPractices2",
+            "request": "launch",
+            "mainClass": "JavaEssentials/StringExamples.StringPractices2",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "StringPractising",
+            "request": "launch",
+            "mainClass": "JavaEssentials/StringExamples.StringPractising",
+            "projectName": "JavaEssentials"
+        },
+        {
+            "type": "java",
+            "name": "SpringBootBasicsApplication",
+            "request": "launch",
+            "mainClass": "com.study.SpringBootBasics.SpringBootBasicsApplication",
+            "projectName": "SpringBootBasics (2)"
+        },
+        {
+            "type": "java",
+            "name": "SpringBootBasicsApplication(1)",
+            "request": "launch",
+            "mainClass": "com.study.SpringBootBasics.SpringBootBasicsApplication",
+            "projectName": "SpringBootBasics"
+        },
+        {
+            "type": "java",
+            "name": "EcommerceApplication",
+            "request": "launch",
+            "mainClass": "com.study.ecommerce.EcommerceApplication",
+            "projectName": "ecommerce"
+        },
+        {
+            "type": "java",
+            "name": "Notes",
+            "request": "launch",
+            "mainClass": "com.study.ecommerce.Notes",
+            "projectName": "ecommerce"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "com.study.springcore.App",
+            "projectName": "springcore (2)"
+        },
+        {
+            "type": "java",
+            "name": "SpringBootNotes",
+            "request": "launch",
+            "mainClass": "com.study.springcore.SpringBootNotes",
+            "projectName": "springcore (2)"
+        },
+        {
+            "type": "java",
+            "name": "App(1)",
+            "request": "launch",
+            "mainClass": "com.study.springcore.App",
+            "projectName": "springcore"
+        },
+        {
+            "type": "java",
+            "name": "SpringBootNotes(1)",
+            "request": "launch",
+            "mainClass": "com.study.springcore.SpringBootNotes",
+            "projectName": "springcore"
+        }
+    ]
+}
