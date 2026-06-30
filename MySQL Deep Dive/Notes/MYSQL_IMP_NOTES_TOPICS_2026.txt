@@ -1,0 +1,40 @@
+MYSQL NOTES:-
+
+Important Topics To Revised And Learn :-
+
+CORE :-
+* CREATE DATABASE
+* CREATE TABLES
+* DROP : DATABASE , TABLES
+* SELECT, INSERT , UPDATE , DELETE
+* WHERE, GROUPBY, HAVING
+
+INTERMIDIATE:-
+* ALTER : 
+* CASE : WHEN, THEN
+* Aggregate Functions: MIN, MAX, AVG, SUM, COUNT
+* SQL JOINS : 
+* Index
+* Views : Simple Views, Complex Views
+* Procedure 
+
+ADVANCE:-
+* TRIGGER
+* FUNCTION : UDF(USER DEFINE FUNCTION), 
+* PROCEDURE
+
+
+**DDL : Data Definition Language**  
+CREATE, ALTER, DROP, TRUNCATE, RENAME
+
+**DML : Data Manipulation Language**  
+INSERT, UPDATE, DELETE, MERGE
+
+**DCL : Data Control Language**  
+GRANT, REVOKE
+
+**TCL : Transaction Control Language**  
+COMMIT, ROLLBACK, SAVEPOINT, SET TRANSACTION
+
+**DQL : Data Query Language**  
+SELECT

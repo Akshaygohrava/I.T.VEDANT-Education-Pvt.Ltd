@@ -1,4 +1,10 @@
-MySQL BASICS : 
+SQL Root Password
+Qwerty@1234
+
+Full Stack Web Developer Intern
+
+Calanjiyam Consultancies & Technologies
+MySQL NOTES: 
 
 CHEATSHEETS
 

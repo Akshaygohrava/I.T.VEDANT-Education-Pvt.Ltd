@@ -1,0 +1,19 @@
+What are joins in sql ?
+ans: Joins in sql is way , we can combine multiple tables data ,into one.
+
+what are types of join?
+Ans: there are 4-5 types of joins, 
+inner join,outer join,left and right join, self join
+
+What is groupby?
+its is used to group the row ,and output the resuits,
+
+what is aggregate functions in sql?
+Ans: Aggregate functions in sql is used to perform function operation on column
+
+
+suppose student table, add column age
+Ans: alter table student add column age int
+
+list any three , buildin mysql function ?
+Ans : uppercase(),lowercase(), concat()

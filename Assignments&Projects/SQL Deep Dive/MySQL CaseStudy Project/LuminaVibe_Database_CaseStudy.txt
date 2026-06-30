@@ -1,0 +1,135 @@
+DATABASE :- 
+CREATE DATABASE luminavibe_db;
+
+1. The users Table (Core)
+Stores login info and profile details.
+
+sql
+CREATE TABLE users (
+    user_id INT PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL, -- Store hashed passwords, never plain text!
+    full_name VARCHAR(100),
+    bio TEXT,
+    profile_picture_url VARCHAR(255),
+    is_verified BOOLEAN DEFAULT FALSE,
+    is_private BOOLEAN DEFAULT FALSE, -- For private accounts
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Indexes for fast login/search
+CREATE INDEX idx_users_email ON users(email);
+CREATE INDEX idx_users_username ON users(username);
+2. The posts Table
+Stores the main feed content.
+
+sql
+CREATE TABLE posts (
+    post_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    content TEXT, -- The caption/text of the post
+    location VARCHAR(100),
+    is_archived BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
+);
+
+-- Index to load the "Feed" sorted by newest first
+CREATE INDEX idx_posts_created ON posts(created_at DESC);
+3. The media Table (For Images/Videos)
+Separating media from the posts table allows one post to have multiple images (carousels).
+
+sql
+CREATE TABLE media (
+    media_id INT PRIMARY KEY AUTO_INCREMENT,
+    post_id INT NOT NULL,
+    media_url VARCHAR(255) NOT NULL, -- Path to S3/Cloudinary
+    media_type ENUM('image', 'video', 'gif') DEFAULT 'image',
+    display_order INT DEFAULT 0, -- To sort images in a carousel
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (post_id) REFERENCES posts(post_id) ON DELETE CASCADE
+);
+4. The comments Table
+Nested replies (Threads). We use a parent_comment_id to allow replies to specific comments.
+
+sql
+CREATE TABLE comments (
+    comment_id INT PRIMARY KEY AUTO_INCREMENT,
+    post_id INT NOT NULL,
+    user_id INT NOT NULL,
+    parent_comment_id INT NULL, -- NULL means it's a top-level comment
+    content TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (post_id) REFERENCES posts(post_id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (parent_comment_id) REFERENCES comments(comment_id) ON DELETE CASCADE
+);
+5. The likes Table (Polymorphic Design)
+Note: In a real app, liking posts and liking comments are different. To keep it simple for a case study, we will track target_type (either 'post' or 'comment') so we don't need two separate tables.
+
+sql
+CREATE TABLE likes (
+    like_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    target_type ENUM('post', 'comment') NOT NULL,
+    target_id INT NOT NULL, -- This holds either the post_id or comment_id
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
+    UNIQUE KEY unique_like (user_id, target_type, target_id) -- Prevents double-liking
+);
+
+-- Indexes to quickly count likes on a specific post/comment
+CREATE INDEX idx_likes_target ON likes(target_type, target_id);
+6. The follows Table (The Social Graph)
+This is a self-referencing many-to-many table.
+
+sql
+CREATE TABLE follows (
+    follow_id INT PRIMARY KEY AUTO_INCREMENT,
+    follower_id INT NOT NULL, -- The user who is following
+    following_id INT NOT NULL, -- The user being followed
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (follower_id) REFERENCES users(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (following_id) REFERENCES users(user_id) ON DELETE CASCADE,
+    UNIQUE KEY unique_follow (follower_id, following_id) -- Prevents double-following
+);
+
+-- Index to check "Who follows me?" and "Who am I following?"
+CREATE INDEX idx_follows_follower ON follows(follower_id);
+CREATE INDEX idx_follows_following ON follows(following_id);
+7. The messages Table (Direct Messaging)
+sql
+CREATE TABLE messages (
+    message_id INT PRIMARY KEY AUTO_INCREMENT,
+    sender_id INT NOT NULL,
+    receiver_id INT NOT NULL,
+    content TEXT NOT NULL,
+    is_read BOOLEAN DEFAULT FALSE,
+    read_at TIMESTAMP NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (sender_id) REFERENCES users(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (receiver_id) REFERENCES users(user_id) ON DELETE CASCADE
+);
+
+CREATE INDEX idx_messages_conversation ON messages(sender_id, receiver_id, created_at);
+8. The notifications Table
+Stores real-time alerts (e.g., "John liked your post").
+
+sql
+CREATE TABLE notifications (
+    notification_id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT NOT NULL, -- The user who receives the notification
+    actor_id INT NOT NULL, -- The user who performed the action (e.g., the one who liked)
+    type ENUM('like', 'comment', 'follow', 'message') NOT NULL,
+    target_id INT NULL, -- The post_id, comment_id, or follow_id that triggered this
+    is_read BOOLEAN DEFAULT FALSE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (actor_id) REFERENCES users(user_id) ON DELETE CASCADE
+);
+
+CREATE INDEX idx_notifications_user ON notifications(user_id, is_read, created_at DESC);
