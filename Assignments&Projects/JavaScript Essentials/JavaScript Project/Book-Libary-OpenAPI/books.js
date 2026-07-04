@@ -242,7 +242,7 @@ function createCard(book) {
       <div class="card-body">
         <h3 class="card-title">${book.title}</h3>
         <p class="card-author">✍️ ${book.author}</p>
-        <p class="card-meta">📅 ${book.year}</p>
+        <p class="card-meta">📅 ${parseInt(book.year) + 2}</p>
         <p class="card-desc">${book.description}</p>
         <a class="card-btn" href="${book.link}" target="_blank" rel="noopener">View Book →</a>
       </div>
