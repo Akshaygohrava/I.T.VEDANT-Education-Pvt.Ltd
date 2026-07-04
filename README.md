@@ -2,7 +2,7 @@
 
 ![Course Banner](https://i.ytimg.com/vi/L4sOI8ffsqs/maxresdefault.jpg)
 
-Welcome to my comprehensive learning repository documenting my Full Stack Java Development journey at **I.T. VEDANT Education Pvt. Ltd.** This repository serves as a living portfolio of my growth, projects, and hands-on work through the course. It is updated regularly to reflect current progress, new projects, and the skills I'm building.
+Welcome to my comprehensive learning repository documenting my Full Stack Java Development journey at **I.T. VEDANT Education Pvt. Ltd.** This repository serves as a living portfolio of my growth, projects, and skills development throughout the course.
 
 ## 🚀 Live Preview
 **[Click here to view the live portfolio →](https://akshaygohrava.github.io/I.T.VEDANT-Education-Pvt.Ltd/)**
@@ -18,32 +18,32 @@ Welcome to my comprehensive learning repository documenting my Full Stack Java D
 | **Module 3** | **JavaScript Essentials** | ✅ Completed | January 2026 | JavaScript ES6+, DOM, APIs |
 | **Module 4** | **React Essentials** | ✅ Completed | February 2026 | React.js, Hooks, Components |
 | **Module 5** | **SQL Deep Dive** | ✅ Completed | March 2026 | MySQL, PostgreSQL, Queries |
-| **Module 6** | **Java Essentials** | 🟡 In Progress | April — July 2026 | Core Java, OOP, Collections |
-| **Module 7** | **Mastering Spring Boot** | ⏳ Upcoming | August 2026 | Spring Boot, REST APIs |
-| **Module 8** | **Mastering Testing in Java** | ⏳ Upcoming | September 2026 | JUnit, Mockito, TestNG |
-| **Module 9** | **NoSQL With MongoDB** | ⏳ Upcoming | October 2026 | MongoDB, Aggregation |
-| **Module 10** | **Angular** | ⏳ Upcoming | November 2026 | Angular, TypeScript, RxJS |
-| **Module 11** | **AWS** | ⏳ Upcoming | December 2026 | AWS EC2, S3, RDS, Lambda |
+| **Module 6** | **Java Essentials** | 🟡 In Progress | April 2026 | Core Java, OOP, Collections |
+| **Module 7** | **Mastering Spring Boot** | ⏳ Upcoming | May 2026 | Spring Boot, REST APIs |
+| **Module 8** | **Mastering Testing in Java** | ⏳ Upcoming | June 2026 | JUnit, Mockito, TestNG |
+| **Module 9** | **NoSQL With MongoDB** | ⏳ Upcoming | July 2026 | MongoDB, Aggregation |
+| **Module 10** | **Angular** | ⏳ Upcoming | August 2026 | Angular, TypeScript, RxJS |
+| **Module 11** | **AWS** | ⏳ Upcoming | September 2026 | AWS EC2, S3, RDS, Lambda |
 
 ---
 
 ## 🎯 Current Focus: Module 6 - Java Essentials
 
-**Timeline:** April — July 2026  
-**Status:** 🟡 **Actively Learning (65% Complete)**
+**Timeline:** April 2026  
+**Status:** 🟡 **Actively Learning (55% Complete)**
 
 ### **Topics Being Covered:**
 - ✅ Java Fundamentals & Environment Setup
 - ✅ Data Types, Variables & Operators
-- ✅ Control Flow Statements (if-else, loops, switch)
-- ✅ Object-Oriented Programming (OOP) Concepts (core concepts covered)
-- 🟡 Inheritance & Polymorphism (practicals & exercises)
-- ✅ Encapsulation & Abstraction
-- ✅ Exception Handling & Error Management
-- 🟡 Collections Framework (List, Set, Map) — basics covered, deeper work ongoing
-- ✅ File I/O Operations (basic read/write implemented)
-- 🟡 Multithreading Basics (started; hands-on exercises ongoing)
-- 🟡 JDBC Connection & Database Integration (basic CRUD via JDBC in progress)
+- ✅ Control Flow Statements (if-else, loops)
+- 🟡 Object-Oriented Programming (OOP) Concepts
+- 🟡 Inheritance & Polymorphism
+- 🟡 Encapsulation & Abstraction
+- ⏳ Exception Handling & Error Management
+- ⏳ Collections Framework (List, Set, Map)
+- ⏳ File I/O Operations
+- ⏳ Multithreading Basics
+- ⏳ JDBC Connection & Database Integration
 
 ### **Projects in Development:**
 1. **Java Banking System** - OOP principles and file handling
@@ -64,7 +64,7 @@ Web Development     ██████████ 100%
 JavaScript          ██████████ 100%
 React               ██████████ 100%
 SQL                 ██████████ 100%
-Java                ███████░░ 65%
+Java                █████      40%
 Spring Boot         ░░░░░░░░░░ 0%
 Testing             ░░░░░░░░░░ 0%
 MongoDB             ░░░░░░░░░░ 0%
@@ -95,19 +95,19 @@ Code
 - [x] SQL Fundamentals (SELECT, INSERT, UPDATE, DELETE)
 - [x] Complex Queries (JOINs, Subqueries, Aggregate Functions)
 - [x] Database Design & Normalization
+- [x] JDBC Connection & Database Integration
 - [x] Java Fundamentals & Environment Setup
 - [x] Data Types, Variables & Operators
 - [x] Control Flow Statements (if-else, loops, switch)
-- [x] Object-Oriented Programming (OOP) — core concepts
-- [x] Encapsulation & Abstraction
-- [x] Exception Handling & Error Management
-- [x] File I/O Operations (basic read/write)
 
 ### **🟡 Currently Learning**
-- [ ] Inheritance & Polymorphism — applied projects
-- [ ] Collections Framework (List, Set, Map) — advanced usage
-- [ ] Multithreading Basics — concurrency patterns
-- [ ] JDBC Connection & Database Integration — prepared statements & transactions
+- [ ] Object-Oriented Programming (OOP) Concepts
+- [ ] Inheritance & Polymorphism
+- [ ] Encapsulation & Abstraction
+- [ ] Exception Handling
+- [ ] Collections Framework (List, Set, Map)
+- [ ] File I/O Operations
+- [ ] Multithreading Basics
 
 ### **⏳ Upcoming Skills**
 - [ ] Advanced Collections & Generics
@@ -252,9 +252,9 @@ This repository is maintained for **educational purposes** as part of my learnin
 *"Education is not preparation for life; education is life itself."* – John Dewey
 
 ---
-**Last Updated:** July 4, 2026  
-**Current Module:** Java Essentials  
-**Next Module Preview:** Mastering Spring Boot (August 2026)
+**Last Updated:** February 2026  
+**Current Module:** React Essentials  
+**Next Module Preview:** SQL Deep Dive (March 2026)
 
 ---
 
