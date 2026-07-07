@@ -1,0 +1,23 @@
+Spring Security:
+Authentication VS Authorization
+First Authentication , then Authorization
+Authentication validates users , with user and pass
+Authorization give resource access to the user
+
+Step-1
+Add Spring Security Dependency
+
+Step-2
+You can Use auto generated password for autentication
+
+Step-3
+you can give custom username and password for login 
+
+Spring Security Architechture : Search Google. medium website
+
+Spring Security Go through Many Filters , you have added, like api access restriction
+username, password required ...
+
+Links:
+localhost://8080/login
+localhost://8080/logout

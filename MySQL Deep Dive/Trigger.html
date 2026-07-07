@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, viewport-fit=cover">
+  <title>⚡ TRIGGERS · concise guide</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(145deg, #f4f9ff 0%, #eef2f8 100%);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
+      padding: 1rem;
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    .cheat-container {
+      max-width: 1300px;
+      width: 100%;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(2px);
+      border-radius: 2rem;
+      box-shadow: 0 20px 40px -12px rgba(0,20,45,0.25);
+      padding: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.8);
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 6vw, 2.6rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      color: #0a2a44;
+      border-bottom: 3px solid #b0472e;
+      padding-bottom: 0.6rem;
+    }
+
+    h1 span {
+      background: #7a2e1a;
+      color: white;
+      font-size: clamp(0.7rem, 3vw, 1rem);
+      font-weight: 500;
+      padding: 0.25rem 0.9rem;
+      border-radius: 40px;
+      white-space: nowrap;
+    }
+
+    .sub-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      margin-top: 0.7rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .badge-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .badge {
+      background: white;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      color: #7a2e1a;
+      border: 1px solid #dbb8a8;
+      white-space: nowrap;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 1.2rem;
+    }
+
+    @media (min-width: 640px) {
+      .grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1.6rem;
+      }
+      body { padding: 1.5rem; }
+      .cheat-container { padding: 1.8rem; }
+    }
+
+    @media (min-width: 1024px) {
+      .grid { gap: 1.8rem; }
+      .cheat-container { padding: 2rem; }
+    }
+
+    .card {
+      background: #ffffffea;
+      backdrop-filter: blur(4px);
+      border-radius: 1.5rem;
+      padding: 1.2rem;
+      box-shadow: 0 8px 18px -6px rgba(24, 50, 80, 0.08);
+      border: 1px solid #ffffff;
+      transition: all 0.2s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      box-shadow: 0 18px 28px -10px #1e3f5f33;
+      border-color: #e6c2b0;
+      background: white;
+    }
+
+    .card-header {
+      font-weight: 700;
+      font-size: clamp(1.2rem, 4vw, 1.45rem);
+      margin-bottom: 1rem;
+      color: #7a2e1a;
+      border-left: 6px solid #b0472e;
+      padding-left: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .sql-block {
+      background: #0e1f2f;
+      color: #e3f0fd;
+      border-radius: 1rem;
+      padding: 0.8rem;
+      font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+      font-size: 0.8rem;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      word-break: break-word;
+      margin: 0.8rem 0;
+      border: 1px solid #2c4b6e;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .sql-block::-webkit-scrollbar { height: 4px; }
+    .keyword { color: #ffb77c; font-weight: 600; }
+    .string { color: #b5f0b0; }
+    .comment { color: #7a9bba; font-style: italic; }
+
+    .note {
+      background: #f7ece6;
+      padding: 0.6rem 0.9rem;
+      border-radius: 1rem;
+      color: #5a281a;
+      font-weight: 450;
+      margin: 0.8rem 0 0.3rem;
+      border-left: 4px solid #b0472e;
+      font-size: 0.85rem;
+    }
+
+    .flex-tag {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.7rem 0;
+    }
+
+    .pill {
+      background: #f0dfd8;
+      color: #5a281a;
+      border-radius: 30px;
+      padding: 0.2rem 0.9rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px dashed #dbb8a8;
+      margin: 1.2rem 0;
+    }
+
+    .two-col {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    @media (min-width: 640px) {
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+    }
+
+    .caption {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #5a281a;
+      margin-top: 0.2rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #f5fafe;
+      border-radius: 1rem;
+      overflow: hidden;
+      margin: 0.8rem 0;
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    @media (min-width: 560px) {
+      table {
+        white-space: normal;
+        display: table;
+      }
+    }
+
+    th {
+      background: #7a2e1a;
+      color: white;
+      font-weight: 600;
+      padding: 0.5rem 0.6rem;
+      font-size: 0.75rem;
+    }
+
+    td {
+      padding: 0.45rem 0.6rem;
+      border-bottom: 1px solid #dbb8a8;
+      font-size: 0.75rem;
+    }
+
+    .accent-text {
+      background: #fef7e0;
+      border-radius: 1rem;
+      padding: 0.5rem 0.9rem;
+      font-size: 0.8rem;
+      margin-top: 0.6rem;
+    }
+
+    .extra-data {
+      background: #f7ece6;
+      border-radius: 1.3rem;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 0.8rem;
+    }
+
+    .footer-note {
+      margin-top: 1.5rem;
+      font-size: 0.75rem;
+      color: #5a281a;
+      border-top: 1px solid #dbb8a8;
+      padding-top: 1rem;
+      text-align: center;
+    }
+
+    .card .sql-block:last-child { margin-bottom: 0; }
+    .badge, .pill { cursor: default; }
+    .emoji-big { font-size: 1.3rem; line-height: 1; }
+  </style>
+</head>
+<body>
+<div class="cheat-container">
+  <h1>
+    ⚡ TRIGGERS · essential guide
+    <span>BEFORE · AFTER · INSTEAD OF</span>
+  </h1>
+  <div class="sub-meta">
+    <div class="badge-group">
+      <span class="badge">🔄 automatic</span>
+      <span class="badge">📌 INSERT/UPDATE/DELETE</span>
+      <span class="badge">⏰ BEFORE / AFTER</span>
+      <span class="badge">📦 audit log</span>
+      <span class="badge">🛡️ data integrity</span>
+    </div>
+    <div class="badge-group">
+      <span class="badge">🔁 FOR EACH ROW</span>
+      <span class="badge">📊 OLD / NEW</span>
+    </div>
+  </div>
+
+  <div class="grid">
+    <!-- CARD 1: BASIC SYNTAX -->
+    <div class="card">
+      <div class="card-header"><span class="emoji-big">📐</span> Syntax & Timing</div>
+      <div class="sql-block"><span class="keyword">CREATE TRIGGER</span> trigger_name<br>
+{ <span class="keyword">BEFORE</span> | <span class="keyword">AFTER</span> } { <span class="keyword">INSERT</span> | <span class="keyword">UPDATE</span> | <span class="keyword">DELETE</span> }<br>
+<span class="keyword">ON</span> table_name <span class="keyword">FOR EACH ROW</span><br>
+<span class="keyword">BEGIN</span><br>
+    <span class="comment">-- SQL statements</span><br>
+    <span class="comment">-- OLD.column (for UPDATE/DELETE)</span><br>
+    <span class="comment">-- NEW.column (for INSERT/UPDATE)</span><br>
+<span class="keyword">END</span>;</div>
+      <div class="note">⏰ BEFORE: validate/modify data before write · AFTER: log/audit after write</div>
+      <div class="flex-tag">
+        <span class="pill">🔹 INSERT</span>
+        <span class="pill">🔹 UPDATE</span>
+        <span class="pill">🔹 DELETE</span>
+        <span class="pill">🔹 FOR EACH ROW</span>
+      </div>
+    </div>
+
+    <!-- CARD 2: BEFORE INSERT (validation) -->
+    <div class="card">
+      <div class="card-header"><span class="emoji-big">🛡️</span> BEFORE INSERT · validation</div>
+      <div class="sql-block"><span class="comment">-- ensure age >= 18</span><br>
+<span class="keyword">DELIMITER</span> //<br>
+<span class="keyword">CREATE TRIGGER</span> check_age_before_insert<br>
+<span class="keyword">BEFORE INSERT ON</span> users<br>
+<span class="keyword">FOR EACH ROW</span><br>
+<span class="keyword">BEGIN</span><br>
+    <span class="keyword">IF</span> NEW.age &lt; 18 <span class="keyword">THEN</span><br>
+        <span class="keyword">SIGNAL SQLSTATE</span> <span class="string">'45000'</span><br>
+        <span class="keyword">SET</span> MESSAGE_TEXT = <span class="string">'Age must be >= 18'</span>;<br>
+    <span class="keyword">END IF</span>;<br>
+<span class="keyword">END</span> //<br>
+<span class="keyword">DELIMITER</span> ;</div>
+      <div class="sql-block"><span class="comment">-- auto-format email to lowercase</span><br>
+<span class="keyword">CREATE TRIGGER</span> format_email<br>
+<span class="keyword">BEFORE INSERT ON</span> users<br>
+<span class="keyword">FOR EACH ROW</span><br>
+<span class="keyword">BEGIN</span><br>
+    <span class="keyword">SET</span> NEW.email = <span class="keyword">LOWER</span>(NEW.email);<br>
+<span class="keyword">END</span>;</div>
+      <div class="note">✅ Prevents invalid data · modifies NEW values before insert</div>
+    </div>
+
+    <!-- CARD 3: AFTER INSERT (audit log) -->
+    <div class="card">
+      <div class="card-header"><span class="emoji-big">📋</span> AFTER INSERT · audit log</div>
+      <div class="sql-block"><span class="comment">-- create audit table</span><br>
+<span class="keyword">CREATE TABLE</span> user_audit (<br>
+    log_id <span class="keyword">INT AUTO_INCREMENT PRIMARY KEY</span>,<br>
+    user_id <span class="keyword">INT</span>, action <span class="keyword">VARCHAR</span>(20),<br>
+    changed_at <span class="keyword">TIMESTAMP DEFAULT CURRENT_TIMESTAMP</span><br>);</div>
+      <div class="sql-block"><span class="comment">-- trigger: log every new user</span><br>
+<span class="keyword">DELIMITER</span> //<br>
+<span class="keyword">CREATE TRIGGER</span> log_user_insert<br>
+<span class="keyword">AFTER INSERT ON</span> users<br>
+<span class="keyword">FOR EACH ROW</span><br>
+<span class="keyword">BEGIN</span><br>
+    <span class="keyword">INSERT INTO</span> user_audit (user_id, action)<br>
+    <span class="keyword">VALUES</span> (NEW.id, <span class="string">'INSERT'</span>);<br>
+<span class="keyword">END</span> //<br>
+<span class="keyword">DELIMITER</span> ;</div>
+      <div class="note">📌 Great for tracking changes, compliance, and history</div>
+    </div>
+
+    <!-- CARD 4: BEFORE UPDATE (modify data) -->
+    <div class="card">
+      <div class="card-header"><span class="emoji-big">✏️</span> BEFORE UPDATE · modify & validate</div>
+      <div class="sql-block"><span class="comment">-- auto-update last_modified timestamp</span><br>
+<span class="keyword">DELIMITER</span> //<br>
+<span class="keyword">CREATE TRIGGER</span> update_timestamp<br>
+<span class="keyword">BEFORE UPDATE ON</span> users<br>
+<span class="keyword">FOR EACH ROW</span><br>
+<span class="keyword">BEGIN</span><br>
+    <span class="keyword">SET</span> NEW.last_modified = <span class="keyword">NOW</span>();<br>
+<span class="keyword">END</span> //<br>
+<span class="keyword">DELIMITER</span> ;</div>
+      <div class="sql-block"><span class="comment">-- prevent lowering salary by more than 10%</span><br>
+<span class="keyword">CREATE TRIGGER</span> salary_check<br>
+<span class="keyword">BEFORE UPDATE ON</span> employees<br>
+<span class="keyword">FOR EACH ROW</span><br>
+<span class="keyword">BEGIN</span><br>
+    <span class="keyword">IF</span> NEW.salary &lt; OLD.salary * 0.9 <span class="keyword">THEN</span><br>
+        <span class="keyword">SIGNAL SQLSTATE</span> <span class="string">'45000'</span><br>
+        <span class="keyword">SET</span> MESSAGE_TEXT = <span class="string">'Salary cut exceeds 10%'</span>;<br>
+    <span class="keyword">END IF</span>;<br>
+<span class="keyword">END</span>;</div>
+      <div class="note">🔍 OLD.column = value before update · NEW.column = new value</div>
+    </div>
+
+    <!-- CARD 5: AFTER DELETE (cleanup) -->
+    <div class="card">
+      <div class="card-header"><span class="emoji-big">🗑️</span> AFTER DELETE · cleanup</div>
+      <div class="sql-block"><span class="comment">-- archive deleted records</span><br>
+<span class="keyword">CREATE TABLE</span> deleted_users_archive (<br>
+    id <span class="keyword">INT</span>, name <span class="keyword">VARCHAR</span>(100), email <span class="keyword">VARCHAR</span>(100),<br>
+    deleted_at <span class="keyword">TIMESTAMP DEFAULT CURRENT_TIMESTAMP</span><br>);</div>
+      <div class="sql-block"><span class="comment">-- trigger: archive before delete</span><br>
+<span class="keyword">DELIMITER</span> //<br>
+<span class="keyword">CREATE TRIGGER</span> archive_user<br>
+<span class="keyword">AFTER DELETE ON</span> users<br>
+<span class="keyword">FOR EACH ROW</span><br>
+<span class="keyword">BEGIN</span><br>
+    <span class="keyword">INSERT INTO</span> deleted_users_archive (id, name, email)<br>
+    <span class="keyword">VALUES</span> (OLD.id, OLD.name, OLD.email);<br>
+<span class="keyword">END</span> //<br>
+<span class="keyword">DELIMITER</span> ;</div>
+      <div class="note">💡 OLD contains the row that was deleted · useful for recovery</div>
+    </div>
+
+    <!-- CARD 6: TRIGGER COMPARISON + DROP -->
+    <div class="card">
+      <div class="card-header"><span class="emoji-big">⚖️</span> OLD vs NEW · DROP</div>
+      <div style="overflow-x: auto;">
+        <table>
+          <tr><th>Operation</th><th>OLD available?</th><th>NEW available?</th></tr>
+          <tr><td>INSERT</td><td>❌</td><td>✅</td></tr>
+          <tr><td>UPDATE</td><td>✅ (old values)</td><td>✅ (new values)</td></tr>
+          <tr><td>DELETE</td><td>✅</td><td>❌</td></tr>
+        </table>
+      </div>
+      <div class="sql-block"><span class="comment">-- Drop a trigger</span><br>
+<span class="keyword">DROP TRIGGER</span> [IF EXISTS] trigger_name;</div>
+      <div class="sql-block"><span class="comment">-- Show all triggers</span><br>
+<span class="keyword">SHOW TRIGGERS</span>;  <span class="comment">-- or</span><br>
+<span class="keyword">SELECT</span> * <span class="keyword">FROM</span> information_schema.triggers<br>
+<span class="keyword">WHERE</span> trigger_schema = <span class="string">'your_database'</span>;</div>
+      <div class="note">📌 Triggers run automatically · no explicit call · can be disabled with DISABLE TRIGGER</div>
+    </div>
+  </div>
+
+  <hr>
+  <div class="two-col">
+    <div class="caption">✅ GOOD: audit logs, validation, auto-updates, data integrity</div>
+    <div class="caption">❌ AVOID: complex business logic, recursive triggers, heavy processing</div>
+  </div>
+
+  <div class="extra-data">
+    <div class="sql-block" style="background: #112433;"><span class="comment">-- Multiple statements in a trigger</span><br>
+<span class="keyword">DELIMITER</span> //<br>
+<span class="keyword">CREATE TRIGGER</span> multi_action<br>
+<span class="keyword">AFTER INSERT ON</span> orders<br>
+<span class="keyword">FOR EACH ROW</span><br>
+<span class="keyword">BEGIN</span><br>
+    <span class="keyword">UPDATE</span> inventory <span class="keyword">SET</span> quantity = quantity - NEW.qty <span class="keyword">WHERE</span> product_id = NEW.product_id;<br>
+    <span class="keyword">INSERT INTO</span> order_log (order_id, status) <span class="keyword">VALUES</span> (NEW.id, <span class="string">'placed'</span>);<br>
+<span class="keyword">END</span> //<br>
+<span class="keyword">DELIMITER</span> ;</div>
+    <div class="sql-block" style="background: #112433;"><span class="comment">-- BEFORE DELETE: prevent deletion of active users</span><br>
+<span class="keyword">CREATE TRIGGER</span> prevent_delete_active<br>
+<span class="keyword">BEFORE DELETE ON</span> users<br>
+<span class="keyword">FOR EACH ROW</span><br>
+<span class="keyword">BEGIN</span><br>
+    <span class="keyword">IF</span> OLD.status = <span class="string">'active'</span> <span class="keyword">THEN</span><br>
+        <span class="keyword">SIGNAL SQLSTATE</span> <span class="string">'45000'</span><br>
+        <span class="keyword">SET</span> MESSAGE_TEXT = <span class="string">'Cannot delete active user'</span>;<br>
+    <span class="keyword">END IF</span>;<br>
+<span class="keyword">END</span>;</div>
+  </div>
+
+  <div class="footer-note">
+    ⚡ TRIGGERS · automatic · row-level · BEFORE/AFTER · INSERT/UPDATE/DELETE · OLD/NEW · audit · validation · integrity
+  </div>
+</div>
+</body>
+</html>

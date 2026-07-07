@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, viewport-fit=cover">
+  <title>📚 STORED FUNCTION · Complete Guide</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(145deg, #f4f9ff 0%, #eef2f8 100%);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, sans-serif;
+      padding: 1rem;
+      line-height: 1.5;
+      min-height: 100vh;
+    }
+
+    .cheat-container {
+      max-width: 1400px;
+      width: 100%;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(2px);
+      border-radius: 2rem;
+      box-shadow: 0 20px 40px -12px rgba(0,20,45,0.25);
+      padding: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.8);
+      transition: all 0.2s ease;
+    }
+
+    h1 {
+      font-size: clamp(1.8rem, 6vw, 2.6rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      color: #0a2a44;
+      border-bottom: 3px solid #2d6eb0;
+      padding-bottom: 0.6rem;
+    }
+
+    h1 span {
+      background: #1a3d5c;
+      color: white;
+      font-size: clamp(0.75rem, 3.5vw, 1rem);
+      font-weight: 500;
+      padding: 0.25rem 0.9rem;
+      border-radius: 40px;
+      white-space: nowrap;
+    }
+
+    .sub-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      margin-top: 0.7rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .badge-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .badge {
+      background: white;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      color: #1b4b77;
+      border: 1px solid #cbdbe9;
+      white-space: nowrap;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 1.2rem;
+    }
+
+    @media (min-width: 640px) {
+      .grid {
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 1.6rem;
+      }
+      body {
+        padding: 1.5rem;
+      }
+      .cheat-container {
+        padding: 1.8rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .grid {
+        gap: 1.8rem;
+      }
+      .cheat-container {
+        padding: 2rem;
+      }
+    }
+
+    .card {
+      background: #ffffffea;
+      backdrop-filter: blur(4px);
+      border-radius: 1.5rem;
+      padding: 1.2rem;
+      box-shadow: 0 8px 18px -6px rgba(24, 50, 80, 0.08);
+      border: 1px solid #ffffff;
+      transition: all 0.2s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      box-shadow: 0 18px 28px -10px #1e3f5f33;
+      border-color: #b9d5f0;
+      background: white;
+    }
+
+    .card-header {
+      font-weight: 700;
+      font-size: clamp(1.2rem, 4vw, 1.45rem);
+      margin-bottom: 1rem;
+      color: #0f3d62;
+      border-left: 6px solid #3a7bb5;
+      padding-left: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .sql-block {
+      background: #0e1f2f;
+      color: #e3f0fd;
+      border-radius: 1rem;
+      padding: 0.8rem;
+      font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+      font-size: 0.8rem;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      word-break: break-word;
+      margin: 0.8rem 0;
+      border: 1px solid #2c4b6e;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .sql-block::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    .keyword { color: #ffb77c; font-weight: 600; }
+    .string { color: #b5f0b0; }
+    .comment { color: #7a9bba; font-style: italic; }
+
+    .note {
+      background: #e5eff9;
+      padding: 0.6rem 0.9rem;
+      border-radius: 1rem;
+      color: #103a5e;
+      font-weight: 450;
+      margin: 0.8rem 0 0.3rem;
+      border-left: 4px solid #2e6a9e;
+      font-size: 0.85rem;
+    }
+
+    .flex-tag {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.7rem 0;
+    }
+
+    .pill {
+      background: #d9eafb;
+      color: #0e3e62;
+      border-radius: 30px;
+      padding: 0.2rem 0.9rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px dashed #bbd2e8;
+      margin: 1.2rem 0;
+    }
+
+    .two-col {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    @media (min-width: 640px) {
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+    }
+
+    .caption {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #1c557c;
+      margin-top: 0.2rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #f5fafe;
+      border-radius: 1rem;
+      overflow: hidden;
+      margin: 0.8rem 0;
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    @media (min-width: 560px) {
+      table {
+        white-space: normal;
+        display: table;
+      }
+    }
+
+    th {
+      background: #1d3f60;
+      color: white;
+      font-weight: 600;
+      padding: 0.5rem 0.6rem;
+      font-size: 0.75rem;
+    }
+
+    td {
+      padding: 0.45rem 0.6rem;
+      border-bottom: 1px solid #cbdae9;
+      font-size: 0.75rem;
+    }
+
+    .accent-text {
+      background: #fef7e0;
+      border-radius: 1rem;
+      padding: 0.5rem 0.9rem;
+      font-size: 0.8rem;
+      margin-top: 0.6rem;
+    }
+
+    .highlight-blue {
+      background: #e2effb;
+      border-radius: 20px;
+      padding: 0.2rem 0.7rem;
+      font-weight: 500;
+      display: inline-block;
+      font-size: 0.75rem;
+    }
+
+    ul, .card ul {
+      margin-left: 1.2rem;
+      color: #1e4a6e;
+      font-weight: 450;
+      font-size: 0.85rem;
+    }
+
+    li {
+      margin-bottom: 0.2rem;
+    }
+
+    .extra-data {
+      background: #eef3fc;
+      border-radius: 1.3rem;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 0.8rem;
+    }
+
+    .footer-note {
+      margin-top: 1.5rem;
+      font-size: 0.75rem;
+      color: #2b5d87;
+      border-top: 1px solid #cbe0f0;
+      padding-top: 1rem;
+      text-align: center;
+    }
+
+    .card .sql-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .badge, .pill {
+      cursor: default;
+    }
+
+    .emoji-big {
+      font-size: 1.3rem;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+<div class="cheat-container">
+  <h1>
+    📚 STORED FUNCTION · Complete Guide
+    <span>Simple · Reusable · Single value</span>
+  </h1>
+  <div class="sub-meta">
+    <div class="badge-group">
+      <span class="badge">🧮 calculator logic</span>
+      <span class="badge">📊 SELECT friendly</span>
+      <span class="badge">⚡ DETERMINISTIC</span>
+      <span class="badge">🔁 RETURN single</span>
+      <span class="badge">📦 real-world</span>
+      <span class="badge">🚫 no side effects</span>
+    </div>
+    <div class="badge-group">
+      <span class="badge">💡 Excel-like formulas</span>
+      <span class="badge">🔧 complex logic</span>
+    </div>
+  </div>
+
+  <div class="grid">
+    <!-- CARD 1: BASIC SYNTAX + ADD -->
+    <div class="card">
+      <div class="card-header"><span class="emoji-big">🎯</span> Basic Syntax</div>
+      <div class="sql-block"><span class="keyword">DELIMITER</span> //<br>
+<span class="keyword">CREATE FUNCTION</span> function_name(parameter1 datatype, parameter2 datatype)<br>
+<span class="keyword">RETURNS</span> return_datatype<br>
+<span class="keyword">DETERMINISTIC</span>  <span class="comment">-- or NOT DETERMINISTIC</span><br>
+<span class="keyword">BEGIN</span><br>
+    <span class="comment">-- SQL statements</span><br>
+    <span class="keyword">RETURN</span> value;<br>
+<span class="keyword">END</span> //<br>
+<span class="keyword">DELIMITER</span> ;</div>
+      <div class="note">📌 Think of it like a calculator: inputs → one result</div>
+      <div class="sql-block"><span class="comment">-- 1. Add Two Numbers (simplest)</span><br>
+<span class="keyword">DELIMITER</span> //<br>
+<span class="keyword">CREATE FUNCTION</span> add_numbers(a <span class="keyword">INT</span>, b <span class="keyword">INT</span>)<br>
+<span class="keyword">RETURNS INT</span> <span class="keyword">DETERMINISTIC</span><br>
+<span class="keyword">BEGIN</span><br>
+    <span class="keyword">RETURN</span> a + b;<br>
+<span class="keyword">END</span> //<br>
+<span class="keyword">DELIMITER</span> ;<br>
+<span class="keyword">SELECT</span> add_numbers(5, 3);  <span class="comment">-- 8</span><br>
+<span class="keyword">SELECT</span> add_numbers(10, 20); <span class="comment">-- 30</span></div>
+    </div>
+
+    <!-- CARD 2: GREETING + AGE -->
+    <div class="card">
+      <div class="card-header"><span class="emoji-big">👋</span> Greeting & Age</div>
+      <div class="sql-block"><span class="comment">-- 2. Greeting Function</span><br>
+<span class="keyword">DELIMITER</span> //<br>
+<span class="keyword">CREATE FUNCTION</span> greet(name <span class="keyword">VARCHAR</span>(50))<br>
+<span class="keyword">RETURNS VARCHAR</span>(100) <span class="keyword">DETERMINISTIC</span><br>
+<span class="keyword">BEGIN</span><br>
+    <span class="keyword">RETURN</span> <span class="keyword">CONCAT</span>(<span class="string">'Hello, '</span>, name, <span class="string">'! Welcome!'</span>);<br>
+<span class="keyword">END</span> //<br>
+<span class="keyword">DELIMITER</span> ;<br>
+<span class="keyword">SELECT</span> greet(<span class="string">'John'</span>);  <span class="comment">-- "Hello, John! Welcome!"</span><br>
+<span class="keyword">SELECT</span> greet(<span class="string">'Alice'</span>); <span class="comment">-- "Hello, Alice! Welcome!"</span></div>
+      <div class="sql-block"><span class="comment">-- 3. Calculate Age</span><br>
+<span class="keyword">DELIMITER</span> //<br>
+<span class="keyword">CREATE FUNCTION</span> calculate_age(birth_date <span class="keyword">DATE</span>)<br>
+<span class="keyword">RETURNS INT</span> <span class="keyword">DETERMINISTIC</span><br>
+<span class="keyword">BEGIN</span><br>
+    <span class="keyword">RETURN</span> <span class="keyword">YEAR</span>(<span class="keyword">CURDATE</span>()) - <span class="keyword">YEAR</span>(birth_date);<br>
+<span class="keyword">END</span> //<br>
+<span class="keyword">DELIMITER</span> ;<br>
+<span class="keyword">SELECT</span> calculate_age(<span class="string">'1990-05-15'</span>);  <span class="comment">-- 36 (2026)</span></div>
+    </div>
+
+    <!-- CARD 3: TAX + DISCOUNT -->
+    <div class="card">
+      <div class="card-header"><span class="emoji-big">💰</span> Tax & Discount</div>
+      <div class="sql-block"><span class="comment">-- 4. Calculate Tax</span><br>
+<span class="keyword">DELIMITER</span> //<br>
+<span class="keyword">CREATE FUNCTION</span> calculate_tax(amount <span class="keyword">DECIMAL</span>(10,2), tax_rate <span class="keyword">DECIMAL</span>(5,2))<br>
+<span class="keyword">RETURNS DECIMAL</span>(10,2) <span class="keyword">DETERMINISTIC</span><br>
+<span class="keyword">BEGIN</span><br>
+    <span class="keyword">RETURN</span> amount * (tax_rate / 100);<br>
+<span class="keyword">END</span> //<br>
+<span class="keyword">DELIMITER</span> ;<br>
+<span class="keyword">SELECT</span> calculate_tax(1000, 10);  <span class="comment">-- 100.00</span><br>
+<span class="keyword">SELECT</span> calculate_tax(500.50, 18); <span class="comment">-- 90.09</span></div>
+      <div class="sql-block"><span class="comment">-- 5. Get Discount Amount (final price)</span><br>
+<span class="keyword">DELIMITER</span> //<br>
+<span class="keyword">CREATE FUNCTION</span> get_discount(price <span class="keyword">DECIMAL</span>(10,2), discount_percent <span class="keyword">INT</span>)<br>
+<span class="keyword">RETURNS DECIMAL</span>(10,2) <span class="keyword">DETERMINISTIC</span><br>
+<span class="keyword">BEGIN</span><br>
+    <span class="keyword">DECLARE</span> discount_amount <span class="keyword">DECIMAL</span>(10,2);<br>
+    <span class="keyword">SET</span> discount_amount = price * (discount_percent / 100);<br>
+    <span class="keyword">RETURN</span> price - discount_amount;<br>
+<span class="keyword">END</span> //<br>
+<span class="keyword">DELIMITER</span> ;<br>
+<span class="keyword">SELECT</span> get_discount(100, 20);  <span class="comment">-- 80.00</span><br>
+<span class="keyword">SELECT</span> get_discount(250, 15);  <span class="comment">-- 212.50</span></div>
+    </div>
+
+    <!-- CARD 4: EVEN/ODD + FULL NAME -->
+    <div class="card">
+      <div class="card-header"><span class="emoji-big">🔢</span> Even/Odd & Full Name</div>
+      <div class="sql-block"><span class="comment">-- 6. Check if Number is Even</span><br>
+<span class="keyword">DELIMITER</span> //<br>
+<span class="keyword">CREATE FUNCTION</span> is_even(num <span class="keyword">INT</span>)<br>
+<span class="keyword">RETURNS VARCHAR</span>(10) <span class="keyword">DETERMINISTIC</span><br>
+<span class="keyword">BEGIN</span><br>
+    <span class="keyword">IF</span> num % 2 = 0 <span class="keyword">THEN</span> <span class="keyword">RETURN</span> <span class="string">'Even'</span>;<br>
+    <span class="keyword">ELSE</span> <span class="keyword">RETURN</span> <span class="string">'Odd'</span>;<br>
+    <span class="keyword">END IF</span>;<br>
+<span class="keyword">END</span> //<br>
+<span class="keyword">DELIMITER</span> ;<br>
+<span class="keyword">SELECT</span> is_even(4);  <span class="comment">-- "Even"</span><br>
+<span class="keyword">SELECT</span> is_even(7);  <span class="comment">-- "Odd"</span></div>
+      <div class="sql-block"><span class="comment">-- 7. Get Full Name from ID (uses table)</span><br>
+<span class="keyword">CREATE TABLE</span> users (<br>
+    id <span class="keyword">INT</span>, first_name <span class="keyword">VARCHAR</span>(50), last_name <span class="keyword">VARCHAR</span>(50)<br>);<br>
+<span class="keyword">INSERT INTO</span> users <span class="keyword">VALUES</span> (1, <span class="string">'John'</span>, <span class="string">'Doe'</span>), (2, <span class="string">'Jane'</span>, <span class="string">'Smith'</span>);<br>
+<span class="keyword">DELIMITER</span> //<br>
+<span class="keyword">CREATE FUNCTION</span> get_full_name(user_id <span class="keyword">INT</span>)<br>
+<span class="keyword">RETURNS VARCHAR</span>(100) <span class="keyword">DETERMINISTIC</span><br>
+<span class="keyword">BEGIN</span><br>
+    <span class="keyword">DECLARE</span> full_name <span class="keyword">VARCHAR</span>(100);<br>
+    <span class="keyword">SELECT</span> <span class="keyword">CONCAT</span>(first_name, <span class="string">' '</span>, last_name) <span class="keyword">INTO</span> full_name<br>
+    <span class="keyword">FROM</span> users <span class="keyword">WHERE</span> id = user_id;<br>
+    <span class="keyword">RETURN</span> full_name;<br>
+<span class="keyword">END</span> //<br>
+<span class="keyword">DELIMITER</span> ;<br>
+<span class="keyword">SELECT</span> get_full_name(1);  <span class="comment">-- "John Doe"</span><br>
+<span class="keyword">SELECT</span> get_full_name(2);  <span class="comment">-- "Jane Smith"</span></div>
+    </div>
+
+    <!-- CARD 5: ORDER COUNT + BONUS -->
+    <div class="card">
+      <div class="card-header"><span class="emoji-big">📦</span> Orders & Bonus</div>
+      <div class="sql-block"><span class="comment">-- 8. Get Total Orders Count</span><br>
+<span class="keyword">CREATE TABLE</span> orders (<br>
+    id <span class="keyword">INT</span>, customer_id <span class="keyword">INT</span>, amount <span class="keyword">DECIMAL</span>(10,2)<br>);<br>
+<span class="keyword">INSERT INTO</span> orders <span class="keyword">VALUES</span> (1, 101, 50), (2, 101, 75), (3, 102, 30);<br>
+<span class="keyword">DELIMITER</span> //<br>
+<span class="keyword">CREATE FUNCTION</span> get_order_count(customer_id <span class="keyword">INT</span>)<br>
+<span class="keyword">RETURNS INT</span> <span class="keyword">DETERMINISTIC</span><br>
+<span class="keyword">BEGIN</span><br>
+    <span class="keyword">DECLARE</span> order_count <span class="keyword">INT</span>;<br>
+    <span class="keyword">SELECT</span> <span class="keyword">COUNT</span>(*) <span class="keyword">INTO</span> order_count<br>
+    <span class="keyword">FROM</span> orders <span class="keyword">WHERE</span> customer_id = customer_id;<br>
+    <span class="keyword">RETURN</span> order_count;<br>
+<span class="keyword">END</span> //<br>
+<span class="keyword">DELIMITER</span> ;<br>
+<span class="keyword">SELECT</span> get_order_count(101);  <span class="comment">-- 2</span><br>
+<span class="keyword">SELECT</span> get_order_count(102);  <span class="comment">-- 1</span></div>
+      <div class="sql-block"><span class="comment">-- 9. Calculate Bonus with Conditions</span><br>
+<span class="keyword">DELIMITER</span> //<br>
+<span class="keyword">CREATE FUNCTION</span> calculate_bonus(salary <span class="keyword">DECIMAL</span>(10,2), performance_score <span class="keyword">INT</span>)<br>
+<span class="keyword">RETURNS DECIMAL</span>(10,2) <span class="keyword">DETERMINISTIC</span><br>
+<span class="keyword">BEGIN</span><br>
+    <span class="keyword">DECLARE</span> bonus <span class="keyword">DECIMAL</span>(10,2);<br>
+    <span class="keyword">IF</span> performance_score >= 90 <span class="keyword">THEN</span> <span class="keyword">SET</span> bonus = salary * 0.20;<br>
+    <span class="keyword">ELSEIF</span> performance_score >= 70 <span class="keyword">THEN</span> <span class="keyword">SET</span> bonus = salary * 0.10;<br>
+    <span class="keyword">ELSE</span> <span class="keyword">SET</span> bonus = 0;<br>
+    <span class="keyword">END IF</span>;<br>
+    <span class="keyword">RETURN</span> bonus;<br>
+<span class="keyword">END</span> //<br>
+<span class="keyword">DELIMITER</span> ;<br>
+<span class="keyword">SELECT</span> calculate_bonus(50000, 95);  <span class="comment">-- 10000.00</span><br>
+<span class="keyword">SELECT</span> calculate_bonus(50000, 75);  <span class="comment">-- 5000.00</span><br>
+<span class="keyword">SELECT</span> calculate_bonus(50000, 50);  <span class="comment">-- 0.00</span></div>
+    </div>
+
+    <!-- CARD 6: GRADE + INITIALS -->
+    <div class="card">
+      <div class="card-header"><span class="emoji-big">📊</span> Grade & Initials</div>
+      <div class="sql-block"><span class="comment">-- 10. Grade Calculator</span><br>
+<span class="keyword">DELIMITER</span> //<br>
+<span class="keyword">CREATE FUNCTION</span> get_grade(score <span class="keyword">INT</span>)<br>
+<span class="keyword">RETURNS VARCHAR</span>(2) <span class="keyword">DETERMINISTIC</span><br>
+<span class="keyword">BEGIN</span><br>
+    <span class="keyword">DECLARE</span> grade <span class="keyword">VARCHAR</span>(2);<br>
+    <span class="keyword">CASE</span><br>
+        <span class="keyword">WHEN</span> score >= 90 <span class="keyword">THEN</span> <span class="keyword">SET</span> grade = <span class="string">'A'</span>;<br>
+        <span class="keyword">WHEN</span> score >= 80 <span class="keyword">THEN</span> <span class="keyword">SET</span> grade = <span class="string">'B'</span>;<br>
+        <span class="keyword">WHEN</span> score >= 70 <span class="keyword">THEN</span> <span class="keyword">SET</span> grade = <span class="string">'C'</span>;<br>
+        <span class="keyword">WHEN</span> score >= 60 <span class="keyword">THEN</span> <span class="keyword">SET</span> grade = <span class="string">'D'</span>;<br>
+        <span class="keyword">ELSE</span> <span class="keyword">SET</span> grade = <span class="string">'F'</span>;<br>
+    <span class="keyword">END CASE</span>;<br>
+    <span class="keyword">RETURN</span> grade;<br>
+<span class="keyword">END</span> //<br>
+<span class="keyword">DELIMITER</span> ;<br>
+<span class="keyword">SELECT</span> get_grade(95);  <span class="comment">-- "A"</span><br>
+<span class="keyword">SELECT</span> get_grade(72);  <span class="comment">-- "C"</span></div>
+      <div class="sql-block"><span class="comment">-- 11. Extract Initials</span><br>
+<span class="keyword">DELIMITER</span> //<br>
+<span class="keyword">CREATE FUNCTION</span> extract_initials(full_name <span class="keyword">VARCHAR</span>(100))<br>
+<span class="keyword">RETURNS VARCHAR</span>(20) <span class="keyword">DETERMINISTIC</span><br>
+<span class="keyword">BEGIN</span><br>
+    <span class="keyword">DECLARE</span> first_initial <span class="keyword">CHAR</span>(1);<br>
+    <span class="keyword">DECLARE</span> last_initial <span class="keyword">CHAR</span>(1);<br>
+    <span class="keyword">SET</span> first_initial = <span class="keyword">UPPER</span>(<span class="keyword">SUBSTRING</span>(full_name, 1, 1));<br>
+    <span class="keyword">SET</span> last_initial = <span class="keyword">UPPER</span>(<span class="keyword">SUBSTRING</span>(full_name, <span class="keyword">LOCATE</span>(<span class="string">' '</span>, full_name) + 1, 1));<br>
+    <span class="keyword">RETURN</span> <span class="keyword">CONCAT</span>(first_initial, last_initial);<br>
+<span class="keyword">END</span> //<br>
+<span class="keyword">DELIMITER</span> ;<br>
+<span class="keyword">SELECT</span> extract_initials(<span class="string">'John Doe'</span>);    <span class="comment">-- "JD"</span><br>
+<span class="keyword">SELECT</span> extract_initials(<span class="string">'Jane Smith'</span>);  <span class="comment">-- "JS"</span></div>
+    </div>
+
+    <!-- CARD 7: FUNCTIONS IN QUERIES + EMPLOYEES -->
+    <div class="card">
+      <div class="card-header"><span class="emoji-big">📈</span> Functions in SELECT</div>
+      <div class="sql-block"><span class="comment">-- Create employees table</span><br>
+<span class="keyword">CREATE TABLE</span> employees (<br>
+    id <span class="keyword">INT</span>, name <span class="keyword">VARCHAR</span>(50), salary <span class="keyword">DECIMAL</span>(10,2),<br>
+    join_date <span class="keyword">DATE</span>, performance <span class="keyword">INT</span><br>);<br>
+<span class="keyword">INSERT INTO</span> employees <span class="keyword">VALUES</span> <br>
+(1, <span class="string">'Alice'</span>, 50000, <span class="string">'2020-01-15'</span>, 85),<br>
+(2, <span class="string">'Bob'</span>, 60000, <span class="string">'2019-03-20'</span>, 92),<br>
+(3, <span class="string">'Charlie'</span>, 45000, <span class="string">'2021-06-10'</span>, 65);</div>
+      <div class="sql-block"><span class="comment">-- Use multiple functions in one query</span><br>
+<span class="keyword">SELECT</span> <br>
+    name, salary,<br>
+    calculate_tax(salary, 10) <span class="keyword">AS</span> tax,<br>
+    calculate_bonus(salary, performance) <span class="keyword">AS</span> bonus,<br>
+    calculate_age(join_date) <span class="keyword">AS</span> years_employed,<br>
+    get_grade(performance) <span class="keyword">AS</span> performance_grade<br>
+<span class="keyword">FROM</span> employees;</div>
+      <div class="note">💡 Output: Alice: tax 5000, bonus 5000, grade B · Bob: tax 6000, bonus 12000, grade A · Charlie: tax 4500, bonus 0, grade F</div>
+    </div>
+
+    <!-- CARD 8: FUNCTION vs PROCEDURE -->
+    <div class="card">
+      <div class="card-header"><span class="emoji-big">⚖️</span> Function vs Procedure</div>
+      <div style="overflow-x: auto;">
+        <table>
+          <tr><th>Feature</th><th>FUNCTION</th><th>PROCEDURE</th></tr>
+          <tr><td>Returns</td><td>Single value</td><td>Multiple values / result sets</td></tr>
+          <tr><td>Use in SELECT</td><td>✅ SELECT func()</td><td>❌ CALL only</td></tr>
+          <tr><td>Modify data</td><td>❌ usually not allowed</td><td>✅ INSERT/UPDATE/DELETE</td></tr>
+          <tr><td>Parameters</td><td>IN only</td><td>IN, OUT, INOUT</td></tr>
+          <tr><td>Call method</td><td>Part of expression</td><td>CALL procedure_name()</td></tr>
+        </table>
+      </div>
+      <div class="sql-block"><span class="comment">-- ❌ BAD: function cannot modify data</span><br>
+<span class="keyword">CREATE FUNCTION</span> bad_function(user_id <span class="keyword">INT</span>)<br>
+<span class="keyword">RETURNS VARCHAR</span>(100)<br>
+<span class="keyword">BEGIN</span><br>
+    <span class="keyword">UPDATE</span> users <span class="keyword">SET</span> last_login = <span class="keyword">NOW</span>() <span class="keyword">WHERE</span> id = user_id;  <span class="comment">-- ERROR!</span><br>
+    <span class="keyword">RETURN</span> <span class="string">'Updated'</span>;<br>
+<span class="keyword">END</span> //</div>
+      <div class="sql-block"><span class="comment">-- ✅ GOOD: only read data</span><br>
+<span class="keyword">CREATE FUNCTION</span> good_function(user_id <span class="keyword">INT</span>)<br>
+<span class="keyword">RETURNS VARCHAR</span>(100)<br>
+<span class="keyword">BEGIN</span><br>
+    <span class="keyword">DECLARE</span> user_name <span class="keyword">VARCHAR</span>(100);<br>
+    <span class="keyword">SELECT</span> name <span class="keyword">INTO</span> user_name <span class="keyword">FROM</span> users <span class="keyword">WHERE</span> id = user_id;<br>
+    <span class="keyword">RETURN</span> user_name;<br>
+<span class="keyword">END</span> //</div>
+    </div>
+
+    <!-- CARD 9: E-COMMERCE COMPLETE -->
+    <div class="card">
+      <div class="card-header"><span class="emoji-big">🔥</span> E‑commerce System</div>
+      <div class="sql-block"><span class="comment">-- Setup tables</span><br>
+<span class="keyword">CREATE TABLE</span> products (<br>
+    id <span class="keyword">INT PRIMARY KEY</span>, name <span class="keyword">VARCHAR</span>(100), price <span class="keyword">DECIMAL</span>(10,2), category <span class="keyword">VARCHAR</span>(50)<br>);<br>
+<span class="keyword">CREATE TABLE</span> orders (<br>
+    id <span class="keyword">INT PRIMARY KEY</span>, product_id <span class="keyword">INT</span>, quantity <span class="keyword">INT</span>, order_date <span class="keyword">DATE</span><br>);<br>
+<span class="comment">-- 1. Final price with tax</span><br>
+<span class="keyword">DELIMITER</span> //<br>
+<span class="keyword">CREATE FUNCTION</span> final_price(price <span class="keyword">DECIMAL</span>(10,2), tax_rate <span class="keyword">DECIMAL</span>(5,2))<br>
+<span class="keyword">RETURNS DECIMAL</span>(10,2) <span class="keyword">DETERMINISTIC</span><br>
+<span class="keyword">BEGIN</span> <span class="keyword">RETURN</span> price + (price * tax_rate / 100); <span class="keyword">END</span> //<br>
+<span class="keyword">DELIMITER</span> ;</div>
+      <div class="sql-block"><span class="comment">-- 2. Order total</span><br>
+<span class="keyword">DELIMITER</span> //<br>
+<span class="keyword">CREATE FUNCTION</span> order_total(order_id <span class="keyword">INT</span>)<br>
+<span class="keyword">RETURNS DECIMAL</span>(10,2) <span class="keyword">DETERMINISTIC</span><br>
+<span class="keyword">BEGIN</span><br>
+    <span class="keyword">DECLARE</span> total <span class="keyword">DECIMAL</span>(10,2);<br>
+    <span class="keyword">SELECT</span> <span class="keyword">SUM</span>(p.price * o.quantity) <span class="keyword">INTO</span> total<br>
+    <span class="keyword">FROM</span> orders o <span class="keyword">JOIN</span> products p <span class="keyword">ON</span> o.product_id = p.id<br>
+    <span class="keyword">WHERE</span> o.id = order_id;<br>
+    <span class="keyword">RETURN</span> <span class="keyword">IFNULL</span>(total, 0);<br>
+<span class="keyword">END</span> //<br>
+<span class="keyword">DELIMITER</span> ;</div>
+      <div class="sql-block"><span class="comment">-- 3. Discount based on quantity</span><br>
+<span class="keyword">DELIMITER</span> //<br>
+<span class="keyword">CREATE FUNCTION</span> apply_discount(quantity <span class="keyword">INT</span>, price <span class="keyword">DECIMAL</span>(10,2))<br>
+<span class="keyword">RETURNS DECIMAL</span>(10,2) <span class="keyword">DETERMINISTIC</span><br>
+<span class="keyword">BEGIN</span><br>
+    <span class="keyword">IF</span> quantity >= 10 <span class="keyword">THEN</span> <span class="keyword">RETURN</span> price * 0.85;<br>
+    <span class="keyword">ELSEIF</span> quantity >= 5 <span class="keyword">THEN</span> <span class="keyword">RETURN</span> price * 0.90;<br>
+    <span class="keyword">ELSE</span> <span class="keyword">RETURN</span> price;<br>
+    <span class="keyword">END IF</span>;<br>
+<span class="keyword">END</span> //<br>
+<span class="keyword">DELIMITER</span> ;</div>
+      <div class="note">📌 Use all together: SELECT p.name, apply_discount(10, p.price) AS discounted, final_price(..., 12) AS final_with_tax, order_total(1) FROM products p;</div>
+    </div>
+
+    <!-- CARD 10: QUICK REFERENCE -->
+    <div class="card">
+      <div class="card-header"><span class="emoji-big">🚀</span> Quick Reference Card</div>
+      <div class="sql-block"><span class="comment">-- Basic function</span><br>
+<span class="keyword">CREATE FUNCTION</span> func_name(param1 <span class="keyword">INT</span>) <span class="keyword">RETURNS INT DETERMINISTIC</span><br>
+<span class="keyword">BEGIN</span> <span class="keyword">RETURN</span> param1 * 2; <span class="keyword">END</span>;</div>
+      <div class="sql-block"><span class="comment">-- With variable</span><br>
+<span class="keyword">CREATE FUNCTION</span> func_name(param1 <span class="keyword">INT</span>) <span class="keyword">RETURNS INT DETERMINISTIC</span><br>
+<span class="keyword">BEGIN</span> <span class="keyword">DECLARE</span> result <span class="keyword">INT</span>; <span class="keyword">SET</span> result = param1 * 2; <span class="keyword">RETURN</span> result; <span class="keyword">END</span>;</div>
+      <div class="sql-block"><span class="comment">-- With conditional</span><br>
+<span class="keyword">CREATE FUNCTION</span> func_name(score <span class="keyword">INT</span>) <span class="keyword">RETURNS VARCHAR</span>(10) <span class="keyword">DETERMINISTIC</span><br>
+<span class="keyword">BEGIN</span> <span class="keyword">IF</span> score > 80 <span class="keyword">THEN</span> <span class="keyword">RETURN</span> <span class="string">'Pass'</span>; <span class="keyword">ELSE</span> <span class="keyword">RETURN</span> <span class="string">'Fail'</span>; <span class="keyword">END IF</span>; <span class="keyword">END</span>;</div>
+      <div class="sql-block"><span class="comment">-- With table data</span><br>
+<span class="keyword">CREATE FUNCTION</span> func_name(id <span class="keyword">INT</span>) <span class="keyword">RETURNS VARCHAR</span>(50) <span class="keyword">DETERMINISTIC</span><br>
+<span class="keyword">BEGIN</span> <span class="keyword">DECLARE</span> val <span class="keyword">VARCHAR</span>(50); <span class="keyword">SELECT</span> name <span class="keyword">INTO</span> val <span class="keyword">FROM</span> table <span class="keyword">WHERE</span> id = id; <span class="keyword">RETURN</span> val; <span class="keyword">END</span>;</div>
+      <div class="accent-text">💡 Key Takeaway: Function = Calculator that always returns one value. Reusable, used in SELECT, no data modification.</div>
+    </div>
+  </div>
+
+  <hr>
+  <div class="two-col">
+    <div class="caption">📌 WHEN TO USE: calculations, formatting, validation, reusable logic in queries</div>
+    <div class="caption">❌ AVOID: data modification, complex transactions, sending emails/APIs</div>
+  </div>
+  <div class="extra-data">
+    <div class="sql-block" style="background: #112433;"><span class="comment">-- Additional quick examples</span><br>
+<span class="keyword">SELECT</span> add_numbers(100, 200);             <span class="comment">-- 300</span><br>
+<span class="keyword">SELECT</span> is_even(10), is_even(11);           <span class="comment">-- Even, Odd</span><br>
+<span class="keyword">SELECT</span> get_grade(82), get_grade(45);       <span class="comment">-- B, F</span><br>
+<span class="keyword">SELECT</span> calculate_tax(2500, 15);            <span class="comment">-- 375.00</span><br>
+<span class="keyword">SELECT</span> extract_initials(<span class="string">'Maria Garcia'</span>); <span class="comment">-- MG</span></div>
+    <div class="sql-block" style="background: #112433;"><span class="comment">-- Demonstrate DETERMINISTIC vs NOT</span><br>
+<span class="comment">-- DETERMINISTIC: same input → same output (e.g. add_numbers)</span><br>
+<span class="comment">-- NOT DETERMINISTIC: can return different values (e.g. using RAND(), NOW())</span><br>
+<span class="keyword">CREATE FUNCTION</span> random_bonus(salary <span class="keyword">DECIMAL</span>(10,2))<br>
+<span class="keyword">RETURNS DECIMAL</span>(10,2) <span class="keyword">NOT DETERMINISTIC</span><br>
+<span class="keyword">BEGIN</span> <span class="keyword">RETURN</span> salary * <span class="keyword">RAND</span>(); <span class="keyword">END</span>;</div>
+  </div>
+  <div class="footer-note">
+    🧠 STORED FUNCTIONS · Complete reference · 10+ real examples · reusuable · single value · SELECT-friendly
+  </div>
+</div>
+</body>
+</html>

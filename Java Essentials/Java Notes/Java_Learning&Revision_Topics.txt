@@ -31,7 +31,7 @@ SQL :- Find Third Highest Salary, 5-10 Topic Question EveryDay
 
 
 JAVA PROJECT :-
-1. Java Calculator
+1. Java Calculator   // Take Reference From Youtube , AI to Understand Logic and Build The Same ....
 2. Java Console Based Quiz App
 3. Java Console Based Banking Management System
  
