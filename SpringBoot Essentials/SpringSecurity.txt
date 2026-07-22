@@ -21,3 +21,13 @@ username, password required ...
 Links:
 localhost://8080/login
 localhost://8080/logout
+
+
+
+***************
+JWT Auth Setups
+JWT Token Creation
+Validation 
+
+Password Encoding From Spring Boot
+

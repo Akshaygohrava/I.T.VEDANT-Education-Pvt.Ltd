@@ -1,0 +1,29 @@
+LocalStorage 
+
+1.localstorage
+
+localstorage.setItem("user", "Akshay");
+
+localstorage
+
+localstorage.getItem("user");
+
+localstorage.clear();
+
+localstorage.setItem("user", {"id":101, "name":"Akshay"});
+
+localstorage.setItem("user", JSON.Stringfy({"id":101, "name":"Akshay"}));
+
+localstorage.getItem("user");
+
+json.parse(user);
+
+Login Logout Session, 
+Authentication
+
+
+
+
+
+
+
