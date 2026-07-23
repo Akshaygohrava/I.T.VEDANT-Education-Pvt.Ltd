@@ -1,0 +1,32 @@
+DSA problems
+.
+1. Reverse a string
+2. Check if a string is a palindrome
+3. Find the factorial of a number
+4. Generate Fibonacci series
+5. Check if a number is prime
+6. Find the GCD/HCF of two numbers
+7. Count vowels and consonants in a string
+8. Remove duplicate elements from an array
+9. Find the second largest element in an array
+10. Find the missing number in an array
+11. Merge two sorted arrays
+12. Sort an array without built-in functions
+13. Find the maximum subarray sum (Kadane’s Algorithm)
+14. Rotate an array by K positions
+15. Move all zeros to the end of an array
+16. Two Sum problem
+17. Binary Search implementation
+18. Find the first non-repeating character
+19. Check if two strings are anagrams
+20. Reverse a linked list
+21. Detect a cycle in a linked list
+22. Find the middle node of a linked list
+23. Implement a stack using arrays
+24. Implement a queue using stacks
+25. Check balanced parentheses
+26. Level Order Traversal of a binary tree
+27. Find the height of a binary tree
+28. Detect a cycle in a graph (DFS/BFS)
+29. Implement BFS and DFS
+30. Find the longest common prefix in an array of strings
