@@ -27,7 +27,9 @@ Ex.Today :- Java Arrays , Program To Find Highest Number From This Array ... ect
 SQL :- Find Third Highest Salary, 5-10 Topic Question EveryDay
  
 
-
+Steps To razorpay Payment Integration
+Steps To JWT Authentication
+MultiThreading,Concurrency,SpringBoot, MySQL,Git
 
 
 JAVA PROJECT :-
