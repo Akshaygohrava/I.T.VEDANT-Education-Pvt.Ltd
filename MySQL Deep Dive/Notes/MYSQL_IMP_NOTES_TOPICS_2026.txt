@@ -38,3 +38,10 @@ COMMIT, ROLLBACK, SAVEPOINT, SET TRANSACTION
 
 **DQL : Data Query Language**  
 SELECT
+
+
+Normalisation In SQL:
+An Organizing data to reduce redundancy and Improve data integrity !
+1NF : remove dublicates columns , only allow single values 
+2NF : must in 1NF, remove partial dependency ...
+3NF : must in 3Nf , remove transtive dependency 
