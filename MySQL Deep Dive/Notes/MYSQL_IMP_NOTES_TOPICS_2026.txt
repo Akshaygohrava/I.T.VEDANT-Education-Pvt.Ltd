@@ -25,7 +25,7 @@ ADVANCE:-
 
 
 **DDL : Data Definition Language**  
-CREATE, ALTER, DROP, TRUNCATE, RENAME
+CREATE, ALTER, DROP, TRUNCATE, SELECT
 
 **DML : Data Manipulation Language**  
 INSERT, UPDATE, DELETE, MERGE

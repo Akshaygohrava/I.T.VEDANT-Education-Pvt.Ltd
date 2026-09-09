@@ -1,3 +1,7 @@
+what are joins ?
+what is subquery ?
+what is differece between primary key and foregin key ?
+
 What are joins in sql ?
 ans: Joins in sql is way , we can combine multiple tables data ,into one.
 
@@ -17,3 +21,5 @@ Ans: alter table student add column age int
 
 list any three , buildin mysql function ?
 Ans : uppercase(),lowercase(), concat()
+
+what is Normalisation?
