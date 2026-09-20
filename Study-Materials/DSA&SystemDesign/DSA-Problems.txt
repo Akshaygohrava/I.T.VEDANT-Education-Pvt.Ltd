@@ -2,8 +2,8 @@ DSA problems
 .
 1. Reverse a string
 2. Check if a string is a palindrome
-3. Find the factorial of a number
-4. Generate Fibonacci series
+3. Find the factorial of a number    
+4. Generate Fibonacci series       
 5. Check if a number is prime
 6. Find the GCD/HCF of two numbers
 7. Count vowels and consonants in a string

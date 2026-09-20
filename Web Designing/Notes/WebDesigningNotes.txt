@@ -1,0 +1,29 @@
+Web Designing Notes : 
+
+For Revision Topics :
+Basic to Advance All Topics Covered:
+
+* Tags
+* Attributes
+* Events Attributes
+* Sementic Elements
+* HTML5 Latest Features
+
+
+CSS3 :
+
+* From Basic Styling to Advance
+* All property , property values
+* Animations
+* Transistions
+* Transform
+* Responsive designs - Flex, Grid, Media Queries
+
+Projects For Web Designs :
+
+* Drop DownMenu
+* Beautiful Animations
+* Blog Websites
+* Clone Websites
+* Responsive Stracture
+

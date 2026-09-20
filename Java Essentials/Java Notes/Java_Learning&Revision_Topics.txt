@@ -20,6 +20,9 @@ Java Topics Learned & Learning and Need Revision Every Months !
 11. MultiThreading 20/6, JDBC
 12. Spring Boot
 
+For Revision : From Creating Class to Developing Management Projects
+Flow : Create Class -> Class Object -> Constructor - Methods - Variables - All Oops Concepts
+
 
 08/06/2026
 Making Practise Of Each Topic Every Day with ,Learn & Practise...
