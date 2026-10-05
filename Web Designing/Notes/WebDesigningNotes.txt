@@ -1,6 +1,6 @@
 Web Designing Notes : 
 
-For Revision Topics :
+For Revision Topics : Revision Done : Last September 2026 - Revise twice a year - by build real projects 
 Basic to Advance All Topics Covered:
 
 * Tags
@@ -17,13 +17,27 @@ CSS3 :
 * Animations
 * Transistions
 * Transform
+* Box Modelling 
 * Responsive designs - Flex, Grid, Media Queries
 
-Projects For Web Designs :
+Projects For Web Designs & Practise and Revision:
+html & Css , Tailwindcss, Materialui
 
 * Drop DownMenu
 * Beautiful Animations
+* Grid , Flexbox, Media Queries
+* Animated Cards
+* Code Html,Css templates
 * Blog Websites
 * Clone Websites
 * Responsive Stracture
+
+It's took ,1 month to revise html ,css from w3school ,from now ,only revision after 6-12 later , September/2026 html,css 
+Html Css best Practices:
+Drop down ,
+Html forms ,
+Html tables,
+Css Animation Mini project,
+Flex ,grid & Media Queries Practices 
+Now React revision & Mastery:
 
