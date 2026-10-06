@@ -1,0 +1,26 @@
+
+
+JavaScript Notes :- 
+
+To Make a Javascript Revision:- from basic to Advance Oct - 2026
+
+* Make a Basic Programms for each 
+* Starts from creating var , in string , number, and Arrays  to Create and Solve DSA Problems like palindrome, fibonacci ect
+* In OpenAI , Search like GIve me To 50-100 Important Topic to Revise For Javascript Interview Quesrtion Like ,
+All types of functions, callbackfunc, 
+recursion in js, 
+Promises, 
+All DOM Manuplation,
+async await, 
+api fetching ,with all methods, ects 
+and Solve them All ....
+
+* First Revise Core Javascript, 
+Then Above Top Topics and make program of Each , 
+Then Solve Top 50 basic to intermidiate DSA Question , 
+And Then Make a Programs Like Calculator , BankManagement Systems, Currency Convertor and more Top 20 JS Project 
+
+************************* And JavaScript Revison Done *********************
+
+Do Same For Java Language ...............
+ 
