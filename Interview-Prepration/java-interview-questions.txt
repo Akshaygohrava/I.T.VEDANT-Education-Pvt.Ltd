@@ -1,0 +1,110 @@
+*Most Asked Java Interview Questions (2024-2026) - 50 Questions*
+
+_Core Java:_
+1. Why is Java platform-independent?
+2. Difference between JDK, JRE, and JVM?
+3. == vs .equals() vs hashCode()
+4. String vs StringBuilder vs StringBuffer
+5. final, finally, finalize — differences
+6. this vs super
+7. Abstract class vs interface
+8. Method overloading vs overriding
+9. Static vs instance methods
+10. Immutable class — how to create one
+
+_Collections:_
+11. ArrayList vs LinkedList vs Vector
+12. HashMap vs Hashtable vs ConcurrentHashMap
+13. How does HashMap work internally?
+14. Comparable vs Comparator
+15. Fail-fast vs fail-safe iterators
+16. HashSet vs TreeSet vs LinkedHashSet
+17. TreeMap vs HashMap
+18. How to make a collection thread-safe?
+19. Collections.unmodifiableList vs List.of()
+20. Iterator vs ListIterator
+
+_Multithreading:_
+21. Thread lifecycle
+22. Runnable vs Callable vs Thread
+23. synchronized vs Lock
+24. volatile vs synchronized
+25. Deadlock — causes and prevention
+26. ExecutorService vs ThreadPoolExecutor
+27. Future vs CompletableFuture
+28. wait, notify, notifyAll
+29. Atomic classes (AtomicInteger, etc.)
+30. Virtual threads in Java 21
+
+_Streams & Functional:_
+31. What is a functional interface?
+32. map vs flatMap
+33. findFirst vs findAny
+34. Intermediate vs terminal operations
+35. reduce vs collect
+36. Optional best practices
+37. Stream vs Collection
+38. Parallel stream — when to use
+39. Collectors.groupingBy example
+40. Lazy evaluation in streams
+
+_Exceptions, JDBC, JVM:_
+41. Checked vs unchecked exceptions
+42. Can we have try without catch?
+43. throw vs throws
+44. Custom exception example
+45. What is OutOfMemoryError?
+46. Stack vs heap memory
+47. Garbage collection types
+48. Class loading mechanism
+49. JDBC steps to connect to a database
+50. Statement vs PreparedStatement
+
+
+
+
+
+
+Java Developer Job Description :-
+
+Design and implement scalable RESTful or GraphQL APIs using Spring Boot
+Develop and maintain microservices with synchronous (REST/gRPC) or asynchronous (Kafka/RabbitMQ) communication
+Architect and optimize queries for relational (PostgreSQL, MySQL) and NoSQL (MongoDB, Redis) databases
+Write comprehensive unit, integration, and functional tests using JUnit and Mockito
+Identify performance bottlenecks and implement caching strategies
+Work with DevOps on CI/CD pipelines (Jenkins, GitLab CI, or GitHub Actions)
+Participate in peer code reviews to maintain code quality
+
+
+Must-Have Skills
+
+Category
+
+Skills
+
+Core Java
+Java 11/17+, Multithreading, Streams API, Memory Management
+Framework
+Spring Boot, Spring Security, Spring Data JPA
+ORM
+Hibernate or MyBatis
+Database
+SQL (PostgreSQL/MySQL)
+Testing
+JUnit, Mockito
+Version Control
+Git (branching, merging, rebasing)
+Build Tools
+Maven or Gradle
+Containerization
+Docker
+
+
+Should-Have Skills
+
+Microservices architecture
+Message brokers (Kafka or RabbitMQ)
+NoSQL databases (MongoDB, Redis)
+Performance tuning & caching
+CI/CD pipeline experience
+Agile/Scrum collaboration
