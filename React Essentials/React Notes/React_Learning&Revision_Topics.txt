@@ -26,204 +26,118 @@ React Topics Learned & Learning and Need Revision Every Months !
 
 October - 2026 - Revision Pattern
 
-1–15: React Fundamentals
-🧩 Components — functional vs class, composition, pure components
-
-📦 Props — passing, default props, prop types, children prop, prop drilling
-
-🔄 State — local vs global, lifting state up, immutable updates
-
-⚛️ JSX — syntax, expressions, fragments, conditional JSX, JSX vs HTML
-
-🖱️ Event Handling — synthetic events, event pooling, handlers, binding
-
-🔀 Conditional Rendering — if, ternary, &&, switch, early return
-
-📋 Lists & Keys — map, key importance, index as key pitfalls
-
-Component Lifecycle — mount, update, unmount (class + hooks equivalent)
-
-Controlled vs Uncontrolled Components — forms, refs, validation
-
-React Fragments — <>...</>, <React.Fragment>, keyed fragments
-
-React Strict Mode — double rendering, dev-only checks
-
-React Portals — modals, tooltips, ReactDOM.createPortal
-
-Refs — createRef, callback refs, forwardRef
-
-Render Props — pattern, use cases, vs HOCs
-
-Higher-Order Components (HOC) — pattern, composition, pitfalls
-
-16–30: React Hooks
-useState — lazy initialization, batching, functional updates
-
-useEffect — dependencies, cleanup, mount/unmount, common bugs
-
-useContext — context API, providers, avoiding prop drilling
-
-useRef — DOM refs, mutable values, vs state
-
-useMemo — memoizing values, performance, when NOT to use
-
-useCallback — memoizing functions, dependency arrays
-
-React.memo — memoizing components, shallow comparison, custom comparator
-
-useReducer — complex state, actions, reducers, vs useState
-
-useLayoutEffect — vs useEffect, DOM measurements
-
-useImperativeHandle — customizing ref exposure
-
-useTransition — non-blocking updates, concurrent rendering
-
-useDeferredValue — deferring expensive renders
-
-useId — unique IDs for accessibility
-
-useSyncExternalStore — external store subscriptions
-
-Custom Hooks — rules, reuse, testing, common patterns
-
-31–40: Patterns, Performance & Data
-🔌 API Integration — fetch, axios, React Query, SWR, error/loading states
-
-🛡️ Error Boundaries — class components, componentDidCatch, fallback UI
-
-♻️ Component Reusability — composition, compound components, slots
-
-⚡ Lazy Loading & Code Splitting — React.lazy, Suspense, dynamic imports
-
-🔄 State & Data Flow — one-way data flow, lifting state, context vs props
-
-State Management — Redux, Zustand, Jotai, Recoil, MobX
-
-React Query / TanStack Query — caching, mutations, invalidation
-
-Form Handling — React Hook Form, Formik, validation
-
-Routing — React Router v6+, nested routes, loaders, actions
-
-Suspense — data fetching, lazy components, streaming SSR
-
-41–50: Advanced & Ecosystem
-Server Components (RSC) — server vs client components
-
-Server-Side Rendering (SSR) — Next.js, hydration, streaming
-
-Static Site Generation (SSG) — Next.js, ISR
-
-Concurrent Rendering — React 18+, transitions, scheduling
-
-React Compiler — auto-memoization, React 19+
-
-React 19 Features — Actions, use(), form actions, useOptimistic
-
-Testing — Jest, React Testing Library, Vitest, Cypress
-
-Accessibility (a11y) — ARIA, semantic HTML, keyboard navigation
-
-Performance Optimization — memoization, virtualization, bundle size
-
-TypeScript with React — props typing, generics, hooks typing
-
-Bonus: Modern 2026+ React Topics
-Next.js 15+ — App Router, Server Actions, Turbopack
-
-React Native — mobile development basics
-
-Remix / React Router 7 — full-stack React
-
-Astro + React Islands — partial hydration
-
-AI Integration — streaming AI responses, Vercel AI SDK
-
-Micro-frontends — Module Federation, independent deploys
-
-Design Systems — shadcn/ui, Radix, Tailwind
-
-Web Components in React — interoperability
-
-React DevTools — profiling, flame graphs
-
-Security — XSS in React, CSP, sanitization
-
-Most Asked React Coding Interview Questions
-Build a counter with useState
-
-Build a todo list with add/edit/delete
-
-Build a search filter with debounce
-
-Build a pagination component
-
-Build an infinite scroll list
-
-Build a modal with portal
-
-Build a tabs component
-
-Build an accordion
-
-Build a dropdown with outside click detection
-
-Build a form with validation
-
-Build a custom useFetch hook
-
-Build a custom useDebounce hook
-
-Build a custom useLocalStorage hook
-
-Build a custom useToggle hook
-
-Build a custom usePagination hook
-
-Implement React.memo manually
-
-Implement useMemo from scratch
-
-Implement useCallback from scratch
-
-Implement useState from scratch
-
-Implement useEffect from scratch
-
-Implement useReducer from scratch
-
-Build an autocomplete component
-
-Build a star rating component
-
-Build a multi-step form
-
-Build a drag-and-drop list
-
-Build a virtualized list
-
-Build a theme switcher with context
-
-Build an auth flow with protected routes
-
-Build a shopping cart with Redux/Zustand
-
-Build a real-time chat UI with WebSockets
-
-Suggested Study Order for 2026–27
-Fundamentals (topics 1–15)
-
-Hooks deep dive (16–30)
-
-Patterns, performance, data (31–40)
-
-Advanced & ecosystem (41–50)
-
-Modern React + Next.js (51–60)
-
-Daily coding practice (2–3 components/hooks)
+Here is your complete list with numbering added:
+
+*1-15: React Fundamentals*
+1. Components — functional vs class, composition, pure components
+2. Props — passing, default props, prop types, children prop, prop drilling
+3. State — local vs global, lifting state up, immutable updates
+4. JSX — syntax, expressions, fragments, conditional JSX, JSX vs HTML
+5. Event Handling — synthetic events, event pooling, handlers, binding
+6. Conditional Rendering — if, ternary, &&, switch, early return
+7. Lists & Keys — map, key importance, index as key pitfalls
+8. Component Lifecycle — mount, update, unmount (class + hooks equivalent)
+9. Controlled vs Uncontrolled Components — forms, refs, validation
+10. React Fragments — <>...</>, <React.Fragment>, keyed fragments
+11. React Strict Mode — double rendering, dev-only checks
+12. React Portals — modals, tooltips, ReactDOM.createPortal
+13. Refs — createRef, callback refs, forwardRef
+14. Render Props — pattern, use cases, vs HOCs
+15. Higher-Order Components (HOC) — pattern, composition, pitfalls
+
+*16-30: React Hooks*
+16. useState — lazy initialization, batching, functional updates
+17. useEffect — dependencies, cleanup, mount/unmount, common bugs
+18. useContext — context API, providers, avoiding prop drilling
+19. useRef — DOM refs, mutable values, vs state
+20. useMemo — memoizing values, performance, when NOT to use
+21. useCallback — memoizing functions, dependency arrays
+22. React.memo — memoizing components, shallow comparison, custom comparator
+23. useReducer — complex state, actions, reducers, vs useState
+24. useLayoutEffect — vs useEffect, DOM measurements
+25. useImperativeHandle — customizing ref exposure
+26. useTransition — non-blocking updates, concurrent rendering
+27. useDeferredValue — deferring expensive renders
+28. useId — unique IDs for accessibility
+29. useSyncExternalStore — external store subscriptions
+30. Custom Hooks — rules, reuse, testing, common patterns
+
+*31-40: Patterns, Performance & Data*
+31. API Integration — fetch, axios, React Query, SWR, error/loading states
+32. Error Boundaries — class components, componentDidCatch, fallback UI
+33. Component Reusability — composition, compound components, slots
+34. Lazy Loading & Code Splitting — React.lazy, Suspense, dynamic imports
+35. State & Data Flow — one-way data flow, lifting state, context vs props
+36. State Management — Redux, Zustand, Jotai, Recoil, MobX
+37. React Query / TanStack Query — caching, mutations, invalidation
+38. Form Handling — React Hook Form, Formik, validation
+39. Routing — React Router v6+, nested routes, loaders, actions
+40. Suspense — data fetching, lazy components, streaming SSR
+
+*41-50: Advanced & Ecosystem*
+41. Server Components (RSC) — server vs client components
+42. Server-Side Rendering (SSR) — Next.js, hydration, streaming
+43. Static Site Generation (SSG) — Next.js, ISR
+44. Concurrent Rendering — React 18+, transitions, scheduling
+45. React Compiler — auto-memoization, React 19+
+46. React 19 Features — Actions, use(), form actions, useOptimistic
+47. Testing — Jest, React Testing Library, Vitest, Cypress
+48. Accessibility (a11y) — ARIA, semantic HTML, keyboard navigation
+49. Performance Optimization — memoization, virtualization, bundle size
+50. TypeScript with React — props typing, generics, hooks typing
+
+*51-60: Bonus - Modern 2026+ React Topics*
+51. Next.js 15+ — App Router, Server Actions, Turbopack
+52. React Native — mobile development basics
+53. Remix / React Router 7 — full-stack React
+54. Astro + React Islands — partial hydration
+55. AI Integration — streaming AI responses, Vercel AI SDK
+56. Micro-frontends — Module Federation, independent deploys
+57. Design Systems — shadcn/ui, Radix, Tailwind
+58. Web Components in React — interoperability
+59. React DevTools — profiling, flame graphs
+60. Security — XSS in React, CSP, sanitization
+
+*61-90: Most Asked React Coding Interview Questions*
+61. Build a counter with useState
+62. Build a todo list with add/edit/delete
+63. Build a search filter with debounce
+64. Build a pagination component
+65. Build an infinite scroll list
+66. Build a modal with portal
+67. Build a tabs component
+68. Build an accordion
+69. Build a dropdown with outside click detection
+70. Build a form with validation
+71. Build a custom useFetch hook
+72. Build a custom useDebounce hook
+73. Build a custom useLocalStorage hook
+74. Build a custom useToggle hook
+75. Build a custom usePagination hook
+76. Implement React.memo manually
+77. Implement useMemo from scratch
+78. Implement useCallback from scratch
+79. Implement useState from scratch
+80. Implement useEffect from scratch
+81. Implement useReducer from scratch
+82. Build an autocomplete component
+83. Build a star rating component
+84. Build a multi-step form
+85. Build a drag-and-drop list
+86. Build a virtualized list
+87. Build a theme switcher with context
+88. Build an auth flow with protected routes
+89. Build a shopping cart with Redux/Zustand
+90. Build a real-time chat UI with WebSockets
+
+*Suggested Study Order for 2026-27*
+
+1. Fundamentals (topics 1-15)
+2. Hooks deep dive (16-30)
+3. Patterns, performance, data (31-40)
+4. Advanced & ecosystem (41-50)
+5. Modern React + Next.js (51-60)
+6. Daily coding practice (2-3 components/hooks)
 
 Comparison: React Topics vs JS Topics
 JS Topic	React Equivalent

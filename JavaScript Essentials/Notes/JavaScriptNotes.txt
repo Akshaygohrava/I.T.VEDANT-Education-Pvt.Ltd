@@ -10,227 +10,131 @@ Revision date : 8/Oct/2026
 Here are 50 important JavaScript interview topics, grouped for study. The ones you mentioned are included: loops, callbacks, async/await API handling, promises, closures, and JS DSA.
 How To Learn and Revise : Copy and paste line by line 10-10 topics in chatgpt with examples and practice them and next ...
 
-1–10: Core JavaScript Fundamentals
-JavaScript Loops — for, while, do...while, for...in, for...of, break/continue
-
-Callback Functions — anonymous, named, regular, arrow, error-first callbacks
-
-Promises — states, chaining, then/catch/finally, Promise.all/allSettled/race/any
-
-API Fetching with async/await — fetch, axios, JSON, error handling, retries
-
-Closures in JS — private variables, counters, loop closure problem, function factories
-
-var, let, const — scope, hoisting, Temporal Dead Zone
-
-Data Types — primitive vs reference, type coercion, typeof, instanceof
-
-Operators — == vs ===, truthy/falsy, ??, ?., spread/rest
-
-Scope & Lexical Scope — global, function, block, closures
-
-Hoisting — functions vs variables, TDZ
-
-11–20: Functions & Modern JS
-this Keyword — regular vs arrow, call, apply, bind
-
-Function Types — declaration, expression, arrow, IIFE, higher-order functions
-
-Array Methods — map, filter, reduce, find, some, every, flat, flatMap
-
-Object Methods — Object.keys/values/entries, freeze, seal, assign, destructuring
-
-Spread & Rest Operators — arrays, objects, function args
-
-Destructuring — array, object, nested, default values
-
-Template Literals & Tagged Templates
-
-Optional Chaining & Nullish Coalescing
-
-Modules — ES Modules vs CommonJS, dynamic import()
-
-Strict Mode — rules, benefits, pitfalls
-
-21–30: Async JavaScript & Event Loop
-Event Loop — call stack, task queue, microtask queue
-
-Microtasks vs Macrotasks — promises vs setTimeout
-
-Async/Await Deep Dive — error handling, parallel vs sequential
-
-Promise Combinators — all, allSettled, race, any
-
-Fetch API vs Axios — interceptors, cancellation, timeout
-
-AbortController & Request Cancellation
-
-Timers — setTimeout, setInterval, requestAnimationFrame
-
-Generators & Iterators — function*, yield, async generators
-
-Web Workers — background threads, postMessage
-
-Streams & Buffers — ReadableStream, WritableStream
-
-31–40: Objects, OOP & Advanced Patterns
-Prototypes & Prototype Chain
-
-Classes & Inheritance — extends, super, private fields #
-
-Map, Set, WeakMap, WeakSet
-
-Symbol & Well-known Symbols
-
-Proxy & Reflect — metaprogramming
-
-Getters & Setters — Object.defineProperty
-
-Shallow vs Deep Copy — structuredClone, JSON pitfalls
-
-Immutability — Object.freeze, immer, immutable patterns
-
-Currying & Partial Application
-
-Memoization & Caching
-
-41–50: Browser, Performance & Security
-DOM Manipulation — selection, creation, traversal
-
-Events — bubbling, capturing, delegation, preventDefault, stopPropagation
-
-Browser Storage — localStorage, sessionStorage, cookies, IndexedDB
-
-CORS & HTTP — status codes, headers, preflight
-
-Security — XSS, CSRF, CSP, sanitization
-
-Performance — reflow/repaint, lazy loading, code splitting, tree shaking
-
-Debounce & Throttle
-
-Memory Management & Garbage Collection
-
-Error Handling — try/catch/finally, custom errors, AggregateError
-
-Testing Basics — Jest, Vitest, unit vs integration tests
-
-Bonus: Modern 2026+ Topics
-TypeScript Basics — types, interfaces, generics, unions, unknown vs any
-
-React/Vue/Svelte Integration — hooks, reactivity, state management
-
-Node.js Fundamentals — fs, path, http, process, npm
-
-REST vs GraphQL vs tRPC
-
-WebSockets & Server-Sent Events
-
-Service Workers & PWA
-
-WebAssembly Basics
-
-AI/LLM Integration — calling AI APIs, streaming responses
-
-Edge Functions & Serverless
-
-Bun, Deno, Vite — modern tooling
-
-Most Asked JavaScript DSA Questions (2026–27 Interviews)
-Reverse a string
-
-Check palindrome
-
-Flatten nested array
-
-Flatten nested object
-
-Remove duplicates from array
-
-Find duplicates in array
-
-Two Sum
-
-Maximum subarray sum — Kadane's algorithm
-
-Anagram check
-
-Group anagrams
-
-First non-repeating character
-
-Implement debounce
-
-Implement throttle
-
-Implement curry
-
-Deep clone an object
-
-Implement memoize
-
-Polyfill Promise.all
-
-Implement EventEmitter
-
-Implement LRU Cache
-
-Detect cycle in linked list
-
-Binary search
-
-Merge two sorted arrays
-
-Valid parentheses
-
-Queue using two stacks
-
-BFS/DFS on tree or graph
-
-Longest substring without repeating characters
-
-Sliding window maximum
-
-Merge intervals
-
-Top K frequent elements
-
-Implement Promise.allSettled polyfill
-
-Implement Array.prototype.flat polyfill
-
-Implement Function.prototype.bind polyfill
-
-Implement Object.deepEqual
-
-Implement JSON.stringify polyfill
-
-Implement rate limiter
-
-Implement infinite scroll
-
-Implement virtual DOM diffing (basic)
-
-Implement useDebounce hook (React)
-
-Implement retry with exponential backoff
-
-Implement a simple state management store
-
-Suggested Study Order for 2026–27
-Core fundamentals (topics 1–10)
-
-Functions & modern JS (11–20)
-
-Async & event loop (21–30)
-
-OOP & patterns (31–40)
-
-Browser, performance, security (41–50)
-
-TypeScript + React/Node (51–60)
-
-DSA practice daily (2–3 problems)
+Here is your list with proper numbering:
+
+*1-10: Core JavaScript Fundamentals*
+1. JavaScript Loops — for, while, do...while, for...in, for...of, break/continue
+2. Callback Functions — anonymous, named, regular, arrow, error-first callbacks
+3. Promises — states, chaining, then/catch/finally, Promise.all/allSettled/race/any
+4. API Fetching with async/await — fetch, axios, JSON, error handling, retries
+5. Closures in JS — private variables, counters, loop closure problem, function factories
+6. var, let, const — scope, hoisting, Temporal Dead Zone
+7. Data Types — primitive vs reference, type coercion, typeof, instanceof
+8. Operators — == vs ===, truthy/falsy, ??, ?., spread/rest
+9. Scope & Lexical Scope — global, function, block, closures
+10. Hoisting — functions vs variables, TDZ
+
+*11-20: Functions & Modern JS*
+11. this Keyword — regular vs arrow, call, apply, bind
+12. Function Types — declaration, expression, arrow, IIFE, higher-order functions
+13. Array Methods — map, filter, reduce, find, some, every, flat, flatMap
+14. Object Methods — Object.keys/values/entries, freeze, seal, assign, destructuring
+15. Spread & Rest Operators — arrays, objects, function args
+16. Destructuring — array, object, nested, default values
+17. Template Literals & Tagged Templates
+18. Optional Chaining & Nullish Coalescing
+19. Modules — ES Modules vs CommonJS, dynamic import()
+20. Strict Mode — rules, benefits, pitfalls
+
+*21-30: Async JavaScript & Event Loop*
+21. Event Loop — call stack, task queue, microtask queue
+22. Microtasks vs Macrotasks — promises vs setTimeout
+23. Async/Await Deep Dive — error handling, parallel vs sequential
+24. Promise Combinators — all, allSettled, race, any
+25. Fetch API vs Axios — interceptors, cancellation, timeout
+26. AbortController & Request Cancellation
+27. Timers — setTimeout, setInterval, requestAnimationFrame
+28. Generators & Iterators — function*, yield, async generators
+29. Web Workers — background threads, postMessage
+30. Streams & Buffers — ReadableStream, WritableStream
+
+*31-40: Objects, OOP & Advanced Patterns*
+31. Prototypes & Prototype Chain
+32. Classes & Inheritance — extends, super, private fields #
+33. Map, Set, WeakMap, WeakSet
+34. Symbol & Well-known Symbols
+35. Proxy & Reflect — metaprogramming
+36. Getters & Setters — Object.defineProperty
+37. Shallow vs Deep Copy — structuredClone, JSON pitfalls
+38. Immutability — Object.freeze, immer, immutable patterns
+39. Currying & Partial Application
+40. Memoization & Caching
+
+*41-50: Browser, Performance & Security*
+41. DOM Manipulation — selection, creation, traversal
+42. Events — bubbling, capturing, delegation, preventDefault, stopPropagation
+43. Browser Storage — localStorage, sessionStorage, cookies, IndexedDB
+44. CORS & HTTP — status codes, headers, preflight
+45. Security — XSS, CSRF, CSP, sanitization
+46. Performance — reflow/repaint, lazy loading, code splitting, tree shaking
+47. Debounce & Throttle
+48. Memory Management & Garbage Collection
+49. Error Handling — try/catch/finally, custom errors, AggregateError
+50. Testing Basics — Jest, Vitest, unit vs integration tests
+
+*51-60: Bonus - Modern 2026+ Topics*
+51. TypeScript Basics — types, interfaces, generics, unions, unknown vs any
+52. React/Vue/Svelte Integration — hooks, reactivity, state management
+53. Node.js Fundamentals — fs, path, http, process, npm
+54. REST vs GraphQL vs tRPC
+55. WebSockets & Server-Sent Events
+56. Service Workers & PWA
+57. WebAssembly Basics
+58. AI/LLM Integration — calling AI APIs, streaming responses
+59. Edge Functions & Serverless
+60. Bun, Deno, Vite — modern tooling
+
+*61-100: Most Asked JavaScript DSA Questions (2026-27 Interviews)*
+61. Reverse a string
+62. Check palindrome
+63. Flatten nested array
+64. Flatten nested object
+65. Remove duplicates from array
+66. Find duplicates in array
+67. Two Sum
+68. Maximum subarray sum — Kadane's algorithm
+69. Anagram check
+70. Group anagrams
+71. First non-repeating character
+72. Implement debounce
+73. Implement throttle
+74. Implement curry
+75. Deep clone an object
+76. Implement memoize
+77. Polyfill Promise.all
+78. Implement EventEmitter
+79. Implement LRU Cache
+80. Detect cycle in linked list
+81. Binary search
+82. Merge two sorted arrays
+83. Valid parentheses
+84. Queue using two stacks
+85. BFS/DFS on tree or graph
+86. Longest substring without repeating characters
+87. Sliding window maximum
+88. Merge intervals
+89. Top K frequent elements
+90. Implement Promise.allSettled polyfill
+91. Implement Array.prototype.flat polyfill
+92. Implement Function.prototype.bind polyfill
+93. Implement Object.deepEqual
+94. Implement JSON.stringify polyfill
+95. Implement rate limiter
+96. Implement infinite scroll
+97. Implement virtual DOM diffing (basic)
+98. Implement useDebounce hook (React)
+99. Implement retry with exponential backoff
+100. Implement a simple state management store
+
+*Suggested Study Order for 2026-27*
+
+1. Core fundamentals (topics 1-10)
+2. Functions & modern JS (11-20)
+3. Async & event loop (21-30)
+4. OOP & patterns (31-40)
+5. Browser, performance, security (41-50)
+6. TypeScript + React/Node (51-60)
+7. DSA practice daily (2-3 problems)
 
 
 
