@@ -1,0 +1,251 @@
+🎯 The 10 React Projects (ordered by learning curve)
+1. Todo App with Hooks + Context ✅
+Difficulty: Beginner → Intermediate
+React topics covered:
+
+useState, useEffect (with dependency arrays!) ⭐
+
+Controlled inputs (value + onChange) ⭐ most-asked React question
+
+Lifting state up ⭐
+
+useContext + useReducer for global state ⭐⭐
+
+List rendering with stable key (and why index keys are bad) ⭐
+
+Props drilling vs Context
+
+Persisting to localStorage inside useEffect
+
+Why it's #1: Every React interview starts here. "Why controlled components?" and "How do you lift state up?" come up in nearly every loop.
+
+2. Debounced Search with useEffect + AbortController 🔍
+Difficulty: Intermediate
+React topics covered:
+
+useEffect cleanup functions ⭐⭐⭐ the #1 React gotcha
+
+Race conditions in async effects (stale responses) ⭐⭐⭐
+
+Custom hook: useDebounce(value, delay) ⭐⭐
+
+Dependency arrays — exhaustive deps, stale closures ⭐⭐⭐
+
+AbortController inside effects
+
+useRef for storing mutable values (not re-rendering) ⭐
+
+Loading / error / empty states pattern
+
+Why: "Show me a custom hook" and "Why does useEffect run twice in StrictMode?" — you'll be able to answer both.
+
+3. Weather App with Custom Hooks 🌦️
+Difficulty: Intermediate
+React topics covered:
+
+Custom hook: useFetch(url) ⭐⭐
+
+useReducer for complex async state (idle | loading | success | error) ⭐
+
+Suspense + lazy for code splitting ⭐⭐
+
+Error boundaries (class component still required!) ⭐
+
+Strict Mode double-rendering — why it happens
+
+Reconciliation — why React re-renders
+
+Memoization: useMemo, useCallback (and when not to use them) ⭐⭐⭐
+
+Why: Custom hooks are the modern React interview currency. Building useFetch teaches async state management properly.
+
+4. Shopping Cart with Context + Reducer 🛒
+Difficulty: Intermediate → Advanced
+React topics covered:
+
+useReducer with action types (ADD_ITEM, REMOVE_ITEM, CLEAR) ⭐⭐⭐
+
+Context + Reducer pattern (mini-Redux) ⭐⭐
+
+Memoizing context values to prevent unnecessary re-renders ⭐⭐⭐
+
+Splitting contexts (state vs dispatch) for performance ⭐⭐
+
+Selectors with useMemo
+
+Persistent cart with localStorage + effect
+
+Optimistic UI updates
+
+Why: "How would you manage global state without Redux?" — Context + Reducer is the expected answer. This project is the reference implementation.
+
+5. Infinite Scroll + Virtualized List 📜
+Difficulty: Advanced
+React topics covered:
+
+useRef for DOM access + sentinel element ⭐
+
+IntersectionObserver inside useEffect (with cleanup!) ⭐⭐
+
+React.memo to prevent re-renders ⭐⭐⭐
+
+useCallback for stable function refs ⭐⭐
+
+Window-based virtualization (react-window or build your own) ⭐⭐⭐
+
+startTransition for non-urgent updates (React 18) ⭐
+
+Suspense + data fetching patterns
+
+Why: Performance is the senior React interview topic. This project gives you concrete stories: "I memoized the row component and cut renders by 90%."
+
+6. Kanban Board (Drag & Drop + Reducer) 📋
+Difficulty: Advanced
+React topics covered:
+
+Complex useReducer with normalized state ⭐⭐⭐
+
+Immutability at scale (nested updates with spread) ⭐
+
+Event handling across siblings (drag events)
+
+Refs to DOM nodes in a list
+
+Undo/redo with a command pattern in reducer ⭐⭐
+
+Derived state (never duplicate state) ⭐⭐
+
+useMemo for expensive selectors
+
+Why: Tests whether you can architect state, not just manage a boolean. This is the "senior engineer" thinking signal.
+
+7. Chat UI with Optimistic Updates 💬
+Difficulty: Advanced
+React topics covered:
+
+Optimistic updates (show message before server confirms) ⭐⭐⭐
+
+Rollback on failure
+
+useReducer for message queue
+
+useRef to auto-scroll to bottom ⭐
+
+Batching in React 18 ⭐⭐
+
+useTransition for typing indicators ⭐
+
+Error boundaries per message
+
+Why: "Optimistic UI" appears in every senior frontend interview. Chat apps are the standard way to practice it.
+
+8. Multi-Step Form with Validation ✅
+Difficulty: Intermediate → Advanced
+React topics covered:
+
+Component composition (<Step>, <Wizard>) ⭐⭐
+
+Children as props, render props ⭐
+
+useReducer for form state
+
+Custom hook: useForm() ⭐⭐
+
+Controlled vs uncontrolled inputs (and useRef for uncontrolled) ⭐⭐⭐
+
+Context to avoid prop drilling across steps
+
+Accessibility (aria-invalid, focus management)
+
+Why: Every real job has forms. Interviewers love asking about controlled vs uncontrolled components and how you'd structure a reusable useForm.
+
+9. Build a Mini Redux (from scratch) ⚡
+Difficulty: Advanced
+React topics covered:
+
+Store, dispatch, subscribe, getState — implement from scratch ⭐⭐⭐
+
+useSyncExternalStore (React 18 official hook) ⭐⭐⭐
+
+Provider pattern with useContext
+
+Batching and tearing issues
+
+Middleware concept (log, thunk-like)
+
+Comparing to useReducer + Context
+
+Why: This is the single best React interview project. "How does Redux work?" becomes trivial. Even if you never use Redux, understanding it makes you think like a React core dev.
+
+10. Build Your Own useState & useEffect 🧠
+Difficulty: Advanced (black belt)
+React topics covered:
+
+Hooks rules — why they must be top-level ⭐⭐⭐
+
+How React stores hooks in a linked list per component ⭐⭐⭐
+
+Closures in hook implementations ⭐⭐
+
+The render phase vs commit phase ⭐⭐
+
+Scheduling and batching
+
+Why useEffect runs after paint
+
+The deps array comparison (Object.is) ⭐
+
+Why: Building React's core hooks teaches you why every rule exists. In interviews, you'll answer confidently instead of reciting.
+
+🧠 Summary Table — Which Project Teaches What
+#	Project	useState/Effect	Custom Hooks	useReducer	Context	Perf (memo/useMemo)	Advanced
+1	Todo	✅✅	✅	✅	✅✅	–	–
+2	Debounce Search	✅✅✅	✅✅✅	–	–	✅	Race conditions
+3	Weather	✅✅	✅✅✅	✅	–	✅✅✅	Suspense
+4	Shopping Cart	✅	✅	✅✅✅	✅✅✅	✅✅	Optimistic UI
+5	Infinite Scroll	✅✅	✅✅	–	–	✅✅✅	Virtualization
+6	Kanban	✅	✅	✅✅✅	✅	✅✅	Undo/redo
+7	Chat	✅✅	✅	✅✅✅	–	✅	Optimistic updates
+8	Multi-Step Form	✅✅✅	✅✅✅	✅	✅✅	✅	Controlled vs Uncontrolled
+9	Mini Redux	✅	✅	✅✅	✅✅	✅✅	External store
+10	Own Hooks	✅✅✅	✅✅✅	–	–	✅✅	Reconciliation
+🗺️ Recommended Path (do these in order)
+text
+Week 1–2:    Todo  →  Debounce Search
+Week 3–4:    Weather  →  Multi-Step Form
+Week 5–6:    Shopping Cart  →  Infinite Scroll
+Week 7–8:    Kanban  →  Chat
+Week 9–10:   Mini Redux  →  Build Your Own Hooks (the finale)
+By the end you'll have used every major React API in real code — plus you'll have interview stories for each.
+
+💼 Why This List Works for Interviews
+Interviewers test 6 core React areas. These projects cover each multiple times:
+
+Interview Area	Covered by projects
+useState / useEffect + cleanup	1, 2, 3, 5 (heaviest)
+Custom Hooks	2, 3, 8, 10 (the best)
+useReducer / Context	1, 4, 6, 7
+Performance (memo, useMemo, useCallback)	3, 4, 5
+Async + Optimistic UI	3, 5, 7
+Architecture / State Design	6, 9, 10
+📌 Two Golden Rules While Building
+Never reach for Redux/Zustand/TanStack Query until you've built #4 and #9 yourself. You'll understand why those libraries exist.
+
+Write about each project. For every one, note:
+
+A bug you hit and how you debugged it (devs love these stories)
+
+One perf improvement you made
+
+One design tradeoff you chose
+
+⚡ If You Only Build 3
+If time is short, these three cover the most interview ground:
+
+#	Project	Why
+#2	Debounced Search	useEffect + cleanup + custom hooks + race conditions — the #1 React interview trap
+#4	Shopping Cart	Context + Reducer + memoization — the #1 "state management" interview topic
+#9	Mini Redux	Deep understanding of how React state actually works under the hood
+Build those three well, and you'll handle 80% of React interview questions with confidence.
+
+Want me to break down any one of these into a full scaffold — components, hooks, file structure, and the interview questions you can expect from it? I'd suggest starting with #2 (Debounced Search) or #9 (Mini Redux) since they teach the most per hour. Just tell me the number. 🚀
