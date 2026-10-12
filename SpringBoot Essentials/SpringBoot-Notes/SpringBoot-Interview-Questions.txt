@@ -1,0 +1,44 @@
+
+Top 20 Entry-Level Java Spring Boot Questions
+
+
+What is Spring Boot and how is it different from Spring?
+
+What is @SpringBootApplication? (Combines @Configuration, @EnableAutoConfiguration, @ComponentScan)
+
+What is auto-configuration?
+
+What are Spring Boot starters? (e.g., spring-boot-starter-web)
+
+Difference between @Component, @Service, @Repository, @Controller?
+
+What is application.properties / application.yml?
+
+What is Spring Boot Actuator?
+
+How does @RestController differ from @Controller?
+
+What is @RequestMapping vs @GetMapping / @PostMapping?
+
+What is @PathVariable vs @RequestParam vs @RequestBody?
+
+What is @Transactional?
+
+Difference between JpaRepository and CrudRepository?
+
+What is JPA vs Hibernate?
+
+What is lazy vs eager loading?
+
+What is @OneToMany / @ManyToOne?
+
+What is Spring Security and how do you configure it?
+
+What is JWT and how is it used?
+
+What is @ControllerAdvice and @ExceptionHandler?
+
+What is a DTO and why use it?
+
+How do you write unit tests in Spring Boot? (@SpringBootTest, @MockBean, Mockito)
+

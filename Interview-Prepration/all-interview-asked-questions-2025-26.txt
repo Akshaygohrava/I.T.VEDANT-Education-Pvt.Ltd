@@ -1,0 +1,330 @@
+
+📋 Complete Interview Questions List (Categorized)
+Below is a comprehensive, category-wise list of all interview questions extracted from your notes.
+
+🎨 HTML / CSS
+#	Question
+1	What is Box Modeling (Box Model)?
+2	How to find margin & padding of a box using Inspect (no guesses)?
+3	If margin-bottom is 10px and margin below is 20px, what is the gap between them in px? (Margin Collapsing)
+4	What is Flexbox?
+5	What is Grid?
+6	What are Media Queries?
+7	Why use React over simple HTML, CSS files? Even we can make SPA from HTML/CSS?
+⚡ JavaScript
+#	Question
+1	Find the first non-repeating string: "aabbccddeff"
+2	Sort an array in alphabetical order (using sort())
+3	Difference between map and for
+4	Difference between forEach and for
+5	What is a Callback Function?
+6	What are Promises? (All states, types, differences)
+7	Difference between for and while loop
+8	Logic building: array = [1,2,5,7,8,6,1,2,4,5] — Find length of array but distinct value length (take 2 same numbers as 1)
+9	What is Event Propagation?
+10	What is Event Capturing?
+11	What is Event Handling?
+12	What is Event Bubbling?
+13	Call any free API (practical)
+14	Use of map method? Give example
+15	Create a for loop that prints 10 to 1
+16	If 6, then continue and break — what happens?
+17	If a function is created above the loop and then the function is called, what is the result?
+18	What is DOM in React and JS?
+19	What is Virtual DOM?
+20	Difference between == and .equals() (JS/Java)
+21	For and Switch — Build
+22	Use of filter, reduce methods with examples
+⚛️ React
+#	Question
+1	What is React Hooks?
+2	Explain useState Hook
+3	What are States and Props? Difference between them
+4	What is useEffect? Uses of useEffect (except API fetching — main uses in React?) with example
+5	What is react.memo?
+6	What is useMemo? Difference between react.memo and useMemo, uses
+7	What is useCallback?
+8	What is useRef? Uses
+9	What is useSelector hook?
+10	What is Redux state management tool?
+11	What are Props?
+12	Difference between React and Next.js
+13	How does Full Stack work?
+14	Next.js — concepts
+15	Fetch APIs
+16	Hooks — general
+17	Why use React over simple HTML, CSS, JS for Single Page Application?
+☕ Java
+#	Question
+1	What is a Class?
+2	What is an Object?
+3	What is OOPs? All 6 concepts with definitions
+4	What is Encapsulation?
+5	What is Abstraction?
+6	How to achieve Abstraction in Java? (using Abstract Class and Interface)
+7	Difference between Abstract Class and Interface
+8	What is an Interface?
+9	What is Method Overloading?
+10	What is Method Overriding?
+11	Difference between Method Overloading and Overriding
+12	What is Multithreading?
+13	What is Lambda Expression? What are its uses?
+14	Difference between LinkedList and HashTree
+15	Difference between == and .equals()
+16	What is Generics?
+17	Java 8 Features
+18	Collections Framework
+19	Java Memory (Types of Java Memory)
+20	What is Functional Interface?
+21	What is Optional Class?
+22	Difference between HashSet and TreeSet
+23	What is Exception?
+24	What is Exception Handling?
+25	What is Global Exception?
+26	What are Heaps in Java?
+27	What is Garbage Collection in Java?
+28	What is Memory Cache?
+29	What is an Immutable Class?
+30	What is static keyword?
+31	What is try-with-resources?
+32	Write a program for Fibonacci Series (DSA)
+33	Write a program to reverse a string with and without Collection
+34	Find the highest number from an array (DSA)
+🌱 Spring Boot
+#	Question
+1	What is Dependency Injection?
+2	What is IoC Container? Uses?
+3	What is an Entity?
+4	What is a Repository?
+5	Uses of Services?
+6	What is Spring MVC?
+7	What is @Bean annotation? What does it do?
+8	What is @Autowired annotation?
+9	What is MVC Architecture?
+10	What is @GeneratedValue?
+11	Difference between Authentication and Authorization
+12	What is a Bean annotation?
+13	What is @Qualifier annotation? Uses and how it works
+14	Do all annotations (Spring Boot annotations)
+15	Difference between Spring, Spring Boot, and Spring MVC
+16	Difference between Spring and Spring Boot
+17	How to scale 5000 users in projects?
+18	Where did you apply Multithreading and OOPs concepts in your project? (Spring Boot & Backend)
+19	Did you work in a Scrum environment?
+20	If you have 10 switch-case statements, what if you have 1000? Is it okay? How do you handle them? (Automation company)
+21	Spring Security — Give five sentences
+22	What is JWT Authentication?
+23	Protected Routes
+24	Role-Based Authorization
+25	Production-ready features
+🗄️ MySQL / SQL
+#	Question
+1	What are Views? Types of Views
+2	What is a Trigger?
+3	What is ALTER? How to add a column in a table? (ALTER TABLE emp ADD COLUMN salary)
+4	Find 2nd highest salary using sub-queries
+5	Find 2nd highest salary (general)
+6	Why use Indexes in SQL?
+7	What are Indexes?
+8	What is a Constraint?
+9	What are Joins? Types of Joins
+10	Difference between Left Join and Right Join
+11	What changes do Joins make? Case scenarios when they are used
+12	What is GROUP BY?
+13	What is HAVING clause?
+14	What is ORDER BY?
+15	Aggregate Functions
+16	Types of DDL, DML, etc.
+17	Normalization
+18	ACID Properties
+19	Join Columns
+20	What is Cache?
+21	What is B-Tree?
+22	What is LIMIT and OFFSET? What do they do?
+23	Find ID, Name, Join column where only from IT department
+24	Find number of employees from Employees table
+25	What is CASE statement?
+26	What are Procedures?
+27	What is HAVING & GROUP BY clause?
+28	Find 2nd highest salary using sub-queries
+29	What is JOIN? Write a query
+30	Types of Views
+🧠 Aptitude / Logical Reasoning
+#	Question
+1	A 120m train runs in 9s — what is the speed of the train?
+2	Find the output: First non-repeating string = "aabbccddeff"
+3	Logic building: array = [1,2,5,7,8,6,1,2,4,5] — Find length of array but distinct value length
+4	If margin-bottom is 10px and margin below is 20px, what is the gap between them in px?
+🧑‍💼 Personal / HR / Behavioral
+#	Question
+1	Tell me about Yourself (in 5 lines)
+2	Why do you want to join us? / What interests you about working for this company?
+3	Tell me about your Hackathon winning experience
+4	Each Internship Experience
+5	Family Background (business, brother, sister)
+6	What is your role in this project and your contribution?
+7	Explain your project — How did you use OOPs in your project?
+8	What problem did you solve in your project?
+9	How did you apply Multithreading and OOPs concepts in your project?
+10	Did you work in a Scrum/Agile environment?
+11	How to scale 5000 users in projects? (You wrote in project — Task Management System)
+12	What are your strengths?
+13	What are your weaknesses?
+14	Where do you see yourself in 5 years?
+15	Are you comfortable with the 6-month probation period?
+16	Why should we hire you?
+17	Do you have any questions for us?
+18	Cultural Fit Questions
+19	What is AI? (Group Discussion — whoever says first wins)
+20	Communication Skills, Technical Skills, Reference
+21	Tell me about your education gap (Health Issues, Bed Rest)
+22	What are your hobbies? (Chess, Magnus Carlsen)
+23	Are you passionate about developing software?
+24	What do you know about Front-End Architecture?
+🏢 Company-Specific / Other Questions
+#	Company	Question
+1	Mass Tech Business Solutions	Familiar Languages, Views, Indexes, Procedures, HAVING & GROUP BY
+2	Mass Tech Business Solutions	Coding Round (3rd Round)
+3	Interskills Solutions	What is AI? (Group Discussion)
+4	Interskills Solutions	HR Round, Technical Round, Management Round
+5	Purveb Innovators	Tell me about yourself in 5 lines
+6	Purveb Innovators	What is React Hooks?
+7	Purveb Innovators	Explain useState Hooks
+8	Purveb Innovators	What is Object-Oriented Programming?
+9	Purveb Innovators	Give five sentences about Spring Security
+10	ACC Walk-in Drive	Find the Output (First non-repeating string)
+11	ACC Walk-in Drive	Sort an array in alphabetical order
+12	ACC Walk-in Drive	Difference between map and for
+13	ACC Walk-in Drive	Difference between forEach and for
+14	ACC Walk-in Drive	Callback Function and Promises
+15	ACC Walk-in Drive	Difference between for and while loop
+16	Alien House Network	Intro to project (Full Stack)
+17	Alien House Network	States, useEffect
+18	Alien House Network	Fetch APIs
+19	Alien House Network	Hooks
+20	Alien House Network	Next.js
+21	Alien House Network	How Full Stack works
+22	Masstech (2nd time)	JavaScript logic building (array distinct length)
+23	Masstech (2nd time)	MySQL: Types in Views, Trigger
+24	Masstech (2nd time)	ALTER — How to add column
+25	Masstech (2nd time)	Find 2nd highest salary using sub-queries
+26	Masstech (2nd time)	Java: Heaps
+27	Masstech (2nd time)	How to achieve Abstraction (Abstract Class vs Interface)
+28	Masstech (2nd time)	What is Encapsulation?
+29	Masstech (2nd time)	Why use Indexes in SQL?
+30	Masstech (2nd time)	Memory Cache
+31	Masstech (2nd time)	Garbage Collection in Java
+32	La Esfera	Myself
+33	La Esfera	One project explanation — role & contribution
+34	La Esfera	Java: Difference between LinkedList and HashTree
+35	La Esfera	== and .equals()
+36	La Esfera	Abstraction — Interface vs Abstract Class
+37	La Esfera	What is Multithreading?
+38	La Esfera	Method Overloading and Overriding
+39	La Esfera	Lambda Expression — what and uses
+40	La Esfera	SQL: Find 2nd highest salary
+41	La Esfera	Aggregate Functions, Types of Joins
+42	La Esfera	Spring Boot: Dependency Injection, IoC Container
+43	Install Educare LPP	JavaScript: Event Propagation, Event Capturing, etc.
+44	Install Educare LPP	Promises — all states, types, difference
+45	Install Educare LPP	Event Handling
+46	Install Educare LPP	React: States, Props, difference
+47	Install Educare LPP	Hooks: useState, useEffect
+48	Install Educare LPP	Uses of above hooks and different questions
+49	Install Educare LPP	React.memo, useMemo — difference, uses
+50	Install Educare LPP	useCallback, useRef and uses
+51	Jforce Solution	What is Exception? Exception Handling? Collection Framework
+52	Jforce Solution	Difference between Abstract and Interface
+53	Jforce Solution	Encapsulation, OOPs all topics
+54	Jforce Solution	SQL: Types of DDL, DML, all etc.
+55	Jforce Solution	Normalization
+56	Jforce Solution	Project Review
+57	Jforce Solution	Bean and Qualifier annotation — uses and how it works
+58	Jforce Solution	Immutable Class, static keyword, try-with-resources
+59	Jforce Solution	Types of Java Memory, Global Exception
+60	Jforce Solution	Difference between Spring and Spring Boot
+61	Jforce Solution	useSelector hook, Redux state management tool, Props
+62	Jforce Solution	Why use React over simple HTML, CSS files?
+63	Upvote Consultant Services	OOPs all concepts with examples
+64	Upvote Consultant Services	Difference between == and .equals()
+65	Upvote Consultant Services	Difference between Abstract Class and Interface
+66	Upvote Consultant Services	Write a program for Fibonacci Series (DSA)
+67	Upvote Consultant Services	Write a program to reverse a string with and without Collection
+68	Upvote Consultant Services	Difference between Spring, Spring Boot, Spring MVC
+69	Upvote Consultant Services	Explain project — how you used OOPs in your project
+70	Upvote Consultant Services	Spring Boot: Internship experience
+71	Upvote Consultant Services	SQL: 2nd highest salary, LIMIT and OFFSET
+72	Upvote Consultant Services	What is GROUP BY?
+73	Upvote Consultant Services	Types of Joins, Difference between Left and Right Join
+74	Upvote Consultant Services	React: Difference between React and Next.js
+75	Upvote Consultant Services	What is Hooks?
+76	Upvote Consultant Services	What is useState and useEffect?
+77	Upvote Consultant Services	What is DOM in React and JS?
+78	Upvote Consultant Services	What is Virtual DOM?
+79	Upvote Consultant Services	Why use React over HTML, CSS, JS for SPA?
+80	Blueray Automation	Aptitude: 120m train runs in 9s — speed?
+81	Blueray Automation	SQL: ACID Properties, Join Columns, Cache
+82	Blueray Automation	REST API: If customer wants to change email column — PUT or PATCH?
+83	Blueray Automation	Threads, Deadlock, etc.
+84	Blueray Automation	B-Tree
+85	Blueray Automation	Cultural Fit Questions
+86	Blueray Automation	What is Dependency Injection?
+87	Blueray Automation	What is OOPs, Object, Class, Method Overloading and Overriding difference?
+88	Blueray Automation	Find ID, Name, Join column where only from IT department
+89	Blueray Automation	Find number of employees from Employees table
+90	Blueray Automation	Find highest number from array (DSA)
+91	Blueray Automation	How to scale 5000 users in projects?
+92	Blueray Automation	Where did you apply Multithreading and OOPs in your project?
+93	Blueray Automation	Did you work in Scrum environment?
+94	Blueray Automation	If 10 switch-case statements, what if 1000? How to handle?
+95	Yuki Technologies	Assignment: Python-based URL link checker
+96	Yuki Technologies	Pharmaceutical IT company — create AI video about medicine
+97	Yuki Technologies	Create and maintain website, links, working with React Native, Flutter
+98	Yuki Technologies	Which project did you work on?
+99	Yuki Technologies	What did you do in your internship?
+100	Tzar Digital Agency	Tell me about Hackathon winning experience
+101	Tzar Digital Agency	Each Internship Experience
+102	Tzar Digital Agency	Family background
+103	Tzar Digital Agency	Assignment: 2 user roles — user and service provider panel system
+104	Tzar Digital Agency	CSS: Box modeling, find margin/padding by inspect
+105	Tzar Digital Agency	Margin collapsing: margin-bottom 10px and margin below 20px — gap?
+106	Tzar Digital Agency	Flex, Grid, Media Queries
+107	Tzar Digital Agency	JavaScript: Call any free API
+108	Tzar Digital Agency	Use of map method? Example
+109	Tzar Digital Agency	Create a for loop that prints 10-1
+110	Tzar Digital Agency	If 6, then continue and break
+111	Tzar Digital Agency	Function call result
+112	Tzar Digital Agency	React: useState, useEffect, uses of useEffect
+113	Tzar Digital Agency	Filter, reduce methods
+114	Tzar Digital Agency	Assignment: Did you add JWT auth?
+115	Tzar Digital Agency	Production-ready apps — JWT auth, protected routes, Spring Security, role-based authorization
+🏗️ System Design (Additional Topics)
+#	Topic
+1	Basics of System Design
+2	Create your first CI/CD Pipeline
+3	Load Balancer
+4	Rate Limiter
+5	How to Scale Apps from 5000 to 50,000 users
+6	Redis (one of the ways)
+7	Put it in CV as System Design
+
+💡 Key Takeaways from Your Notes
+"Never tell that I'm still learning — say 'I don't know' instead. Otherwise they will tell you to complete the course first, then apply."
+
+"Before telling any answer in yes or no — think for 5-10 seconds."
+
+"Start with Good Afternoon, end with Thank You."
+
+"Give proper Myself — not half."
+
+"Sit straight, don't move too much, whole face-to-face communication until interview ends."
+
+"Be on time — leave 2-3 hours before, reach 10 minutes before interview."
+
+"Keep 2 CVs ready, cash ready, get out early."
+
+"Go for every interview opportunity — even if not selected."
+
+"Keep fast learning skills — still not completed Java!"
+
+Total Questions Listed: 115+ (excluding System Design topics)
