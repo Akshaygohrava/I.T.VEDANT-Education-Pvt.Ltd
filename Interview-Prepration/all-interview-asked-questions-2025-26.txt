@@ -328,3 +328,21 @@ Below is a comprehensive, category-wise list of all interview questions extracte
 "Keep fast learning skills — still not completed Java!"
 
 Total Questions Listed: 115+ (excluding System Design topics)
+
+
+What actually matters more than the title
+Recruiters care far more about:
+
+What you built — concrete projects, features, tech stack.
+
+Impact — "Reduced API latency by 30%," "Shipped X feature used by N users."
+
+Skills — languages, frameworks, tools.
+
+Example bullet:
+
+Software Engineer Intern — [ShowStopper] (Summer 2026)
+
+Built a REST API in Node.js handling 10k+ daily requests
+
+Reduced page load time by 40% by optimizing React components
