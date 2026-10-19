@@ -1,0 +1,25 @@
+
+
+System Design Notes :-
+
+Tech , Stack and System Design I Worked On:- Internships 
+
+
+1. Develop web applications — full-stack feature development
+2. Build frontend & backend systems — React/Redux frontends, SpringBoot, Node.js backends
+3. Develop REST APIs — design, versioning, documentation
+4. Integrate databases — MySQL & MongoDB, ORMs/ODMs
+5. Implement authentication & authorization — JWT, role-based access control
+6. Write clean, maintainable code — modular structure, code reviews, linting
+7. Conduct testing & debugging — unit, integration, and API testing
+8. Deploy applications to cloud infrastructure — AWS, Vercel, Netlify, Render
+9. Maintain documentation — API docs, setup guides, architecture notes
+
+
+1. How to Scale Application for 100k User ?
+2. How To Dockerize the Project, Test On Different Version and Stack ?
+3. How to Deploy Frontend & Backend on Vercel, Netlify, AWS, Render ?
+4. How to Solve merge Conflit error in github ?
+5. How to add CI/CD pipeline in apps, using jenkins , github Actions ?
+5. How to Build,  Test and Integrate APIs? PostMan , newman 
+6. When To Use MySQL and and When MongoDB ?
