@@ -5,12 +5,12 @@ JavaScript Notes :-
 
 Important Topics To Learn and Revise Before Interview : October 2026
 
-Revision date : 8/Oct/2026
+Revision date : 8/Oct/2026 - 22/Oct/2026
 
-Here are 50 important JavaScript interview topics, grouped for study. The ones you mentioned are included: loops, callbacks, async/await API handling, promises, closures, and JS DSA.
 How To Learn and Revise : Copy and paste line by line 10-10 topics in chatgpt with examples and practice them and next ...
 
-Here is your list with proper numbering:
+
+I was learning/Revising javascript lets explain each topic one by one , with one simple example, 
 
 *1-10: Core JavaScript Fundamentals*
 1. JavaScript Loops — for, while, do...while, for...in, for...of, break/continue

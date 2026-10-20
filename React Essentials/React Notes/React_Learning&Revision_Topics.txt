@@ -26,7 +26,8 @@ React Topics Learned & Learning and Need Revision Every Months !
 
 October - 2026 - Revision Pattern
 
-Here is your complete list with numbering added:
+
+i was learning/Revising React ,lets explain each topic one by one , with one simple example, 
 
 *1-15: React Fundamentals*
 1. Components — functional vs class, composition, pure components
