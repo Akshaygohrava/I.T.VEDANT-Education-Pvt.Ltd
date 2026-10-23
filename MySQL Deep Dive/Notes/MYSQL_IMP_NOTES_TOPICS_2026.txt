@@ -2,6 +2,25 @@ MYSQL NOTES:-
 
 Important Topics To Revised And Learn :-
 
+How to Revise MySQL , PostgreSQL ects :- 22/Oct/2026
+Start From Creating Database > then table 
+* Create Database 
+* Create Table 
+* Insert values , Update , Delete Values based on conditions 
+* Create Multiple Tables , Link primary key , then Foregin Key 
+* Add Constraints 
+* Use Joins 
+* Use Groupby , OrderBY,  having, where, view, procedures, stored functions, and Trigger
+* Rollback and Commit 
+* Solve Top 10-20 Sql question , which asked in interview like and having,
+  covering most of SQL topic like where , having, orderby , groupby, joins, ects 
+ 1. Find 2nd highest salary using subquery and without it 
+ 2. add and drop coloumn, rename , add after coloumn, sort desc / asc 
+ 3. .. and more 20-30 SQl question like this !
+
+****************** SQL Revision Done ***************************
+
+
 CORE :-
 * CREATE DATABASE
 * CREATE TABLES
