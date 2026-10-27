@@ -72,6 +72,11 @@ I was learning/Revising javascript lets explain each topic one by one , with one
 49. Error Handling — try/catch/finally, custom errors, AggregateError
 50. Testing Basics — Jest, Vitest, unit vs integration tests
 
+
+Event Propogation In Java,
+DOM Manuplation
+
+
 *51-60: Bonus - Modern 2026+ Topics*
 51. TypeScript Basics — types, interfaces, generics, unions, unknown vs any
 52. React/Vue/Svelte Integration — hooks, reactivity, state management
