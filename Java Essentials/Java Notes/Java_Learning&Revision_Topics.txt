@@ -54,9 +54,9 @@ Got it — resetting numbers for Interview Questions and DSA sections:
 23. Multithreading — Thread, Runnable, Callable, lifecycle, thread states
 24. Synchronization — synchronized, locks, volatile, race conditions, deadlock
 25. Executor Framework — ExecutorService, ThreadPoolExecutor, Future, CompletableFuture
-26. Java Memory & Garbage Collection — GC types, System.gc(), memory leaks ✅
+26. Java Memory Management & Garbage Collection — GC types, System.gc(), memory leaks ✅
 27. Recursion — base case, stack overflow, tail recursion ✅
-28. Inner Classes — static, non-static, anonymous, local classes
+28. Inner Classes — static, non-static, anonymous, local classes, Wrapper , Immutable class.
 29. Enums — methods, constructors, EnumSet, EnumMap
 30. Annotations — built-in, custom, retention, target, reflection
 
@@ -220,6 +220,8 @@ SQL :- Find Third Highest Salary, 5-10 Topic Question EveryDay
 
 Steps To razorpay Payment Integration
 Steps To JWT Authentication
+Role based Authorizaion,
+Spring Security,
 MultiThreading,Concurrency,SpringBoot, MySQL,Git
 
 
@@ -227,6 +229,10 @@ JAVA PROJECT :-
 1. Java Calculator   // Take Reference From Youtube , AI to Understand Logic and Build The Same ....
 2. Java Console Based Quiz App
 3. Java Console Based Banking Management System
+
+
+Garbage Collection is Java's automatic process of finding and freeing memory occupied by objects,
+ that are no longer used by the program. You don't manually free memory (unlike C/C++) — the JVM does it for you
  
 
 

@@ -76,7 +76,7 @@ I was learning/Revising javascript lets explain each topic one by one , with one
 Event Propogation In Java,
 DOM Manuplation
 
-
+Not Needed, Advanvce , includes , other language and frameworks 
 *51-60: Bonus - Modern 2026+ Topics*
 51. TypeScript Basics — types, interfaces, generics, unions, unknown vs any
 52. React/Vue/Svelte Integration — hooks, reactivity, state management
