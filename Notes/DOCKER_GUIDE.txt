@@ -1,0 +1,317 @@
+================================================================================
+           LUMINAVIBE BACKEND - COMPLETE DOCKER GUIDE & CHEATSHEET
+================================================================================
+
+TABLE OF CONTENTS
+-----------------
+1. Prerequisites & Required Applications
+2. Overview of Required Docker Files
+3. File Contents & Explanations
+4. Basic Quickstart (Run Everything with 1 Command)
+5. Advanced / Standalone Commands (Without Docker Compose)
+6. Day-to-Day Management Commands (Logs, Restart, Shell Access)
+7. Database & Persistence Management
+8. Cleanup & Maintenance Commands
+9. Common Errors & Troubleshooting
+
+================================================================================
+1. PREREQUISITES & REQUIRED APPLICATIONS
+================================================================================
+
+Before running any Docker commands:
+- Install and launch "Docker Desktop" for Windows.
+  Ensure the engine status at the bottom-left of Docker Desktop is GREEN (Running).
+- Verify in your terminal (PowerShell or Command Prompt):
+    docker --version
+    docker compose version
+
+If you see an error like "failed to connect to the docker API" or "daemon is not
+running", start Docker Desktop from the Windows Start menu first.
+
+
+================================================================================
+2. OVERVIEW OF REQUIRED DOCKER FILES
+================================================================================
+
+To dockerize this Spring Boot + MySQL backend, 3 main files are created in the
+project root (c:\Users\aksha\OneDrive\Desktop\LuminaVibe-Backend):
+
+1. Dockerfile
+   - Builds the Spring Boot application using Java 17 and Maven.
+   - Creates a lightweight, secure production runtime container.
+
+2. docker-compose.yml
+   - Manages and links multiple containers together:
+     a) MySQL database service (port 3306)
+     b) Spring Boot backend service (port 8080)
+   - Automates network creation, health checking, and data storage.
+
+3. .dockerignore
+   - Tells Docker which folders to ignore during the build (like target/, .git/,
+     uploads/, IDE files) so builds are fast and clean.
+
+4. application.properties (Updated)
+   - Configured with environment variable placeholders (${SPRING_DATASOURCE_URL:...})
+     so it automatically connects to MySQL inside Docker while still working
+     locally when running without Docker.
+
+
+================================================================================
+3. FILE CONTENTS & EXPLANATIONS
+================================================================================
+
+--- [A] Dockerfile ---
+Uses a Multi-Stage build for minimal image size and maximum security:
+
+# Stage 1: Build JAR using Maven & Java 17
+FROM maven:3.9-eclipse-temurin-17 AS builder
+WORKDIR /app
+COPY pom.xml .
+RUN mvn dependency:go-offline -B || true
+COPY src ./src
+RUN mvn clean package -DskipTests
+
+# Stage 2: Minimal runtime JRE
+FROM eclipse-temurin:17-jre-jammy
+WORKDIR /app
+RUN mkdir -p uploads/posts uploads/stories
+COPY --from=builder /app/target/*.jar app.jar
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "app.jar"]
+
+Why this matters:
+- The heavy Maven compiler and source files stay in Stage 1 and are discarded.
+- Only the slim JRE (Java Runtime Environment) and the compiled JAR make it to
+  the final image.
+
+
+--- [B] docker-compose.yml ---
+Defines two interconnected services:
+
+services:
+  mysqldb:
+    image: mysql:8.0
+    container_name: luminavibe-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: luminavibe
+      MYSQL_ROOT_PASSWORD: Qwerty@1234
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -u root --password=Qwerty@1234 || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: luminavibe-backend
+    restart: unless-stopped
+    depends_on:
+      mysqldb:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb:3306/luminavibe?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: Qwerty@1234
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+    volumes:
+      - ./uploads:/app/uploads
+
+volumes:
+  mysql_data:
+
+Key Features:
+- "healthcheck" on mysqldb: Spring Boot won't start until MySQL is fully initialized
+  and ready to receive database connections.
+- "mysql_data" volume: Your database tables, users, and data remain safe even if
+  the container is deleted or rebuilt.
+- "./uploads:/app/uploads": Any avatar, post, or story uploaded by users is stored
+  in your host "uploads" folder so nothing is lost.
+
+
+--- [C] .dockerignore ---
+Prevents bloat during container builds:
+
+**/.git
+**/.gitignore
+**/.project
+**/.classpath
+**/.factorypath
+**/.settings
+**/.idea
+**/.vscode
+target/
+uploads/
+*.log
+.mvn/wrapper/maven-wrapper.jar
+mvnw
+mvnw.cmd
+HELP.md
+
+
+================================================================================
+4. BASIC QUICKSTART (RUN EVERYTHING WITH 1 COMMAND)
+================================================================================
+
+Open PowerShell or CMD in the project root directory:
+cd c:\Users\aksha\OneDrive\Desktop\LuminaVibe-Backend
+
+1. BUILD AND START (Background mode):
+   docker compose up --build -d
+
+2. CHECK RUNNING STATUS:
+   docker compose ps
+
+3. VIEW BACKEND LOGS:
+   docker compose logs -f backend
+
+4. VIEW MYSQL LOGS:
+   docker compose logs -f mysqldb
+
+5. TEST THE BACKEND:
+   Open your browser or Postman and hit:
+   http://localhost:8080/
+
+6. STOP EVERYTHING:
+   docker compose down
+
+
+================================================================================
+5. ADVANCED / STANDALONE COMMANDS (WITHOUT DOCKER COMPOSE)
+================================================================================
+
+If you ever want to run or test containers individually without Docker Compose:
+
+1. Create a custom Docker bridge network:
+   docker network create luminavibe-net
+
+2. Run MySQL container manually:
+   docker run -d `
+     --name luminavibe-mysql `
+     --network luminavibe-net `
+     -e MYSQL_ROOT_PASSWORD=Qwerty@1234 `
+     -e MYSQL_DATABASE=luminavibe `
+     -p 3306:3306 `
+     -v mysql_data:/var/lib/mysql `
+     mysql:8.0
+
+3. Build the backend image manually:
+   docker build -t luminavibe-backend:latest .
+
+4. Run the backend container manually:
+   docker run -d `
+     --name luminavibe-backend `
+     --network luminavibe-net `
+     -p 8080:8080 `
+     -e SPRING_DATASOURCE_URL="jdbc:mysql://luminavibe-mysql:3306/luminavibe?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC" `
+     -e SPRING_DATASOURCE_USERNAME="root" `
+     -e SPRING_DATASOURCE_PASSWORD="Qwerty@1234" `
+     -v "${PWD}/uploads:/app/uploads" `
+     luminavibe-backend:latest
+
+
+================================================================================
+6. DAY-TO-DAY MANAGEMENT COMMANDS
+================================================================================
+
+1. REBUILD ONLY THE BACKEND (after you change Java code):
+   docker compose build backend
+   docker compose up -d backend
+
+2. RESTART A SINGLE SERVICE:
+   docker compose restart backend
+   docker compose restart mysqldb
+
+3. OPEN A TERMINAL / SHELL INSIDE THE BACKEND CONTAINER:
+   docker exec -it luminavibe-backend bash
+   (Or 'sh' if bash is unavailable)
+
+4. INSPECT CONTAINER RESOURCE USAGE (CPU, Memory, Network I/O):
+   docker stats
+
+5. VIEW RECENT LOGS (Last 100 lines):
+   docker compose logs --tail=100 backend
+
+
+================================================================================
+7. DATABASE & PERSISTENCE MANAGEMENT
+================================================================================
+
+1. ACCESS MYSQL SHELL INSIDE CONTAINER:
+   docker exec -it luminavibe-mysql mysql -u root -pQwerty@1234 luminavibe
+
+   Common MySQL test queries:
+   SHOW TABLES;
+   SELECT * FROM users;
+   EXIT;
+
+2. BACK UP THE MYSQL DATABASE TO A .SQL FILE:
+   docker exec luminavibe-mysql mysqldump -u root -pQwerty@1234 luminavibe > backup.sql
+
+3. RESTORE DATABASE FROM A .SQL FILE:
+   Get-Content backup.sql | docker exec -i luminavibe-mysql mysql -u root -pQwerty@1234 luminavibe
+
+4. DELETE DATABASE VOLUME (CAUTION: Resets all database data):
+   docker compose down -v
+
+
+================================================================================
+8. CLEANUP & MAINTENANCE COMMANDS
+================================================================================
+
+1. STOP AND REMOVE ALL CONTAINERS & NETWORKS:
+   docker compose down
+
+2. REMOVE UNUSED DOCKER IMAGES (Free up disk space):
+   docker image prune -f
+
+3. COMPLETE DOCKER SYSTEM PURGE (Removes stopped containers, dangling images, build cache):
+   docker system prune -a --volumes
+
+
+================================================================================
+9. COMMON ERRORS & TROUBLESHOOTING
+================================================================================
+
+Error A: "failed to connect to the docker API" / "pipe not found"
+Cause: Docker Desktop is not open or still starting.
+Fix: Open Docker Desktop from Windows Start menu, wait until the icon in the
+     taskbar says "Docker Desktop is running", and retry.
+
+Error B: "Port 3306 is already allocated"
+Cause: A local instance of MySQL is already running directly on your Windows host.
+Fix Option 1: Stop your local Windows MySQL service:
+  - Open Services (services.msc) -> Find "MySQL" or "MySQL80" -> Right-click -> Stop.
+Fix Option 2: Change host port in docker-compose.yml under mysqldb:
+  ports:
+    - "3307:3306"
+
+Error C: "Port 8080 is already allocated"
+Cause: Another application or an existing Spring Boot instance is running on port 8080.
+Fix: Find and kill the process:
+  netstat -ano | findstr :8080
+  taskkill /PID <PID_NUMBER> /F
+Or change backend ports in docker-compose.yml:
+  ports:
+    - "8081:8080"
+
+Error D: "Communications link failure during handshake"
+Cause: Backend tried connecting to MySQL before MySQL was finished initializing.
+Fix: Our docker-compose.yml already includes 'healthcheck' and 'condition: service_healthy'
+     to prevent this. If modifying configs, ensure depends_on waits for health check.
+
+Error E: Uploaded images/files are missing
+Cause: Volume mounting was omitted.
+Fix: Always keep the volume mapping in docker-compose.yml:
+     volumes:
+       - ./uploads:/app/uploads
+================================================================================

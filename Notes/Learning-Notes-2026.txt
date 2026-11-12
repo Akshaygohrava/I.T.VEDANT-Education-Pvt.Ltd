@@ -37,3 +37,61 @@ Basics Of Redis
 4. RESTful APIs :-
 everything about rest apis and graphql , how things works 
 API Integration , From ITVEDANT 24/JUNE/2026
+
+
+Frontend : - Build file = dist , Calls hosted backend Links as endpoint url , Deploy on = Vercel, Netlify  
+Backend :- Dockerize Backend ,  build file jar , CORS = who can call apis , Deploy on = Render, Railway, AWS 
+
+
+For Backend Deployed On Render : First make Docker file for SpringBoot / Backend Services, then Deploy that github repo on render,
+* Can add Environment Variable later or first , Create Postgre Database on Render, Nova, Railway or any service, 
+* add Environment varibles, like ,   and Deploy It after complete Log in 3-10 its deployed , now backend link is live ,
+                                     * Calls that link apis , instead for localhost:8080, for production ... 
+* 1. Database URL
+Key:
+text
+SPRING_DATASOURCE_URL
+Value:
+text
+jdbc:postgresql://dpg-dbloi5t9fdbs73cc74g0-a:5432/luminavibe
+2. Database Username
+Key:
+text
+SPRING_DATASOURCE_USERNAME
+Value:
+text
+luminavibe_user
+3. Database Password
+Key:
+text
+SPRING_DATASOURCE_PASSWORD
+Value:
+text
+VFxoXVs8JbneCC9rGg6la2xJ2hcqElNG
+4. Auto Table Creation
+Key:
+text
+SPRING_JPA_HIBERNATE_DDL_AUTO
+Value:
+text
+update
+5. JWT Secret Key
+Key:
+text
+SPRING_APP_JWT_SECRET
+Value:
+text
+jfdjfhjdhfjdhfjdhfdjhfjhgrjirutirirutirjifjirhitgthythyyuhtyfghhhjjjhtdgyfrthtyutyt
+6. JWT Expiration
+Key:
+text
+SPRING_APP_JWT_EXPIRATION_MS
+Value:
+text
+432000000
+Summary Checklist on Render
+Click Save Changes at the bottom of the Environment tab.
+Render will trigger a new deployment.
+Open the Logs tab: You should see Spring Boot connect to PostgreSQL (dpg-dbloi5t9fdbs73cc74g0-a:5432/luminavibe), create the tables, and start Tomcat on Render's assigned port!
+
+

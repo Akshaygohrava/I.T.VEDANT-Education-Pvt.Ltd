@@ -60,6 +60,173 @@ _Exceptions, JDBC, JVM:_
 49. JDBC steps to connect to a database
 50. Statement vs PreparedStatement
 
+Real Time Interview Asked Question : 2025 - 2026
+
+☕ JAVA (Core + OOP + Advanced)
+#	Question	Times Asked
+1	What is OOP? Explain all 4 pillars with examples	⭐⭐⭐⭐⭐ (5+)
+2	Difference between abstract class and interface / How is abstraction achieved	⭐⭐⭐⭐⭐ (5+)
+3	Difference between == and .equals()	⭐⭐⭐⭐ (4)
+4	Difference between equals() and hashCode()	⭐⭐⭐ (3)
+5	What is a Class and Object?	⭐⭐⭐ (3)
+6	What is Encapsulation?	⭐⭐⭐ (3)
+7	What is the static keyword? Uses?	⭐⭐⭐ (3)
+8	What is method overloading vs overriding?	⭐⭐ (2)
+9	What is a Wrapper class?	⭐⭐ (2)
+10	What is String? (immutability)	⭐⭐ (2)
+11	What is an immutable class? How to create one?	⭐⭐ (2)
+12	What is the Collection Framework?	⭐⭐ (2)
+13	What is LinkedList? Maps in Collections?	⭐⭐ (2)
+14	Difference between HashSet and TreeSet	⭐ (1)
+15	Difference between LinkedList and HashTree	⭐ (1)
+16	What are Generics?	⭐ (1)
+17	Java 8 features	⭐ (1)
+18	What are Lambda expressions? Uses?	⭐ (1)
+19	What is a functional interface? Optional class?	⭐ (1)
+20	What is an exception? Exception handling? try-with-resources	⭐⭐ (2)
+21	Types of Java memory	⭐⭐ (2)
+22	What is garbage collection?	⭐⭐ (2)
+23	What is multithreading? Where applied in project?	⭐⭐⭐ (3)
+24	What does run() method do in multithreading?	⭐ (1)
+25	What are threads? What is deadlock?	⭐ (1)
+26	What is a global exception (handler)?	⭐ (1)
+27	What are heaps in Java?	⭐ (1)
+28	Types of inheritance?	⭐ (1)
+29	How does an interface achieve 100% abstraction?	⭐ (1)
+30	What is JSP / Servlet?	⭐ (1)
+🌱 SPRING BOOT / BACKEND
+#	Question	Times Asked
+1	What is Dependency Injection (DI)? Uses?	⭐⭐⭐⭐ (4)
+2	What is IoC Container? How it works?	⭐⭐⭐ (3)
+3	Difference between Spring, Spring Boot, Spring MVC	⭐⭐⭐ (3)
+4	What is Spring Boot?	⭐⭐⭐ (3)
+5	Name/explain 10 annotations used in Spring Boot	⭐⭐ (2)
+6	Difference between @RestController and @Controller	⭐⭐ (2)
+7	What is @Bean annotation? What does it do?	⭐⭐ (2)
+8	Difference between @Bean and @Autowired	⭐⭐ (2)
+9	What is @Qualifier annotation? Uses & how it works	⭐ (1)
+10	What is an Entity?	⭐ (1)
+11	What is a Repository?	⭐ (1)
+12	What are the uses of Services?	⭐ (1)
+13	What is Spring MVC? What is MVC architecture?	⭐⭐ (2)
+14	What is @GeneratedValue?	⭐ (1)
+15	Difference between Authentication and Authorization	⭐ (1)
+16	What is Spring Security? (5 sentences)	⭐⭐ (2)
+17	What is a Bean?	⭐⭐ (2)
+18	What is middleware?	⭐ (1)
+19	What is a REST API? PUT vs PATCH (email change scenario)	⭐ (1)
+20	(Scenario) Build production-ready app with JWT, protected routes, role-based auth, Spring Security	⭐ (1)
+🗄️ MySQL / SQL
+#	Question	Times Asked
+1	Find the 2nd highest salary (subquery)	⭐⭐⭐⭐⭐ (5+)
+2	Types of Joins + difference LEFT vs RIGHT (with case scenarios)	⭐⭐⭐⭐ (4)
+3	What is an Index? Why use indexes in SQL?	⭐⭐ (2)
+4	What are Views? Types of views	⭐⭐ (2)
+5	What are Triggers?	⭐⭐ (2)
+6	How to add a column to a table? (ALTER TABLE)	⭐⭐⭐ (3)
+7	What is GROUP BY? What is HAVING?	⭐⭐ (2)
+8	Aggregate functions	⭐ (1)
+9	DDL and DML commands — types	⭐⭐ (2)
+10	Normalization	⭐⭐ (2)
+11	What is a Constraint?	⭐ (1)
+12	What is a memory cache?	⭐ (1)
+13	What are ACID properties?	⭐ (1)
+14	What is a B-Tree?	⭐ (1)
+15	What is LIMIT and OFFSET?	⭐ (1)
+16	What is a Stored Procedure? Write a query	⭐ (1)
+17	(Query) Create employee table (emp_id PK, emp_name), insert data, create emp_detail table with foreign key	⭐ (1)
+18	(Query) Select id, name from IT department	⭐ (1)
+19	(Query) Count employees from employees table	⭐ (1)
+20	Join columns (concept)	⭐ (1)
+🧮 DSA
+#	Question	Times Asked
+1	Check if a number is prime (user input)	⭐⭐ (2)
+2	Fibonacci series program	⭐⭐⭐ (3)
+3	Reverse a string (with and without collections)	⭐ (1)
+4	Find highest number in an array	⭐ (1)
+5	Find length of array with distinct values only ([1,2,5,7,8,6,1,2,4,5])	⭐ (1)
+6	First non-repeating character in a string ("aabbccddeff" → e)	⭐ (1)
+7	Pyramid pattern program (*, **, ***)	⭐ (1)
+8	Add 5 items to a LinkedList / iterate it	⭐ (1)
+9	Sort an array alphabetically	⭐ (1)
+10	For loop: print 10→1, with continue/break at 6	⭐ (1)
+11	How many ways to get all values (iterable/loops)	⭐ (1)
+
+*🎯 TOP PRIORITY (Most Repeated — Master These First)*
+
+1. 2nd highest salary (SQL) — 5+
+2. OOP 4 pillars — 5+
+3. Abstract class vs Interface — 5+
+4. Dependency Injection / IoC — 4
+5. Joins (types + LEFT/RIGHT scenarios) — 4
+6. == vs .equals() — 4
+7. Multithreading — 3
+8. Spring vs Spring Boot vs Spring MVC — 3
+9. Fibonacci — 3
+10. ALTER TABLE / add column — 3
+11. equals() vs hashCode() — 3
+12. Static keyword — 3
+
+
+
+
+1. Core Java (Beginner to Advanced)
+Fundamentals: data types, variables, operators
+Control flow: if, for, while, switch
+Collections: list, set, map, queue
+Object-Oriented Programming: inheritance, polymorphism, encapsulation, abstraction
+Exception handling: try-catch-finally, custom exceptions
+Java 8+ features: lambda expressions, Stream API, optional, date and time API
+
+2. Java Database Connectivity (JDBC)
+Connecting with databases
+CRUD operations
+Prepared and callable statements
+Connection pooling
+
+3. SQL (Database Skills)
+Basics: create, select, insert, update, delete
+Advanced: joins, group by, subqueries, indexing, optimization
+Transactions: ACID properties, stored procedures, triggers
+
+4. JSP and Servlets (Web Basics)
+Basics of HTTP and request-response lifecycle
+Session management: cookies, HttpSession
+Form handling and MVC architecture
+
+5. Spring Framework
+Dependency injection and inversion of control
+Spring MVC architecture
+Spring security: authentication and authorization
+Aspect-oriented programming
+
+6. Hibernate (ORM Skills)
+Object-relational mapping basics
+Entity mapping: one-to-one, one-to-many, many-to-many
+Hibernate query language
+Caching and optimization
+
+7. Spring Boot (Advanced Skills)
+RESTful web services
+Microservices architecture
+Spring boot starters and Spring Data JPA
+Spring Cloud for distributed systems
+Application monitoring with Actuator
+
+8. Build Tools and Version Control
+Build tools: Maven, Gradle
+Version control: Git
+Collaborative tools: GitHub, GitLab, Bitbucket
+
+9. DevOps Basics
+Docker: containerizing Java applications
+Kubernetes: orchestrating containers
+Jenkins: CI/CD workflows
+
+10. Cloud Platforms
+AWS fundamentals: EC2, S3, RDS, CloudWatch
+Optionally explore Google Cloud or Microsoft Azure
+
 
 
 
