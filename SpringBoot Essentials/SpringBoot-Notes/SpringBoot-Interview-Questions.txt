@@ -1,4 +1,65 @@
 
+Spring Boot Questions :-
+
+What Is Spring ?
+Spring is an open-source application framework and Inversion of Control (IoC) container. 
+It is designed to simplify the development of enterprise Java applications by providing a comprehensive infrastructure,
+ that handles the "plumbing" of your application, allowing you to focus on business logic. 
+* Spring is an IoC container. It manages the lifecycle of your objects (called "beans") and their dependencies. 
+Instead of your code creating objects manually, Spring "injects" them for you. 
+This promotes loose coupling and makes testing easier.
+
+What is Spring MVC ?
+Spring MVC (formally Spring Web MVC) is the original web framework included in the Spring Framework, 
+built on the Servlet API. It implements the Model-View-Controller design pattern to help you build flexible, 
+loosely coupled web applications .
+* Spring MVC / MVC architecture
+Model-View-Controller: Model = data/business, View = UI, Controller = handles requests and picks the response. 
+Spring MVC uses DispatcherServlet → handler mapping → controller → view resolver.
+
+What Is SpringBoot ? 
+Spring Boot is an extension built on top of Spring. It simplifies the setup via Auto-Configuration and Starter Dependencies. 
+It provides an embedded server (Tomcat, Jetty), eliminating the need for external server deployments. Essentially, 
+Spring Boot is "Spring with a convention-over-configuration approach," making it ideal for microservices 
+* Framework that simplifies Spring setup: auto-configuration, starter dependencies, embedded Tomcat/Jetty, application.properties, production-ready (Actuator), standalone JAR via @SpringBootApplication.
+* It is used To build Microservices 
+
+What is Hibernate ? 
+Hibernate is the ORM Object Relational Mapping Framework, Its Maps Java Objects to the Database Tables
+and handles the conversion between the object-oriented paradigm and the relational database paradigm. 
+It automates the persistence of data, meaning developers can save, retrieve, and query data without writing complex JDBC code or manual SQL (though it supports native SQL) .
+
+"Spring is the foundation — DI and core modules. Spring MVC is the web layer built on Spring. 
+Spring Boot sits on top of both and removes boilerplate with auto-configuration, starters, and an embedded server."
+
+What is IOC Container ?
+Inversion of Control container manages object creation, wiring, and lifecycle. 
+Spring's ApplicationContext reads bean definitions, instantiates beans, injects dependencies, and manages scope/lifecycle. 
+You don't call new; the container does.
+
+What is Dependency InJection ?
+A design pattern where objects receive their dependencies from outside (container) instead of creating them. 
+Benefits: loose coupling, testability, easier config.
+
+IoC = the framework controls object creation and lifecycle (you don't call new). 
+DI = a form of IoC where dependencies are injected into an object rather than created inside it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Top 20 Entry-Level Java Spring Boot Questions
 
 
@@ -10,7 +71,7 @@ What is auto-configuration?
 
 What are Spring Boot starters? (e.g., spring-boot-starter-web)
 
-Difference between @Component, @Service, @Repository, @Controller?
+Difference between @Component,@Entity, @Service, @Repository, @Controller?
 
 What is application.properties / application.yml?
 
@@ -25,6 +86,7 @@ What is @PathVariable vs @RequestParam vs @RequestBody?
 What is @Transactional?
 
 Difference between JpaRepository and CrudRepository?
+Difference between MVC architecture and Spring MVC ?
 
 What is JPA vs Hibernate?
 
